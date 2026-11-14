@@ -1,0 +1,54 @@
+# .gitignore của root — HAI CHẾ ĐỘ, chỉ khối "Repo con" bên dưới khác nhau:
+#   - PROJECT-TEMPLATE: cả thư mục là MỘT repo (monorepo) ⇒ khối "Repo con" để COMMENT, template track mọi thứ.
+#   - Dự án thật: root là WRAPPER, mỗi module + project-docs là repo RIÊNG ⇒ /bootstrap-project (Bước 6)
+#     BỎ COMMENT khối đó TRƯỚC khi `git init` wrapper. Verify: `git ls-files` ở root không có file của repo con.
+# .gitignore của từng module và project-docs đúng cho cả hai chế độ (pattern tương đối) — giữ nguyên.
+
+# --- Repo con — vietsubps5 chốt MONOREPO (2026-11-14): GIỮ COMMENT, mọi module nằm chung repo này ---
+# /project-docs/
+# /tv-overlay/
+# /engine/
+
+# --- Secrets & env ---
+# `.env` của module COMMIT có chủ ý (trong repo module) — chỉ chặn bản ghi đè riêng máy.
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- Dependencies / build ---
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+# .NET
+bin/
+obj/
+TestResults/
+.vs/
+*.user
+
+# --- Logs ---
+*.log
+
+# --- Artifact của công cụ agent (workspace root của worker = root này) ---
+.playwright-mcp/
+.playwright-profile/
+probe-out/
+
+# --- Claude Code: cấu hình máy cá nhân / runtime ---
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/*.local.json
+
+# --- Rác OS / editor ---
+nul
+Thumbs.db
+.DS_Store
+
+# --- Token tạm / file cá nhân (không commit) ---
+# Mật khẩu tài khoản test local/dev thì COMMIT (project-docs/automation/test-accounts.md).
+# *.local.md gồm cả workflow/agent-platform/worker-policy.local.md — policy chọn platform/model
+# cho worker của từng người (mẫu commit được: worker-policy.sample.md).
+*.local.md
+*.token

@@ -1,0 +1,27 @@
+# .gitignore của repo project-docs
+
+# --- Stream thô của worker — chỉ giữ local để tra ---
+*/_workers/streams/
+
+# --- Token tạm (không commit) ---
+# Mật khẩu tài khoản test local/dev thì COMMIT trong automation/test-accounts.md — để cả team dùng được.
+*.token
+
+# --- Artifact của công cụ agent ---
+.playwright-mcp/
+probe-out/
+
+# --- Rác OS / editor ---
+nul
+Thumbs.db
+.DS_Store
+
+# --- Script thử nghiệm của đợt: không commit (luật: workflow/leader-stages/03-write-docs.md) ---
+# Kết quả/report/ảnh trong playtest/ vẫn commit
+*/playtest/**/*.js
+*/playtest/**/*.mjs
+*/playtest/**/*.cjs
+*/playtest/**/*.ts
+*/playtest/**/*.ps1
+*/playtest/**/*.sh
+*/playtest/**/*.py

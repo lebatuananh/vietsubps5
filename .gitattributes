@@ -1,0 +1,19 @@
+# Chuẩn hoá line ending: repo luôn lưu LF, checkout theo OS.
+# Team dùng cả Windows lẫn macOS → tránh diff giả toàn file.
+# Áp cho cả hai chế độ: template (monorepo) và dự án thật — khi tách repo, copy file này vào root MỖI repo con.
+* text=auto eol=lf
+
+# Script Windows-only: giữ CRLF khi checkout
+*.ps1  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# Shell script: luôn LF kể cả trên Windows
+*.sh   text eol=lf
+
+# Ảnh evidence / mockup: nhị phân, không chuẩn hoá
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
