@@ -61,7 +61,7 @@ Ngoài risk gate chung ([team-leader §5](workflow/roles/team-leader.md)), dự 
 
 ## Cấu trúc repo
 
-🔴 **Dự án này là MONOREPO — lệch có chủ ý so với template** (User chốt 2026-11-14): **một repo git duy nhất** ở root, remote GitHub `git@github.com:lebatuananh/vietsubps5.git` (HTTPS: `https://github.com/lebatuananh/vietsubps5.git`), **private**. Khối "Repo con" trong `.gitignore` root **giữ comment**. Chuyển public chỉ khi chia sẻ bản build có mã AGPL (Risk gate riêng).
+🔴 **Dự án này là MONOREPO — lệch có chủ ý so với template** (User chốt 2026-11-14): **một repo git duy nhất** ở root, remote GitHub `origin` = `https://github.com/lebatuananh/vietsubps5.git` (máy User chưa có SSH key cho GitHub — kiểm 2026-11-14; có key thì đổi sang `git@github.com:lebatuananh/vietsubps5.git`), **private**. Khối "Repo con" trong `.gitignore` root **giữ comment**. Chuyển public chỉ khi chia sẻ bản build có mã AGPL (Risk gate riêng).
 
 Đọc `workflow/` (viết cho chế độ nhiều repo) theo cách quy đổi sau:
 
