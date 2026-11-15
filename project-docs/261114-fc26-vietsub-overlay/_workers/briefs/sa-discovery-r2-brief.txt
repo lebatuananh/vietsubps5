@@ -1,0 +1,29 @@
+VietSub-261114-SA round 2 (resume, delta only)
+
+DISCOVERY ROUND 2: challenge + fill the rubric. Same role and rules as round 1 (read-only, write only inside the batch folder).
+
+What changed since your round 1 report:
+* Leader verified 5 of your load-bearing claims (D1, D2, D5, D7, pricing): all correct. See the last lines of 261114-workflow-log.md. Draft section 2 now carries a correction about Console Translator.
+* User approved this plan (quote: toi dong y nhe), 2026-11-15:
+  1. Core on the Windows PC. Slice 1 = Career Mode Inbox rendered beautifully, image taken from the OFFICIAL PS Remote Play app via Windows.Graphics.Capture; the User opens that app by hand for this slice.
+  2. Then add groups of Career Mode screens, one install on the TV per group.
+  3. Slice X (no need to start anything) placed EARLY, after 2 to 3 screen groups: core auto-starts with Windows and auto-connects to the PS5 via chiaki-ng run as a SEPARATE program, probably with a secondary PSN account. AGPL and the PSN account will be approved by the User separately when we reach it.
+  TV and phone placements are out of this batch.
+* The User did NOT answer how he ran Console Translator (phone/iPhone/PC, opened each time or not). Treat cell 3 quote about never starting anything as the target of slice X, not of slice 1.
+* Leader proposed a tech stack to the User (not yet final). CHALLENGE it:
+  * engine: C# on .NET 10 (machine has .NET 8 runtime/SDK 8.0; .NET 8 support ends 2026-11-10, verify), Windows.Graphics.Capture, Windows.Media.Ocr first and PaddleOCR via ONNX Runtime only if measured accuracy is poor, glossary JSON in repo, translation cache in SQLite, LLM for new sentences (provider choice is a User risk gate; candidates Claude Haiku 5.5 / Sonnet 5.5), WebSocket over LAN with a pairing token, tray app with autostart, xUnit tests with FC 26 screenshot fixtures.
+  * tv-overlay: Kotlin, target Android 15, TYPE_APPLICATION_OVERLAY with a custom View drawing via Canvas + StaticLayout (not Compose), Be Vietnam Pro bundled, OkHttp WebSocket client, foreground service + boot start + battery optimization exemption, JUnit + Android TV emulator.
+  * tooling to install by the User: Android Studio (SDK, adb, JDK, TV emulator), .NET 10 SDK.
+
+Your round 2 tasks:
+1. Simplest viable design for SLICE 1 only (KISS): which of the parts above slice 1 truly needs and which wait (e.g. tray app, autostart, SQLite vs a JSON file, pairing token, fuzzy matching, mDNS). Say what is over-engineering for slice 1.
+2. Stack challenge: for each choice above, keep / change with reason and source. Specifically: WinRT access from .NET 10 (target framework moniker, CsWinRT or not), Windows.Media.Ocr language pack requirement for English, which side is WebSocket server (engine or TV) and why, Android overlay drawing approach, minimum Android version on Sony Google TV.
+3. Test plan, concrete for slice 1: tier 1 smoke steps for Dev and Reviewer WITHOUT a PS5 (fixtures: what exactly the User must capture and how, e.g. PS5 Create button screenshots of Inbox list and one mail, plus a short screen recording of the PS Remote Play window), commands, expected outputs, what data is kept or removed, whether Reviewer reruns smoke; steps only the User can do on the real TV, written as a numbered checklist; tier 2 End User review: when, input, pass criteria. Mark every step not yet tried as chua kiem.
+4. Acceptance metric for slice 1 the User can judge on the TV (beautiful and correct), plus the measurable ones.
+5. Final list of definitely NOT doing in this batch (update round 1 section 11 with the approved plan; in-match text and Ultimate Team stay out unless you see a reason).
+6. Slices table updated with the approved order (slice X after 2 to 3 groups), each row saying whether it can be installed on the TV, TDD parts, and whether a mockup phase comes first (every user-facing screen needs a mockup phase approved by the User before code, see your handbook B6).
+7. Any remaining question only the User can answer, each with your recommended answer.
+
+Output: append a section titled Round 2 to project-docs/261114-fc26-vietsub-overlay/261114-discovery.md and update earlier sections if they became wrong (mark what you changed). First line of the file: set to IN PROGRESS while working, then exactly DISCOVERY-R2 DONE when complete. Checkpoint early.
+
+Open question (answer even if the list above looks complete): What important thing did the Leader NOT ask? Which concept in this brief is merged or named wrong? Is any part of the approved plan a mistake? Say so even if it breaks the plan.

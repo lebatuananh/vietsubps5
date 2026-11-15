@@ -1,0 +1,7 @@
+VietSub-261114-probe
+This is a capability probe. Do exactly these steps, nothing else:
+* Read the file D:/Temp/claude/d9d3e1a64600903d/e9665b82-ba7d-4af5-805e-bccc099e6d39/scratchpad/probe/token-in.txt and remember its content.
+* Write a new file D:/Temp/claude/d9d3e1a64600903d/e9665b82-ba7d-4af5-805e-bccc099e6d39/scratchpad/probe/token-out.txt whose only content is that same token followed by the text -ok
+* Run the shell command: git rev-parse --short=8 HEAD   and include its output in your final answer.
+* Use WebSearch once with the query: PS Remote Play Windows download   and include the first result URL in your final answer.
+Final answer format: three lines: TOKEN=<token> HASH=<hash> URL=<url>

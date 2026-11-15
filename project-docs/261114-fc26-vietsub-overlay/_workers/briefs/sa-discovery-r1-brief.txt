@@ -1,0 +1,33 @@
+VietSub-261114-SA
+You are the BA/SA for batch 261114 of project VietSub PS5. This is DISCOVERY ROUND 1 (orientation + challenge). Read-only role: do not create or modify any code, config or file outside the batch folder.
+
+Read fully before anything else:
+1. CLAUDE.md (repo root) - product, hard constraints, risk gates
+2. workflow/roles/ba-sa.md - your handbook, follow it (report format in section 4, evidence rules in section 3)
+3. project-docs/261114-fc26-vietsub-overlay/261114-draft.md - the 6 cells the User decided, in the User's own words. They are BINDING constraints.
+
+Situation: the repo has NO code yet (first batch). So current-state survey here means: facts about the devices, platforms, libraries and the game, verified from official docs and primary sources on the web, plus quick read-only checks on this Windows machine. There is no TV/PS5 access for you: do NOT run adb, do NOT try to reach any LAN device.
+
+Leader's working assumptions (CHALLENGE them, do not confirm them; assume the Leader missed something):
+* A1. Architecture already chosen before this batch: game video goes HDMI PS5 to TV untouched; a Google TV app draws a transparent overlay over the HDMI input; a processing core gets a copy of the game image via PS Remote Play, does OCR, translates, and sends text + coordinates over LAN to the TV app.
+* A2. The core runs on the Windows PC first, capturing the window of the OFFICIAL PS Remote Play app (Windows Graphics Capture), because that avoids implementing the Remote Play protocol. Assumption: that window can be captured (not black, no DRM block). Verify.
+* A3. NEW question from the User (2026-11-14): since a TV APK must be written anyway, why not put the whole core inside the TV APK (or a phone) and drop the PC? Leader believes the extra cost is the Remote Play client (chiaki-ng, AGPL-3.0, PSN registration, video decode), not the APK. Compare three placements of the core: PC, TV, phone. For each: effort, latency of the translated text, CPU/GPU/RAM load (Sony Google TV SoC class; list what we must ask the User to identify the exact TV model/SoC), stability, licensing duty when sharing with friends, PSN account risk, and how well it meets the User quote about never having to start anything (cell 3). Give a recommendation with reasons. Note: the User already accepted keeping the PC on (cell 6) as a trade-off; that is a fallback, not a requirement.
+* A4. Overlay over HDMI input on Sony Google TV works: the User installed Console Translator (Google Play com.kyozx.consoletranslator) TV component on THIS TV, and it draws over the PS5 HDMI picture and runs in the background without being reopened. Find out which Android mechanism makes this possible (overlay permission type, foreground service, boot start, accessibility service, etc.), its restrictions on Google TV / Sony, and how the User grants it on a sideloaded APK.
+* A5. Overlay coordinates can be mapped from the captured Remote Play frame to the TV panel by simple scaling, once TV overscan is off. Verify resolution/aspect of Remote Play stream vs panel, letterboxing, and what breaks the mapping.
+* A6. OCR + translation quality: FC 26 UI uses stylised fonts, small text, text over images. Which OCR engines are viable for each core placement (Windows.Media.Ocr, ML Kit, Tesseract, others)? Translation: glossary for football terms + cache keyed by game + normalised source sentence + LLM only for new sentences. Career Mode text has templates with variables (player names, numbers, money) - how to normalise so the cache hits. Give an order-of-magnitude cost estimate for translating Career Mode with a cache (state assumptions, mark as estimate).
+* A7. Beautiful in-place rendering (cell 3: chuan va dep, khong meo xech): erase/cover the English text and draw Vietnamese text in matching size/colour, auto-fit longer Vietnamese strings, no flicker (stability/debounce rules), Vietnamese font coverage. What makes this hard on real FC 26 screens?
+
+Also cover, as required by your handbook:
+* Inventory of Career Mode screen/text kinds (inbox, news, transfers/negotiation, scouting, training/development, menus, player attributes...) and which are static vs dynamic. Cite sources (EA docs, guides, screenshots on the web).
+* Test plan in 2 tiers: tier 1 smoke WITHOUT a PS5 at hand (e.g. recorded FC 26 Career Mode screenshots/videos as fixtures, Android TV emulator for the overlay app) and what can only be verified on the real TV by the User; tier 2 translation-quality review (End User role), when.
+* Vertical slices bound to cell 5: the FIRST install on the TV is ONE Career Mode screen rendered beautifully and correctly. Then each later slice adds a group of Career Mode screens until everything is translated.
+* User-facing experience (pillar 7 of discovery): what the User sees and feels, design direction for the overlay (typography, cover style, motion), compared with Console Translator. Do NOT build mockups in this round; propose what the mockup phase must show.
+* Proposed list of what this batch will definitely NOT do.
+* Module(s) to create and a branch name proposal (monorepo, see CLAUDE.md).
+
+Quick read-only checks you may run on this machine (only these): Get-Command / where for claude, adb, java, dotnet, python, node; Get-CimInstance Win32_VideoController; check whether PS Remote Play is installed (Get-ChildItem on Program Files paths). Report outputs verbatim.
+
+Output: write your report to project-docs/261114-fc26-vietsub-overlay/261114-discovery.md . Vietnamese prose, identifiers verbatim in English. Every factual claim gets a source URL or command+output, labelled verified / assumption as your handbook says. The FIRST line of the file must be exactly IN PROGRESS while you work; when the report is complete, replace the first line with exactly: DISCOVERY-R1 DONE
+Write a partial report early and keep updating it (checkpoint), so work survives if the run is cut.
+
+Open question (answer it even if everything above looks covered): What important thing did the Leader NOT ask? Which concept in this brief is merged or named wrong? If a basic assumption of this brief is wrong, say so - even if it breaks the whole plan.
