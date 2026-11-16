@@ -1,0 +1,14 @@
+VietSub-261114-Dev fix round after review 2a (resume, delta only)
+
+Reviewer verdict on your turn 2a: PASS, no blocking items (project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-review-2a.md). Leader decided which notes you fix now: read the new row Sau review 2a - Rev 2.4 in the section Quyet dinh sau phan hoi Dev of the Phase doc (BINDING), plus the row (b) khong phu thuoc thu tu - Rev 2.3.
+
+Fix exactly these, nothing else: NB2 (fallback rule + new TDD case), NB3 (multiplicity in (a) + new TDD case), NB6 ((b) multiset; update expected numbers in existing tests per the new definition), NB4 (size mismatch => exit 6), NB7 (clean exit 1 for bad --hwnd and missing ocr-score dir), NB10 (remove AllowUnsafeBlocks), NB5 (README note). Keep NB8, NB9 and pool recreation for Phase 3 (do not implement).
+* TDD for NB2, NB3, NB6: write or update tests first, show RED, then GREEN.
+* Rerun: dotnet build engine (0 warnings), dotnet test engine, smoke 3 and 5 on your synthetic images; add one dark-screen synthetic image (uniform dark background, text in the middle, nothing at the edges) to show NB2 now gives the full rect.
+* Update engine/README.md for every behaviour change (exit codes, fallback field, metric definitions).
+
+Report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-fix2a.md . FIRST line DEV-FIX2A IN PROGRESS while working, exactly DEV-FIX2A DONE when finished. Content: per NB what changed (file:line), red then green output, test count before/after, smoke results with evidence paths under playtest/epic1-phase1/dev/, git status --short at the end.
+
+NOT YOURS: same block as turn 2a (no TV/PS5/LAN/adb/emulator; capture only your own ffplay window and stop only your PIDs; git read-only; do not edit docs other than engine/README.md and your report; no credentials).
+
+Open question: does any Leader decision in Rev 2.4 conflict with how the code works or make a real capture worse?

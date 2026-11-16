@@ -1,0 +1,9 @@
+=== app label present in the 'display over other apps' list? (full list text via dumps while scrolling)
+text="VietSub — lớp phủ kiểm tra"
+found after 5 scroll steps
+=== focus visibility after a D-pad key (non-touch mode)
+screenshot 2b-07-main-after-dpad.png
+before: SYSTEM_ALERT_WINDOW: default; time=+1m49s950ms ago; duration=+2s705ms
+our row focused after 8 steps
+after toggle via remote: SYSTEM_ALERT_WINDOW: allow; time=+2m24s802ms ago; duration=+2s705ms
+back in app (onResume refresh): pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,708][330,804] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']

@@ -1,0 +1,49 @@
+{
+  "image": "re-p1-pillar43-symmetric.png",
+  "imageSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080
+  },
+  "confident": false,
+  "fallback": null,
+  "scaleApplied": 1,
+  "variant": "scale1",
+  "lines": [
+    {
+      "text": "Transfer Hub",
+      "boxPx": {
+        "x": 281,
+        "y": 48,
+        "w": 245,
+        "h": 29
+      },
+      "box01": {
+        "x": 0.14635416666666667,
+        "y": 0.044444444444444446,
+        "w": 0.12760416666666669,
+        "h": 0.026851851851851856
+      }
+    },
+    {
+      "text": "Scouting network updated",
+      "boxPx": {
+        "x": 281,
+        "y": 146,
+        "w": 347,
+        "h": 28
+      },
+      "box01": {
+        "x": 0.14635416666666667,
+        "y": 0.13518518518518519,
+        "w": 0.18072916666666666,
+        "h": 0.025925925925925936
+      }
+    }
+  ]
+}

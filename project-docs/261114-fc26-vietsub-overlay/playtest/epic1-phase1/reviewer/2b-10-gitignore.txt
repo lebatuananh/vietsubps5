@@ -1,0 +1,17 @@
+tv-overlay/.gitignore:3:build/	tv-overlay/app/build
+tv-overlay/.gitignore:1:.gradle/	tv-overlay/.gradle
+tv-overlay/.gitignore:2:local.properties	tv-overlay/local.properties
+tv-overlay/.gitignore:4:*.keystore	tv-overlay/x.keystore
+project-docs/.gitignore:26:*/playtest/**/*.sh	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/tools/smoke-2b.sh
+project-docs/.gitignore:27:*/playtest/**/*.py	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/tools/font_check.py
+=== untracked tv-overlay files: 24
+OFL-BeVietnamPro.txt
+README.md
+app/
+build.gradle.kts
+gradle/
+gradle.properties
+gradlew*
+gradlew.bat
+settings.gradle.kts
+1616	total

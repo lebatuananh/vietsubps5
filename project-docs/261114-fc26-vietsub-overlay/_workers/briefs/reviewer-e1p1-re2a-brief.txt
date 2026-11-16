@@ -1,0 +1,14 @@
+VietSub-261114-Reviewer re-review after fix round 2a (resume, delta only)
+
+Dev applied the fixes Leader decided from your review 2a: Phase doc row Sau review 2a - Rev 2.4 (and (b) multiset from Rev 2.3). Dev report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-fix2a.md . Dev says NB4 (exit 6 on resize) was NOT exercised for real.
+
+Re-review ONLY the delta:
+* For each of NB2, NB3, NB4, NB5, NB6, NB7, NB10: what you verified (file:line) and the regression risk of the fix itself (could the NB2 fallback make a real letterboxed Remote Play capture worse? does NB3 multiplicity break the merged-row case? does NB6 still flag real misreads?).
+* Rerun yourself: dotnet build engine (0 warnings), dotnet test engine, your dark-screen image (NB2 must now give full rect, box01 error near 0), your duplicate-segment demo (NB3 must now give 5/6 or the correct lower value), and your resize case D (NB4 must now exit 6 with a clear message, no truncated PNG). Evidence in playtest/epic1-phase1/reviewer/ with names prefixed re-.
+* Confirm NB8, NB9, pool recreation were NOT implemented (they are Phase 3 debt) and nothing else outside the listed fixes changed (git diff stat is not available since files are untracked; compare against what you read in review 2a).
+
+Append a section Re-review fix 2a to project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-review-2a.md . Set the FIRST line to REVIEW-RE2A IN PROGRESS while working, exactly REVIEW-RE2A DONE when finished, and put the new verdict PASS or FAIL right after the new section title.
+
+NOT YOURS: unchanged from review 2a (read-only on code and docs except your report and reviewer evidence; your own windows and PIDs only; git read-only; no TV/PS5/LAN/adb/emulator).
+
+Open question: did the fix round introduce a new risk the Leader should know before the User captures the real PS Remote Play window?

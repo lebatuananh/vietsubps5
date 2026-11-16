@@ -1,0 +1,34 @@
+{
+  "image": "synth-dark.png",
+  "imageSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080
+  },
+  "confident": true,
+  "fallback": "client",
+  "scaleApplied": 2,
+  "variant": "scale2",
+  "lines": [
+    {
+      "text": "Dark Screen Message",
+      "boxPx": {
+        "x": 647.5,
+        "y": 509,
+        "w": 626,
+        "h": 61.5
+      },
+      "box01": {
+        "x": 0.3372395833333333,
+        "y": 0.47129629629629627,
+        "w": 0.32604166666666673,
+        "h": 0.05694444444444452
+      }
+    }
+  ]
+}

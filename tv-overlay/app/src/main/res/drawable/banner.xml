@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <path android:fillColor="#14202C" android:pathData="M0,0h320v180h-320z" />
+    <!-- 4 dấu góc chữ L vàng -->
+    <path android:fillColor="#FFD400" android:pathData="M10,10h40v8h-32v32h-8z" />
+    <path android:fillColor="#FFD400" android:pathData="M310,10h-40v8h32v32h8z" />
+    <path android:fillColor="#FFD400" android:pathData="M10,170h40v-8h-32v-32h-8z" />
+    <path android:fillColor="#FFD400" android:pathData="M310,170h-40v-8h32v-32h8z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M120,80h80v20h-80z" />
+</vector>

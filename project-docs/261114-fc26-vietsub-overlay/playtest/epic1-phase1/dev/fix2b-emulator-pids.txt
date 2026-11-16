@@ -1,0 +1,9 @@
+﻿cmd PID=11832
+
+ProcessId ParentProcessId Name                           
+--------- --------------- ----                           
+    30308           11832 emulator.exe                   
+    30176           30308 qemu-system-x86_64-headless.exe
+
+
+

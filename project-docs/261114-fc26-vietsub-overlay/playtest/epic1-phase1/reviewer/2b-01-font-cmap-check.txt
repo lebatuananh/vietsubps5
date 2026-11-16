@@ -1,0 +1,6 @@
+be_vietnam_pro_regular.ttf: GDI face='Be Vietnam Pro' | port: viet 90/90, sample missing [], A=True 日=False 한=False
+   oracle(GDI) viet 90/90, 日=False 한=False; port==oracle on 139 probe cps: True
+be_vietnam_pro_semibold.ttf: GDI face='Be Vietnam Pro SemiBold' | port: viet 90/90, sample missing [], A=True 日=False 한=False
+   oracle(GDI) viet 90/90, 日=False 한=False; port==oracle on 139 probe cps: True
+NEGATIVE symbol.ttf: port viet 0/90 (expect 0), total cps=188
+NEGATIVE marlett.ttf: port viet 0/90 (expect 0), total cps=39

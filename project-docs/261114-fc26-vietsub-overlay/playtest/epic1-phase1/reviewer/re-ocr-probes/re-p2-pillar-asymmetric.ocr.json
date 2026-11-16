@@ -1,0 +1,49 @@
+{
+  "image": "re-p2-pillar-asymmetric.png",
+  "imageSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080
+  },
+  "confident": true,
+  "fallback": "client",
+  "scaleApplied": 1,
+  "variant": "scale1",
+  "lines": [
+    {
+      "text": "Transfer Hub",
+      "boxPx": {
+        "x": 241,
+        "y": 48,
+        "w": 245,
+        "h": 29
+      },
+      "box01": {
+        "x": 0.12552083333333333,
+        "y": 0.044444444444444446,
+        "w": 0.12760416666666666,
+        "h": 0.026851851851851856
+      }
+    },
+    {
+      "text": "Scouting network updated",
+      "boxPx": {
+        "x": 241,
+        "y": 146,
+        "w": 347,
+        "h": 28
+      },
+      "box01": {
+        "x": 0.12552083333333333,
+        "y": 0.13518518518518519,
+        "w": 0.1807291666666667,
+        "h": 0.025925925925925936
+      }
+    }
+  ]
+}

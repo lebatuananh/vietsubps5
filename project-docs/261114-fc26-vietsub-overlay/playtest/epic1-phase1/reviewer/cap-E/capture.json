@@ -1,0 +1,38 @@
+{
+  "window": {
+    "hwnd": "0x1A0CF4",
+    "title": "RvwCapE",
+    "width": 2896,
+    "height": 1768
+  },
+  "dpiPerMonitorV2": true,
+  "wgcFrameSize": {
+    "width": 2880,
+    "height": 1752
+  },
+  "clientRect": {
+    "x": 0,
+    "y": 23,
+    "width": 2880,
+    "height": 1729
+  },
+  "clientOffset": {
+    "x": 0,
+    "y": 23
+  },
+  "contentRect": {
+    "x": 0,
+    "y": 54,
+    "width": 2880,
+    "height": 1620
+  },
+  "confident": true,
+  "meanLuma": 119.2485733564681,
+  "frames": [
+    {
+      "file": "frame-001.png",
+      "capturedAtUtc": "2026-11-16T00:53:51.0540388Z",
+      "meanLuma": 119.2485733564681
+    }
+  ]
+}

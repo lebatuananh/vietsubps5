@@ -1,0 +1,46 @@
+== test results
+testsuite name="vn.vietsub.ps5.tv.CoordinateMapperTest" tests="3" skipped="0" failures="0"
+testsuite name="vn.vietsub.ps5.tv.FontCoverageTest" tests="3" skipped="0" failures="0"
+== badging
+package: name='vn.vietsub.ps5.tv' versionCode='1' versionName='0.1.0-phase1' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_SPECIAL_USE'
+uses-permission: name='vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+launchable-activity: name='vn.vietsub.ps5.tv.MainActivity'  label='' icon=''
+leanback-launchable-activity: name='vn.vietsub.ps5.tv.MainActivity'  label='' icon='' banner=''
+  uses-feature-not-required: name='android.hardware.touchscreen'
+  uses-feature-not-required: name='android.software.leanback'
+other-services
+== permissions absent?
+0
+== apk sha
+a481dc246ff1c64a7f6ad1fdc68da254af20d4381b21da26017430dd922dbb02 *app/build/outputs/apk/debug/app-debug.apk
+== ignore check
+tv-overlay/.gitignore:3:build/	tv-overlay/app/build
+tv-overlay/.gitignore:1:.gradle/	tv-overlay/.gradle
+tv-overlay/.gitignore:2:local.properties	tv-overlay/local.properties
+tv-overlay/.gitignore
+tv-overlay/OFL-BeVietnamPro.txt
+tv-overlay/app/build.gradle.kts
+tv-overlay/app/src/main/AndroidManifest.xml
+tv-overlay/app/src/main/java/vn/vietsub/ps5/tv/CoordinateMapper.kt
+tv-overlay/app/src/main/java/vn/vietsub/ps5/tv/MainActivity.kt
+tv-overlay/app/src/main/java/vn/vietsub/ps5/tv/OverlayService.kt
+tv-overlay/app/src/main/java/vn/vietsub/ps5/tv/OverlayView.kt
+tv-overlay/app/src/main/res/drawable/banner.xml
+tv-overlay/app/src/main/res/drawable/ic_stat.xml
+tv-overlay/app/src/main/res/font/be_vietnam_pro_regular.ttf
+tv-overlay/app/src/main/res/font/be_vietnam_pro_semibold.ttf
+tv-overlay/app/src/main/res/values/strings.xml
+tv-overlay/app/src/test/java/vn/vietsub/ps5/tv/CoordinateMapperTest.kt
+tv-overlay/app/src/test/java/vn/vietsub/ps5/tv/FontCoverage.kt
+tv-overlay/app/src/test/java/vn/vietsub/ps5/tv/FontCoverageTest.kt
+tv-overlay/build.gradle.kts
+tv-overlay/gradle.properties
+tv-overlay/gradle/wrapper/gradle-wrapper.jar
+tv-overlay/gradle/wrapper/gradle-wrapper.properties
+tv-overlay/gradlew
+tv-overlay/gradlew.bat
+tv-overlay/settings.gradle.kts

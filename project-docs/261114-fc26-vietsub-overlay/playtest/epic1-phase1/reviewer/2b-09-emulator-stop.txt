@@ -1,0 +1,15 @@
+﻿launcher cmd PID=25548
+  child PID=30380 conhost.exe
+  child PID=27872 emulator.exe
+SUCCESS: The process with PID 19412 (child process of PID 7196) has been terminated.
+SUCCESS: The process with PID 19740 (child process of PID 7196) has been terminated.
+SUCCESS: The process with PID 7196 (child process of PID 27872) has been terminated.
+SUCCESS: The process with PID 30380 (child process of PID 25548) has been terminated.
+SUCCESS: The process with PID 27872 (child process of PID 25548) has been terminated.
+SUCCESS: The process with PID 25548 (child process of PID 13424) has been terminated.
+Stopping Daemon(s)
+1 Daemon stopped
+adb devices:
+List of devices attached
+
+remaining emulator/qemu: 

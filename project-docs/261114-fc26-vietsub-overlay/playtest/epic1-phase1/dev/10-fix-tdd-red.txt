@@ -1,0 +1,68 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Engine -> D:\Project\vietsubps5\engine\src\Engine\bin\Debug\net10.0-windows10.0.22621.0\Engine.dll
+  Engine.Tests -> D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll
+Test run for D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed Engine.Tests.OcrScorerTests.WordCoverage_IsOrderIndependent_ColumnMajorOcrVsRowMajorGolden [1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 7
+Actual:   5
+  Stack Trace:
+     at Engine.Tests.OcrScorerTests.WordCoverage_IsOrderIndependent_ColumnMajorOcrVsRowMajorGolden() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 117
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+dotnet : [xUnit.net 00:00:00.29]     
+Engine.Tests.OcrScorerTests.WordCoverage_IsOrderIndependent_ColumnMajorOcrVsRowMajorGolden [FAIL]
+At line:1 char:411
++ ... b-overlay\playtest\epic1-phase1\dev'; dotnet test engine 2>&1 | Out-F ...
++                                           ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([xUnit.net 00:0...orGolden [FAIL]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[xUnit.net 00:00:00.29]     Engine.Tests.OcrScorerTests.DuplicateGoldenSegment_TwoDistinctOccurrences_BothMatch [FAIL]
+  Failed Engine.Tests.OcrScorerTests.DuplicateGoldenSegment_TwoDistinctOccurrences_BothMatch [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 1
+Actual:   2
+  Stack Trace:
+     at Engine.Tests.OcrScorerTests.DuplicateGoldenSegment_TwoDistinctOccurrences_BothMatch() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 107
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.30]     
+Engine.Tests.OcrScorerTests.DuplicateGoldenSegment_SecondOccurrenceMisread_OnlyOneOfTwoMatches [FAIL]
+[xUnit.net 00:00:00.30]     
+Engine.Tests.ContentRectDetectorTests.DarkUniformScreen_TextInMiddle_NothingAtEdges_FallsBackToWholeClient [FAIL]
+[xUnit.net 00:00:00.38]     Engine.Tests.ContentRectDetectorTests.RectForNormalization_UsesWholeImage_WhenNotConfident 
+[FAIL]
+  Failed Engine.Tests.OcrScorerTests.DuplicateGoldenSegment_SecondOccurrenceMisread_OnlyOneOfTwoMatches [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 1
+Actual:   2
+  Stack Trace:
+     at Engine.Tests.OcrScorerTests.DuplicateGoldenSegment_SecondOccurrenceMisread_OnlyOneOfTwoMatches() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 95
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.DarkUniformScreen_TextInMiddle_NothingAtEdges_FallsBackToWholeClient [141 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 }
+Actual:   ContentRect { X = 660, Y = 390, Width = 600, Height = 300 }
+  Stack Trace:
+     at Engine.Tests.ContentRectDetectorTests.DarkUniformScreen_TextInMiddle_NothingAtEdges_FallsBackToWholeClient() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 117
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.RectForNormalization_UsesWholeImage_WhenNotConfident [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 }
+Actual:   ContentRect { X = 300, Y = 148, Width = 705, Height = 578 }
+  Stack Trace:
+     at Engine.Tests.ContentRectDetectorTests.RectForNormalization_UsesWholeImage_WhenNotConfident() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 136
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     5, Passed:    23, Skipped:     0, Total:    28, Duration: 492 ms - Engine.Tests.dll (net10.0)

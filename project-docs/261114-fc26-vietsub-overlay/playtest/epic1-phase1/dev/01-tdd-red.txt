@@ -1,0 +1,225 @@
+﻿Test run for D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+dotnet : [xUnit.net 00:00:00.14]     
+Engine.Tests.OcrScorerTests.PunctuationCountsAsBoundary_TodayMatchesInsideTodayComma [FAIL]
+At line:1 char:452
++ ... tory -Force $d | Out-Null; dotnet test engine --no-build 2>&1 | Out-F ...
++                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([xUnit.net 00:0...dayComma [FAIL]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[xUnit.net 00:00:00.15]     Engine.Tests.NormalizerTests.BoxOverflowingEdge_ClampsCornersAndKeepsSizeNonNegative [FAIL]
+[xUnit.net 00:00:00.15]     
+Engine.Tests.OcrScorerTests.OneWrongCharacter_SegmentFails_WordsTwoOfThree_ListedWithNearestLine [FAIL]
+[xUnit.net 00:00:00.15]     Engine.Tests.OcrScorerTests.SegmentSplitOverTwoConsecutiveLines_Matches [FAIL]
+[xUnit.net 00:00:00.15]     Engine.Tests.OcrScorerTests.MergedRow_AllThreeSegmentsMatch_AndAllFiveWords [FAIL]
+[xUnit.net 00:00:00.15]     Engine.Tests.OcrScorerTests.ExtraWhitespace_IsNormalizedBeforeComparing [FAIL]
+[xUnit.net 00:00:00.15]     Engine.Tests.OcrScorerTests.CaseIsKept_InboxVsInbox_NoMatch [FAIL]
+  Failed Engine.Tests.OcrScorerTests.PunctuationCountsAsBoundary_TodayMatchesInsideTodayComma [2 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.PunctuationCountsAsBoundary_TodayMatchesInsideTodayComma() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 39
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.NormalizerTests.BoxOverflowingEdge_ClampsCornersAndKeepsSizeNonNegative [2 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.Normalizer.Normalize(Box boxPx, ContentRect contentRect) in D:\Project\vietsubps5\engine\src\Engine\Geometry\Normalizer.cs:line 10
+   at Engine.Tests.NormalizerTests.BoxOverflowingEdge_ClampsCornersAndKeepsSizeNonNegative() in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 31
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.OneWrongCharacter_SegmentFails_WordsTwoOfThree_ListedWithNearestLine [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.OneWrongCharacter_SegmentFails_WordsTwoOfThree_ListedWithNearestLine() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 55
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.SegmentSplitOverTwoConsecutiveLines_Matches [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.SegmentSplitOverTwoConsecutiveLines_Matches() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 46
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.MergedRow_AllThreeSegmentsMatch_AndAllFiveWords [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.MergedRow_AllThreeSegmentsMatch_AndAllFiveWords() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 12
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.ExtraWhitespace_IsNormalizedBeforeComparing [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.ExtraWhitespace_IsNormalizedBeforeComparing() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 68
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.CaseIsKept_InboxVsInbox_NoMatch [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.CaseIsKept_InboxVsInbox_NoMatch() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 75
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.16]     Engine.Tests.OcrScorerTests.DoesNotJoinMoreThanThreeLines [FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.OcrScorerTests.EmptyGolden_IsUndefined_NotDivideByZero [FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.OcrScorerTests.MatchMustEndOnWordBoundary_BoardVsBoardroom_NoMatch [FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.OcrScorerTests.MatchMustStartOnWordBoundary_RoomVsBoardroom_NoMatch [FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(w: 1920, h: 0) 
+[FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(w: 0, h: 1080) 
+[FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.NormalizerTests.Center_BoxMapsToExpectedFractions [FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.NormalizerTests.RectWithOffset_SubtractsOriginBeforeDividing [FAIL]
+[xUnit.net 00:00:00.16]     Engine.Tests.ContentRectDetectorTests.NoBorder_ReturnsWholeImage_Confident [FAIL]
+  Failed Engine.Tests.OcrScorerTests.DoesNotJoinMoreThanThreeLines [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.DoesNotJoinMoreThanThreeLines() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 82
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.EmptyGolden_IsUndefined_NotDivideByZero [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.EmptyGolden_IsUndefined_NotDivideByZero() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 92
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.MatchMustEndOnWordBoundary_BoardVsBoardroom_NoMatch [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.MatchMustEndOnWordBoundary_BoardVsBoardroom_NoMatch() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 25
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.OcrScorerTests.MatchMustStartOnWordBoundary_RoomVsBoardroom_NoMatch [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Ocr.OcrScorer.Score(IReadOnlyList`1 goldenSegments, IReadOnlyList`1 ocrLines) in D:\Project\vietsubps5\engine\src\Engine\Ocr\OcrScorer.cs:line 27
+   at Engine.Tests.OcrScorerTests.Score(String[] golden, String[] ocr) in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 7
+   at Engine.Tests.OcrScorerTests.MatchMustStartOnWordBoundary_RoomVsBoardroom_NoMatch() in D:\Project\vietsubps5\engine\tests\Engine.Tests\OcrScorerTests.cs:line 32
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(w: 1920, h: 0) [1 ms]
+  Error Message:
+   Assert.Throws() Failure: Exception type was not an exact match
+Expected: typeof(System.ArgumentException)
+Actual:   typeof(System.NotImplementedException)
+---- System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Tests.NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(Int32 w, Int32 h) in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 53
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+----- Inner Stack Trace -----
+   at Engine.Geometry.Normalizer.Normalize(Box boxPx, ContentRect contentRect) in D:\Project\vietsubps5\engine\src\Engine\Geometry\Normalizer.cs:line 10
+   at Engine.Tests.NormalizerTests.<>c__DisplayClass3_0.<EmptyRect_ThrowsWithMessage_NoDivideByZero>b__0() in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 54
+  Failed Engine.Tests.NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(w: 0, h: 1080) [< 1 ms]
+  Error Message:
+   Assert.Throws() Failure: Exception type was not an exact match
+[xUnit.net 00:00:00.16]     Engine.Tests.ContentRectDetectorTests.AllBlack_ReturnsWholeImage_NotConfident [FAIL]
+[xUnit.net 00:00:00.19]     Engine.Tests.ContentRectDetectorTests.Pillarbox_LeftAndRightBlack_DetectsContent [FAIL]
+[xUnit.net 00:00:00.22]     Engine.Tests.ContentRectDetectorTests.ContentNotSixteenByNine_ReturnsRealRect_NotConfident 
+[FAIL]
+[xUnit.net 00:00:00.25]     
+Engine.Tests.ContentRectDetectorTests.DarkContentEdge_WithScatteredBrightDetail_IsNotCropped [FAIL]
+Expected: typeof(System.ArgumentException)
+Actual:   typeof(System.NotImplementedException)
+---- System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Tests.NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(Int32 w, Int32 h) in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 53
+   at InvokeStub_NormalizerTests.EmptyRect_ThrowsWithMessage_NoDivideByZero(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+----- Inner Stack Trace -----
+   at Engine.Geometry.Normalizer.Normalize(Box boxPx, ContentRect contentRect) in D:\Project\vietsubps5\engine\src\Engine\Geometry\Normalizer.cs:line 10
+   at Engine.Tests.NormalizerTests.<>c__DisplayClass3_0.<EmptyRect_ThrowsWithMessage_NoDivideByZero>b__0() in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 54
+  Failed Engine.Tests.NormalizerTests.Center_BoxMapsToExpectedFractions [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.Normalizer.Normalize(Box boxPx, ContentRect contentRect) in D:\Project\vietsubps5\engine\src\Engine\Geometry\Normalizer.cs:line 10
+   at Engine.Tests.NormalizerTests.Center_BoxMapsToExpectedFractions() in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 10
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.NormalizerTests.RectWithOffset_SubtractsOriginBeforeDividing [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.Normalizer.Normalize(Box boxPx, ContentRect contentRect) in D:\Project\vietsubps5\engine\src\Engine\Geometry\Normalizer.cs:line 10
+   at Engine.Tests.NormalizerTests.RectWithOffset_SubtractsOriginBeforeDividing() in D:\Project\vietsubps5\engine\tests\Engine.Tests\NormalizerTests.cs:line 20
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.NoBorder_ReturnsWholeImage_Confident [31 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.ContentRectDetector.Detect(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride) in D:\Project\vietsubps5\engine\src\Engine\Geometry\ContentRectDetector.cs:line 18
+   at Engine.Tests.ContentRectDetectorTests.NoBorder_ReturnsWholeImage_Confident() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 37
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.28]     Engine.Tests.ContentRectDetectorTests.Letterbox_TopAndBottomBlack_DetectsContent [FAIL]
+  Failed Engine.Tests.ContentRectDetectorTests.AllBlack_ReturnsWholeImage_NotConfident [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.ContentRectDetector.Detect(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride) in D:\Project\vietsubps5\engine\src\Engine\Geometry\ContentRectDetector.cs:line 18
+   at Engine.Tests.ContentRectDetectorTests.AllBlack_ReturnsWholeImage_NotConfident() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 83
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.Pillarbox_LeftAndRightBlack_DetectsContent [31 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.ContentRectDetector.Detect(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride) in D:\Project\vietsubps5\engine\src\Engine\Geometry\ContentRectDetector.cs:line 18
+   at Engine.Tests.ContentRectDetectorTests.Pillarbox_LeftAndRightBlack_DetectsContent() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 55
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.ContentNotSixteenByNine_ReturnsRealRect_NotConfident [22 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.ContentRectDetector.Detect(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride) in D:\Project\vietsubps5\engine\src\Engine\Geometry\ContentRectDetector.cs:line 18
+   at Engine.Tests.ContentRectDetectorTests.ContentNotSixteenByNine_ReturnsRealRect_NotConfident() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 92
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.DarkContentEdge_WithScatteredBrightDetail_IsNotCropped [28 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.ContentRectDetector.Detect(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride) in D:\Project\vietsubps5\engine\src\Engine\Geometry\ContentRectDetector.cs:line 18
+   at Engine.Tests.ContentRectDetectorTests.DarkContentEdge_WithScatteredBrightDetail_IsNotCropped() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 74
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ContentRectDetectorTests.Letterbox_TopAndBottomBlack_DetectsContent [31 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Geometry.ContentRectDetector.Detect(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride) in D:\Project\vietsubps5\engine\src\Engine\Geometry\ContentRectDetector.cs:line 18
+   at Engine.Tests.ContentRectDetectorTests.Letterbox_TopAndBottomBlack_DetectsContent() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ContentRectDetectorTests.cs:line 46
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:    21, Passed:     0, Skipped:     0, Total:    21, Duration: 146 ms - Engine.Tests.dll (net10.0)

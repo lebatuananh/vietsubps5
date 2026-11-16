@@ -1,0 +1,19 @@
+VietSub-261114-SA SA gate Epic 1 Phase 1 (resume, delta only)
+
+Task: independent review (SA gate) of the Phase doc the Leader just wrote, per section 5 of your handbook workflow/roles/ba-sa.md. Read-only except your report.
+
+Read:
+* project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase1.md (the Phase doc under review)
+* project-docs/261114-fc26-vietsub-overlay/261114-epic1.md and 261114-overview.md (new)
+* 261114-draft.md sections 3 to 8 (updated after the User approved the package: quote ok ban cu lam tiep nhe, 2026-11-15)
+* your own discovery report (Round 2 is the approved basis)
+
+Context delta since round 2: User approved everything you proposed in R2 (stack changes, Claude Sonnet 5.5 with a 100000 chars/day cap, the NOT-doing list R2.6, the corner-marker APK before slice 1). Phases were renumbered: your lot 0 = Phase 1 (this doc), lot 0.5 mockup = Phase 2, lot 1 Inbox = Phase 3. Branch features/261114-fc26-vietsub-overlay exists (commit 8101fc7). Leader probe: OCR en-US present, only .NET SDK 8.0.121, laptop, Windows build 26100.
+
+Check the six criteria of your handbook section 5: 1 matches the approved direction (no scope creep beyond lot 0) · 2 matches the real repo now (no code exists; check every path, command and name the doc relies on, e.g. TFM, Android manifest items, FGS type specialUse requirements, ACTION_MANAGE_OVERLAY_PERMISSION on TV, leanback launcher, WGC interop) · 3 enough for Dev without guessing · 4 enough for smoke (steps, data, cleanup decision, Reviewer rerun decided) · 5 CLAUDE.md hard constraints and risk gates (especially: Dev must never touch the real TV; no PSN; no paid calls) · 6 experience: the test APK main screen is declared a diagnostic tool, not product UI, and has no mockup. Judge whether that exemption is acceptable.
+
+BLOCKER only if one of these three (copied verbatim from the handbook): (1) causes repeated paid calls or wrong money grants (paid double call, granted twice, charged without granting); (2) loss or wrong deletion of data; (3) spec missing to the point that Dev has to guess. Plus any violation of the hard constraints (Rang buoc dac thu) in CLAUDE.md. Everything else is a NOTE.
+
+Output: write project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-sa-review.md using the handbook format (Verdict PASS or BLOCKER (n), Finding table with evidence, Muc mo). Vietnamese prose, identifiers in English. The FIRST line of the file must be exactly SA-GATE IN PROGRESS while working and exactly SA-GATE DONE when finished; put the verdict on the next lines.
+
+Open question (answer even if the doc looks fine): What important thing does this Phase doc NOT say? Which concept is merged or named wrong? Is any step in the wrong order, or is a basic assumption wrong?

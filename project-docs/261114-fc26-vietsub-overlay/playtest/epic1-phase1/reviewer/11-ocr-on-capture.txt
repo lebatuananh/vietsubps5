@@ -1,0 +1,13 @@
+LABEL: OCR on reviewer's own WGC capture (cap-A, from ffplay window) - synthetic, NOT R-D
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] frame-001.png 1920x1200 scaleApplied=1 content=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True lines=16 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-capA\frame-001.ocr.json
+[ocr] frame-002.png 1920x1200 scaleApplied=1 content=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True lines=16 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-capA\frame-002.ocr.json
+[ocr] frame-003.png 1920x1200 scaleApplied=1 content=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True lines=16 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-capA\frame-003.ocr.json
+exit=0
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] frame-001: đoạn 16/16 (a)=100,0% · từ 34/54 (b)=63,0%
+[score] bỏ qua frame-002: không có frame-002.golden.json
+[score] bỏ qua frame-003: không có frame-003.golden.json
+[score] TỔNG 1 ảnh: đoạn 16/16 (a)=100,0% · từ 34/54 (b)=63,0%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+exit=0

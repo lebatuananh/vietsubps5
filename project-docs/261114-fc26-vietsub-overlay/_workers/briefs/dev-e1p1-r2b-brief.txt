@@ -1,0 +1,21 @@
+VietSub-261114-Dev turn 2b (resume, delta only)
+
+Turn 2a (engine/) is closed: Reviewer PASS after your fix round. Leader added Rev 2.5 rows in the Decisions section (Buoc 7 rules only, nothing for you to change in engine/).
+
+Now CODE turn 2b = Phase doc Buoc 4 and Buoc 5 only (tv-overlay/), following every BINDING row in the section Quyet dinh sau phan hoi Dev (G9 to G11, 1.2 #6, #7, #8, N4 to N7, N16, N17, N20, N21, Gradle wrapper G10 / N8). Do not touch engine/ except nothing; do not edit CLAUDE.md or automation/README.md (Leader does Buoc 8).
+* TDD Stub -> Red -> Green for the normalized-to-pixel mapper (JUnit, 3 cases from the doc table).
+* Build: gradle wrapper from the official distribution downloaded OUTSIDE the repo (scratchpad probe dir), verify its published SHA-256, commit-ready wrapper files only. JAVA_HOME = C:\Program Files\Android\Android Studio\jbr, ANDROID_HOME = %LOCALAPPDATA%\Android\Sdk, set inside your shell process only. Pick Gradle/AGP/Kotlin from the official compatibility matrices for JDK 25 (cite the URLs in README). If no combination works with JBR 25: stop and report; do not install another JDK. Installing platforms;android-36 is allowed if a dependency truly needs it (call sdkmanager via cmd /c with the package name in double quotes - see automation/README.md trap).
+* Emulator smoke = Blackbox steps 6 to 11: create AVD vietsub_dev from system-images;android-31;google-tv;x86 (avdmanager via cmd /c, quoted), start it DETACHED per workflow/guidelines/blackbox-android-adb.md section 7 on port 5556, always adb -s emulator-5556, three uiautomator dumps (1.2 #6), overlay_on true via am start (debug only), screencap with Bash tool or shell screencap + pull (NOT PowerShell >), auto_off_ms check, hasGlyph log, no-key-eating check, then stop the emulator process tree you started and confirm adb devices is clean.
+* Evidence under project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ with names prefixed 2b-.
+* Long first builds: run them in the background and log to a file; do not let a tool call hang.
+
+Report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-2b.md . FIRST line DEV-2B IN PROGRESS while working (write early, update as you go), exactly DEV-2B DONE when finished. Content: files built, dependency versions + licenses, test counts red/green, smoke per step with evidence paths and screenshots you looked at, section Chua chung minh duoc, deviations with reasons, git status --short at the end.
+
+NOT YOURS - do not touch:
+* Real TV, PS5, any LAN IP, adb connect: never. Only emulator-5556 that YOU started; stop only its process tree (PIDs you recorded).
+* Windows you did not start; PS Remote Play: never.
+* Git: read-only commands only.
+* Docs other than tv-overlay/README.md and your report: do not edit.
+* Credentials: none. Do not sign with any keystore other than the default debug keystore.
+
+Open question: which Leader decision for 2b turned out wrong in practice, and what will only the real Sony TV prove?

@@ -13,6 +13,8 @@
 # `.env` của module COMMIT có chủ ý (trong repo module) — chỉ chặn bản ghi đè riêng máy.
 .env.local
 .env.*.local
+# Cấu hình riêng máy (vd engine.local.json) — CLAUDE.md mục Môi trường
+*.local.json
 *.pem
 *.key
 
@@ -27,6 +29,9 @@ obj/
 TestResults/
 .vs/
 *.user
+
+# --- Fixture lớn / riêng tư (F3 video, F4 ảnh TV phòng nhà User) — không commit ---
+engine/tests/fixtures/**/_local/
 
 # --- Logs ---
 *.log

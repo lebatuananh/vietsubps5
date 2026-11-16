@@ -1,0 +1,42 @@
+LABEL: reviewer-own synthetic, NOT FC 26 / NOT R-D
+=== NB2 dark screen (same rv-dark-edge.png as review 2a)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] rv-dark-edge.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=4 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-ocr-dark\rv-dark-edge.ocr.json
+exit=0
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] rv-dark-edge: đoạn 4/4 (a)=100,0% · từ 18/18 (b)=100,0%
+[score] TỔNG 1 ảnh: đoạn 4/4 (a)=100,0% · từ 18/18 (b)=100,0%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+exit=0
+=== NB2 regression probes
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] re-p1-pillar43-symmetric.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=False lines=2 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-ocr-probes\re-p1-pillar43-symmetric.ocr.json
+[ocr] re-p2-pillar-asymmetric.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=2 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-ocr-probes\re-p2-pillar-asymmetric.ocr.json
+[ocr] re-p3-letterbox-noisybars.png 1920x1200 scaleApplied=1 content=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True lines=2 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-ocr-probes\re-p3-letterbox-noisybars.ocr.json
+[ocr] re-p4-dark-centred-fullheight.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=3 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-ocr-probes\re-p4-dark-centred-fullheight.ocr.json
+exit=0
+=== NB3 duplicate demo (same inputs as review 2a)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] dup: đoạn 5/6 (a)=83,3% · từ 7/8 (b)=87,5%
+    KHÔNG KHỚP: "Board"  ⇐ dòng OCR gần nhất: "Board"
+[score] TỔNG 1 ảnh: đoạn 5/6 (a)=83,3% · từ 7/8 (b)=87,5%
+[score] ngưỡng tham khảo (a) ≥ 95%: KHÔNG ĐẠT
+exit=0
+=== full synthetic set x1 (regression of (a)/(b))
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] rv-dark-edge: đoạn 4/4 (a)=100,0% · từ 18/18 (b)=100,0%
+[score] rv-letterbox-messages: đoạn 16/16 (a)=100,0% · từ 54/54 (b)=100,0%
+[score] rv-pillar-email: đoạn 7/7 (a)=100,0% · từ 49/49 (b)=100,0%
+[score] TỔNG 3 ảnh: đoạn 27/27 (a)=100,0% · từ 121/121 (b)=100,0%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+exit=0
+=== NB7
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (1): --hwnd không hợp lệ: 'zz12' (mong đợi số hoặc 0xHEX).
+exit=1
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (1): Thư mục --ocr không tồn tại: project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/does-not-exist
+exit=1
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (1): Thư mục --golden không tồn tại: project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/does-not-exist
+exit=1

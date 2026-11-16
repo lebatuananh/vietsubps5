@@ -1,0 +1,12 @@
+List of devices attached
+emulator-5556	device
+
+12
+31
+AOSP TV on x86
+Performing Streamed Install
+Success
+    versionCode=1 minSdk=29 targetSdk=35
+    versionName=0.1.0-phase1
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.FOREGROUND_SERVICE_SPECIAL_USE

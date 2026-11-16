@@ -1,0 +1,13 @@
+VietSub-261114-Reviewer re-review after fix round 2b (resume, delta only)
+
+Dev fixed your blocking B1, B2 and notes N1, N2: report project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-fix2b.md (adds a ScrollView, declared as a deviation). Re-review ONLY the delta:
+* B1, B2, N1, N2: verified at file:line, plus the regression risk of each fix (pending-state logic across process death, EmptyStub detection by class name, ScrollView vs D-pad focus, StateListDrawable on API 29).
+* Rerun on YOUR emulator (emulator-5558, your AVD vietsub_rv, detached, stop your tree after): reset permissions, then ONLY input keyevent for the buttons: press battery button => fallback hint visible; overlay button => settings opens, BACK => overlay fallback hint naming the VietSub line; focused button visibly highlighted after a D-pad key. Screenshots prefixed re2b- in playtest/epic1-phase1/reviewer/.
+* gradlew testDebugUnitTest (6/6) and assembleDebug 0 warnings.
+* Dev open questions 1 to 6 (remote-only UX): classify each as acceptable for a diagnostic APK (Phase 1) or must-fix now. Leader intends to carry them into the Phase 2 product mockup.
+
+Append a section Re-review fix 2b to project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-review-2b.md . FIRST line REVIEW-RE2B IN PROGRESS while working, exactly REVIEW-RE2B DONE when finished; new verdict PASS or FAIL right after the section title.
+
+NOT YOURS: unchanged (no TV/PS5/LAN/adb connect; only emulator-5558 you start; never emulator-5556; git read-only; no code/doc edits except your report and evidence).
+
+Open question: is the diagnostic APK now safe and usable enough for the User to install on the real TV with remote only?

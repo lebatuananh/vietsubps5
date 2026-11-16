@@ -1,0 +1,4 @@
+LABEL: display scale check from a PerMonitorV2 process (python ctypes)
+GetDpiForSystem 96 screen 2880 1800
+HKCU WindowMetrics AppliedDPI (registry, may be stale): 144
+Maximized own window work area (05-smoke-capture.txt case E): WGC 2880x1752 => taskbar 48 px physical => 100% scale

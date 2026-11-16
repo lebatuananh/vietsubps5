@@ -1,0 +1,18 @@
+--------- beginning of main
+11-16 08:19:43.723  4656  4656 I VietSubOverlay: overlay bật; tự tắt sau 1800000 ms
+11-16 08:19:43.732  4656  4656 I VietSubGlyph: range U+1EA0-U+1EF9: total=90 ok=90 missing=0 []
+11-16 08:19:43.735  4656  4656 I VietSubGlyph: sample string missing glyphs: []
+11-16 08:19:43.804  4656  4656 I VietSubGlyph: control (CJK, expect false): {日=true, 한=true}
+  * ServiceRecord{b77d142 u0 vn.vietsub.ps5.tv/.OverlayService}
+    isForeground=true foregroundId=1 foregroundNoti=Notification(channel=overlay shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)
+    mOwnerUid=10087 showForAllUsers=false package=vn.vietsub.ps5.tv appop=SYSTEM_ALERT_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=shortEdges ty=APPLICATION_OVERLAY fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCHABLE LAYOUT_IN_SCREEN LAYOUT_NO_LIMITS HARDWARE_ACCELERATED
+      pfl=USE_BLAST
+      bhv=DEFAULT
+--
+    mOwnerUid=10077 showForAllUsers=true package=com.android.systemui appop=SYSTEM_ALERT_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=APPLICATION_OVERLAY fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE HARDWARE_ACCELERATED
+      pfl=SHOW_FOR_ALL_USERS NO_MOVE_ANIMATION USE_BLAST FIT_INSETS_CONTROLLED INTERCEPT_GLOBAL_DRAG_AND_DROP
+      bhv=DEFAULT}

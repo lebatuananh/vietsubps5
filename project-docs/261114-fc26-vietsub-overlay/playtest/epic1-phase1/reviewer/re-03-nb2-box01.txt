@@ -1,0 +1,10 @@
+contentRect {'x': 0, 'y': 0, 'width': 1920, 'height': 1080} confident True fallback client
+Squad Morale                   box01=(0.1568,0.1370) truth=(0.1568,0.1370) d=0.0000
+Team chemistry is improving af box01=(0.1562,0.2463) truth=(0.1562,0.2463) d=0.0000
+Two senior players are unhappy box01=(0.1562,0.3389) truth=(0.1562,0.3389) d=0.0000
+Back                           box01=(0.1573,0.6537) truth=(0.1573,0.6537) d=0.0000
+WORST box01 error = 0 (review 2a: 0.312)
+re-p1-pillar43-symmetric.png {'x': 0, 'y': 0, 'width': 1920, 'height': 1080} False None
+re-p2-pillar-asymmetric.png {'x': 0, 'y': 0, 'width': 1920, 'height': 1080} True client
+re-p3-letterbox-noisybars.png {'x': 0, 'y': 60, 'width': 1920, 'height': 1080} True None
+re-p4-dark-centred-fullheight.png {'x': 0, 'y': 0, 'width': 1920, 'height': 1080} True client

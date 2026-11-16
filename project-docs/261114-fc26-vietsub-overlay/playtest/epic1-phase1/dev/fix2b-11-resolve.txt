@@ -1,0 +1,6 @@
+== resolve battery intent
+priority=1 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=true
+com.android.tv.settings/.EmptyStubActivity
+== resolve overlay intent
+priority=1 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=true
+com.android.tv.settings/.device.apps.specialaccess.SystemAlertActivity

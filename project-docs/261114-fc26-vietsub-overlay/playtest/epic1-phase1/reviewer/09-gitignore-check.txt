@@ -1,0 +1,53 @@
+=== git ls-files --others --exclude-standard engine
+engine/Engine.slnx
+engine/README.md
+engine/src/Engine/Capture/NativeMethods.cs
+engine/src/Engine/Capture/WindowCapturer.cs
+engine/src/Engine/Capture/WindowFinder.cs
+engine/src/Engine/Cli.cs
+engine/src/Engine/Commands.cs
+engine/src/Engine/Engine.csproj
+engine/src/Engine/Geometry/ContentRectDetector.cs
+engine/src/Engine/Geometry/Geometry.cs
+engine/src/Engine/Geometry/Normalizer.cs
+engine/src/Engine/ImageIo.cs
+engine/src/Engine/Ocr/OcrRunner.cs
+engine/src/Engine/Ocr/OcrScorer.cs
+engine/src/Engine/Program.cs
+engine/tests/Engine.Tests/ContentRectDetectorTests.cs
+engine/tests/Engine.Tests/Engine.Tests.csproj
+engine/tests/Engine.Tests/GlobalUsings.cs
+engine/tests/Engine.Tests/NormalizerTests.cs
+engine/tests/Engine.Tests/OcrScorerTests.cs
+engine/tests/fixtures/fc26/inbox/f1-remoteplay/.gitkeep
+engine/tests/fixtures/fc26/inbox/f2-ps5/.gitkeep
+engine/tests/fixtures/fc26/inbox/f3-frames/.gitkeep
+engine/tests/fixtures/fc26/inbox/golden/.gitkeep
+=== check-ignore
+.gitignore:27:bin/	engine/src/Engine/bin
+.gitignore:28:obj/	engine/src/Engine/obj
+.gitignore:27:bin/	engine/tests/Engine.Tests/bin
+.gitignore:34:engine/tests/fixtures/**/_local/	engine/tests/fixtures/fc26/inbox/_local/f3-video
+.gitignore:17:*.local.json	engine/x.local.json
+project-docs/.gitignore:27:*/playtest/**/*.py	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/tools/make_synth.py
+project-docs/.gitignore:25:*/playtest/**/*.ps1	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/smoke34.ps1
+=== ls _local
+total 4
+drwxr-xr-x 1 lebatuananh 197121 0 Nov 15 12:59 ./
+drwxr-xr-x 1 lebatuananh 197121 0 Nov 15 12:59 ../
+drwxr-xr-x 1 lebatuananh 197121 0 Nov 15 12:59 f3-video/
+drwxr-xr-x 1 lebatuananh 197121 0 Nov 15 12:59 f4-tv-photo/
+=== playtest sizes (would be committed)
+424	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-E/frame-001.png
+212	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap-w2-mp4-renderer-sw/frame-001.png
+140	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/06-maximized-half.png
+116	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/08-box-check-x2.png
+112	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/synthetic/synth-inbox-list.png
+108	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap/frame-003.png
+108	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap/frame-002.png
+108	project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap/frame-001.png
+3147	total
+=== root gitignore bin/obj lines
+27:bin/
+28:obj/
+29:TestResults/

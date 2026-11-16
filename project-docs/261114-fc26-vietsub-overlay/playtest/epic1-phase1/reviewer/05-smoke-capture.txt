@@ -1,0 +1,99 @@
+﻿=== A: smoke 3 - ffplay software renderer, reviewer letterbox image 1920x1200, --frames 3
+ffplay started PID=29672 HWND=0x170CCE title=RvwCapA windowRect=1936x1239 env=SDL_RENDER_DRIVER=software
+--- engine [A] exit=0 elapsed=2.2s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x170CCE "RvwCapA" 1936x1239
+    [capture] frames=3 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-A
+    [capture] frame-001.png: 1920x1200 (WGC 1922x1232, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1200 }) meanLuma=45,5
+    [capture] frame-002.png: 1920x1200 (WGC 1922x1232, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1200 }) meanLuma=45,5
+    [capture] frame-003.png: 1920x1200 (WGC 1922x1232, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1200 }) meanLuma=45,5
+    [capture] contentRect=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-A\capture.json
+ffplay PID=29672 stopped
+=== B: non-16:9 window 1200x1000 showing a 2000x1080 pillarboxed image (ffplay adds its own bars)
+ffplay started PID=24804 HWND=0x170CF4 title=RvwCapB windowRect=1216x1039 env=SDL_RENDER_DRIVER=software
+--- engine [B] exit=0 elapsed=1.1s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x170CF4 "RvwCapB" 1216x1039
+    [capture] frames=1 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-B
+    [capture] frame-001.png: 1200x1000 (WGC 1202x1032, client trong khung ContentRect { X = 1, Y = 31, Width = 1200, Height = 1000 }) meanLuma=19,5
+    [capture] contentRect=ContentRect { X = 24, Y = 176, Width = 1152, Height = 648 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-B\capture.json
+ffplay PID=24804 stopped
+=== C: moving source (lavfi testsrc2 + running timestamp), --frames 3 --interval-ms 700
+ffplay started PID=31168 HWND=0x180CF4 title=RvwCapC windowRect=1296x759 env=SDL_RENDER_DRIVER=software
+--- engine [C] exit=0 elapsed=2.6s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x180CF4 "RvwCapC" 1296x759
+    [capture] frames=3 interval=700ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-C
+    [capture] frame-001.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=127,0
+    [capture] frame-002.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=126,6
+    [capture] frame-003.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=126,6
+    [capture] contentRect=ContentRect { X = 0, Y = 0, Width = 1280, Height = 720 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-C\capture.json
+ffplay PID=31168 stopped
+=== D: window GROWS mid-capture (960x540 -> 1700x1000 client-ish) --frames 3 --interval-ms 2500
+ffplay started PID=20988 HWND=0x190CF4 title=RvwCapD windowRect=976x579 env=SDL_RENDER_DRIVER=software
+    resized own window to 1716x1039 during capture
+--- engine [D] exit=0 elapsed=6.2s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x190CF4 "RvwCapD" 976x579
+    [capture] frames=3 interval=2500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-D
+    [capture] frame-001.png: 960x540 (WGC 962x572, client trong khung ContentRect { X = 1, Y = 31, Width = 960, Height = 540 }) meanLuma=126,5
+    [capture] frame-002.png: 960x540 (WGC 962x572, client trong khung ContentRect { X = 1, Y = 31, Width = 960, Height = 540 }) meanLuma=126,3
+    [capture] frame-003.png: 961x541 (WGC 962x572, client trong khung ContentRect { X = 1, Y = 31, Width = 961, Height = 541 }) meanLuma=131,0
+    [capture] contentRect=ContentRect { X = 0, Y = 0, Width = 960, Height = 540 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-D\capture.json
+ffplay PID=20988 stopped
+=== E: MAXIMIZED own window
+ffplay started PID=24956 HWND=0x1A0CF4 title=RvwCapE windowRect=1296x759 env=SDL_RENDER_DRIVER=software
+    maximized windowRect=(-8,-8)-(2888,1760)
+--- engine [E] exit=0 elapsed=1.4s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x1A0CF4 "RvwCapE" 2896x1768
+    [capture] frames=1 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-E
+    [capture] frame-001.png: 2880x1729 (WGC 2880x1752, client trong khung ContentRect { X = 0, Y = 23, Width = 2880, Height = 1729 }) meanLuma=119,2
+    [capture] contentRect=ContentRect { X = 0, Y = 54, Width = 2880, Height = 1620 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-E\capture.json
+ffplay PID=24956 stopped
+=== F: DPI-UNAWARE own window: WinForms in Windows PowerShell 5.1, ClientSize 1280x720 logical, display 150%
+form started PID=31760 HWND=0x290CE2
+--- engine [F] exit=0 elapsed=1.1s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x290CE2 "RvwCapF" 1296x759
+    [capture] frames=1 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-F
+    [capture] frame-001.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=41,0
+    [capture] contentRect=ContentRect { X = 64, Y = 36, Width = 1152, Height = 648 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-F\capture.json
+form PID=31760 stopped
+=== G: smoke 4 - minimize own window then capture
+ffplay started PID=26500 HWND=0x2402BA title=RvwCapG windowRect=2016x1119 env=SDL_RENDER_DRIVER=software
+--- engine [G] exit=3 elapsed=0.7s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x2402BA "RvwCapG" 237x39
+    [capture] frames=1 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/cap-G
+    [engine] LỖI (3): Cửa sổ đang thu nhỏ (minimized) — WGC không có khung mới. Mở lại cửa sổ: HWND=0x2402BA "RvwCapG" 237x39
+ffplay PID=26500 stopped
+=== H: error paths (no window needed)
+--- engine [H1-bad-hwnd] exit=-532462766 elapsed=1.2s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    Unhandled exception. System.FormatException: The input string 'zz12' was not in a correct format.
+       at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+       at System.Int64.Parse(String s, IFormatProvider provider)
+       at Engine.Commands.CaptureAsync(Args a, Boolean dpiOk) in D:\Project\vietsubps5\engine\src\Engine\Commands.cs:line 40
+       at Engine.Program.Main(String[] args) in D:\Project\vietsubps5\engine\src\Engine\Program.cs:line 36
+       at Engine.Program.<Main>(String[] args)
+--- engine [H2-ocrscore-missing-dir] exit=-532462766 elapsed=1.1s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    Unhandled exception. System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\vietsubps5\project-docs\261114-fc26-vietsub-overlay\playtest\epic1-phase1\reviewer\does-not-exist'.
+       at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+       at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+       at System.IO.Enumeration.FileSystemEnumerator`1..ctor(String directory, Boolean isNormalized, EnumerationOptions options, String expression)
+       at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized, String expression)
+       at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+       at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions enumerationOptions)
+       at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+       at Engine.Commands.OcrScoreAsync(Args a) in D:\Project\vietsubps5\engine\src\Engine\Commands.cs:line 131
+       at Engine.Program.Main(String[] args) in D:\Project\vietsubps5\engine\src\Engine\Program.cs:line 39
+       at Engine.Program.<Main>(String[] args)
+--- engine [H3-unknown-flag-no-value] exit=1 elapsed=0.7s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [engine] LỖI (1): Thiếu giá trị cho --window-title.
+--- engine [H4-ocr-missing-input] exit=1 elapsed=0.7s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [engine] LỖI (1): Thư mục --input không tồn tại: project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/does-not-exist
+=== done; remaining ffplay processes:

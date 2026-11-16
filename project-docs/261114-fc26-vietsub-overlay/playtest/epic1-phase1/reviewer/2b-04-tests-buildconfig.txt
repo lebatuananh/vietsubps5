@@ -1,0 +1,10 @@
+> Task :app:testDebugUnitTest
+BUILD SUCCESSFUL in 2s
+<testsuite name="vn.vietsub.ps5.tv.CoordinateMapperTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-16T01:30:38.763Z"
+<testsuite name="vn.vietsub.ps5.tv.FontCoverageTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-16T01:30:38.770Z"
+=== BuildConfig
+generated/source/buildConfig/debug/vn/vietsub/ps5/tv/BuildConfig.java:  public static final boolean DEBUG = Boolean.parseBoolean("true");
+generated/source/buildConfig/release/vn/vietsub/ps5/tv/BuildConfig.java:  public static final boolean DEBUG = false;
+=== apks
+-rw-r--r-- 1 lebatuananh 197121 7210283 Nov 16 08:23 outputs/apk/debug/app-debug.apk
+-rw-r--r-- 1 lebatuananh 197121 5821074 Nov 16 08:30 outputs/apk/release/app-release-unsigned.apk

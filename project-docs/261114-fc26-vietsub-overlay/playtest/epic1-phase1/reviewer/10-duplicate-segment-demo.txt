@@ -1,0 +1,6 @@
+LABEL: hand-made OCR lines; 2nd 'Board' is misread as 'B0ard' (zero). Shows (a) reuses one OCR line for duplicate golden segments.
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] dup: đoạn 6/6 (a)=100,0% · từ 6/8 (b)=75,0%
+[score] TỔNG 1 ảnh: đoạn 6/6 (a)=100,0% · từ 6/8 (b)=75,0%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+exit=0

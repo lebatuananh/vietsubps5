@@ -1,0 +1,11 @@
+VietSub-261114-SA SA gate Epic 1 Phase 1 - re-review of Rev 2 (resume, delta only)
+
+The Leader revised project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase1.md to Rev 2. The Revision line at the top lists what changed: B1 fixed (segment definition, ScoreOcr matching rule with substring over 1 to 3 adjacent OCR lines, word-level recall as secondary metric, 7 TDD cases) and ALL notes N1 to N21 applied, plus three items from your Muc mo (picture conditions recorded at the TV step, Step 7 not blocked by Q1, debug signing trap). Leader choice for N8: option (b), Dev generates the Gradle wrapper from the official Gradle distribution, JAVA_HOME and ANDROID_HOME set only inside the shell process.
+
+Review ONLY the delta (handbook section 5: the re-review must not open new categories of concern outside the delta). Check that each change actually closes your finding, is consistent with the rest of the doc, and did not introduce a contradiction or a new guess for Dev.
+
+Same BLOCKER rule, copied verbatim: BLOCKER only if (1) causes repeated paid calls or wrong money grants; (2) loss or wrong deletion of data; (3) spec missing to the point that Dev has to guess. Plus any violation of the hard constraints in CLAUDE.md. Everything else is a NOTE.
+
+Output: append a section titled Re-review Rev 2 to project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-sa-review.md with a table finding to status (closed / not closed + why) and the new verdict. Set the FIRST line of the file to exactly SA-GATE R2 IN PROGRESS while working and exactly SA-GATE R2 DONE when finished, and line 3 to the new verdict (PASS or BLOCKER (n)).
+
+Open question: did any Rev 2 change make something worse or create a new guess for Dev?

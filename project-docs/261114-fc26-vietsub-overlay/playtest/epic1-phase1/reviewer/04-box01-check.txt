@@ -1,0 +1,68 @@
+## x1
+== rv-letterbox-messages: engine contentRect=(0,60,1920,1080) confident=True truth=(0,60,1920,1080) variant=scale1
+   'MESSAGES                              ' ink=(60,93) ocr=(63,93) dpx=3  box01=(0.033,0.031) vs truth01=(0.033,0.031) d01=0.000
+   'Head of Recruitment                   ' ink=(70,226) ocr=(72,226) dpx=2  box01=(0.037,0.154) vs truth01=(0.037,0.154) d01=0.000
+   'Winger shortlist is ready to view     ' ink=(620,226) ocr=(620,226) dpx=0  box01=(0.323,0.154) vs truth01=(0.323,0.154) d01=0.000
+   'Mon 14 Jul                            ' ink=(1560,226) ocr=(1562,226) dpx=2  box01=(0.814,0.154) vs truth01=(0.814,0.154) d01=0.000
+   'Club Secretary                        ' ink=(70,376) ocr=(71,376) dpx=1  box01=(0.037,0.293) vs truth01=(0.037,0.293) d01=0.000
+   'Registration window closes Friday     ' ink=(620,376) ocr=(622,376) dpx=2  box01=(0.324,0.293) vs truth01=(0.324,0.293) d01=0.000
+   'Sun 13 Jul                            ' ink=(1560,376) ocr=(1561,376) dpx=1  box01=(0.813,0.293) vs truth01=(0.813,0.293) d01=0.000
+   'Assistant Manager                     ' ink=(69,526) ocr=(70,526) dpx=1  box01=(0.036,0.431) vs truth01=(0.036,0.431) d01=0.000
+   'Pre-season friendly confirmed vs Porto' ink=(620,526) ocr=(622,526) dpx=2  box01=(0.324,0.431) vs truth01=(0.324,0.431) d01=0.000
+   'Sat 12 Jul                            ' ink=(1560,526) ocr=(1561,526) dpx=1  box01=(0.813,0.431) vs truth01=(0.813,0.431) d01=0.000
+   'Finance Director                      ' ink=(70,676) ocr=(73,676) dpx=3  box01=(0.038,0.570) vs truth01=(0.038,0.570) d01=0.000
+   'Wage budget set at $310K per week     ' ink=(620,675) ocr=(620,675) dpx=0  box01=(0.323,0.569) vs truth01=(0.323,0.569) d01=0.000
+   'Thu 10 Jul                            ' ink=(1560,676) ocr=(1560,676) dpx=0  box01=(0.812,0.570) vs truth01=(0.812,0.570) d01=0.000
+   'Physio Department                     ' ink=(70,826) ocr=(72,826) dpx=2  box01=(0.037,0.709) vs truth01=(0.037,0.709) d01=0.000
+   'Midfielder returns to full training   ' ink=(620,826) ocr=(622,826) dpx=2  box01=(0.324,0.709) vs truth01=(0.324,0.709) d01=0.000
+   'Tue 8 Jul                             ' ink=(1560,826) ocr=(1560,826) dpx=0  box01=(0.812,0.709) vs truth01=(0.812,0.709) d01=0.000
+   WORST top-left px error=3  WORST box01 error vs true content rect=0.000
+== rv-pillar-email: engine contentRect=(40,0,1920,1080) confident=True truth=(40,0,1920,1080) variant=scale1
+   'Loan Recall Request                   ' ink=(120,89) ocr=(123,89) dpx=3  box01=(0.043,0.082) vs truth01=(0.043,0.082) d01=0.000
+   'From: Head of Recruitment             ' ink=(120,175) ocr=(122,175) dpx=2  box01=(0.043,0.162) vs truth01=(0.043,0.162) d01=0.000
+   'Boss,                                 ' ink=(120,266) ocr=(122,266) dpx=2  box01=(0.043,0.246) vs truth01=(0.043,0.246) d01=0.000
+   'The parent club wants their goalkeeper' ink=(120,326) ocr=(120,326) dpx=0  box01=(0.042,0.302) vs truth01=(0.042,0.302) d01=0.000
+   'They will cover 60% of his wages if we' ink=(120,386) ocr=(120,386) dpx=0  box01=(0.042,0.357) vs truth01=(0.042,0.357) d01=0.000
+   'Let me know if you would like to negot' ink=(120,446) ocr=(122,446) dpx=2  box01=(0.043,0.413) vs truth01=(0.043,0.413) d01=0.000
+   'Press X to reply, O to go back.       ' ink=(120,604) ocr=(121,604) dpx=1  box01=(0.042,0.559) vs truth01=(0.042,0.559) d01=0.000
+   WORST top-left px error=3  WORST box01 error vs true content rect=0.000
+== rv-dark-edge: engine contentRect=(300,148,705,578) confident=False truth=(0,0,1920,1080) variant=scale1
+   'Squad Morale                          ' ink=(300,148) ocr=(301,148) dpx=1  box01=(0.001,0.000) vs truth01=(0.157,0.137) d01=0.155
+   'Team chemistry is improving after thre' ink=(300,266) ocr=(300,266) dpx=0  box01=(0.000,0.204) vs truth01=(0.156,0.246) d01=0.156
+   'Two senior players are unhappy with pl' ink=(300,366) ocr=(300,366) dpx=0  box01=(0.000,0.377) vs truth01=(0.156,0.339) d01=0.156
+   'Back                                  ' ink=(300,706) ocr=(302,706) dpx=2  box01=(0.003,0.965) vs truth01=(0.157,0.654) d01=0.312
+   WORST top-left px error=2  WORST box01 error vs true content rect=0.312
+## x2
+== rv-letterbox-messages: engine contentRect=(0,60,1920,1080) confident=True truth=(0,60,1920,1080) variant=scale2
+   'MESSAGES                              ' ink=(60,93) ocr=(62,92) dpx=2  box01=(0.033,0.030) vs truth01=(0.033,0.030) d01=0.000
+   'Head of Recruitment                   ' ink=(70,226) ocr=(72,226) dpx=2  box01=(0.037,0.153) vs truth01=(0.037,0.153) d01=0.000
+   'Winger shortlist is ready to view     ' ink=(620,226) ocr=(620,226) dpx=0  box01=(0.323,0.153) vs truth01=(0.323,0.153) d01=0.000
+   'Mon 14 Jul                            ' ink=(1560,226) ocr=(1562,226) dpx=2  box01=(0.813,0.153) vs truth01=(0.813,0.153) d01=0.000
+   'Club Secretary                        ' ink=(70,376) ocr=(71,376) dpx=1  box01=(0.037,0.292) vs truth01=(0.037,0.292) d01=0.000
+   'Registration window closes Friday     ' ink=(620,376) ocr=(622,376) dpx=2  box01=(0.324,0.292) vs truth01=(0.324,0.292) d01=0.000
+   'Sun 13 Jul                            ' ink=(1560,376) ocr=(1560,376) dpx=0  box01=(0.813,0.292) vs truth01=(0.813,0.292) d01=0.000
+   'Assistant Manager                     ' ink=(69,526) ocr=(70,526) dpx=0  box01=(0.036,0.431) vs truth01=(0.036,0.431) d01=0.000
+   'Pre-season friendly confirmed vs Porto' ink=(620,526) ocr=(622,526) dpx=2  box01=(0.324,0.431) vs truth01=(0.324,0.431) d01=0.000
+   'Sat 12 Jul                            ' ink=(1560,526) ocr=(1560,526) dpx=0  box01=(0.813,0.431) vs truth01=(0.813,0.431) d01=0.000
+   'Finance Director                      ' ink=(70,676) ocr=(72,676) dpx=2  box01=(0.037,0.570) vs truth01=(0.037,0.570) d01=0.000
+   'Wage budget set at $310K per week     ' ink=(620,675) ocr=(620,674) dpx=0  box01=(0.323,0.569) vs truth01=(0.323,0.569) d01=0.000
+   'Thu 10 Jul                            ' ink=(1560,676) ocr=(1560,676) dpx=0  box01=(0.812,0.570) vs truth01=(0.812,0.570) d01=0.000
+   'Physio Department                     ' ink=(70,826) ocr=(72,826) dpx=2  box01=(0.037,0.709) vs truth01=(0.037,0.709) d01=0.000
+   'Midfielder returns to full training   ' ink=(620,826) ocr=(622,826) dpx=2  box01=(0.324,0.709) vs truth01=(0.324,0.709) d01=0.000
+   'Tue 8 Jul                             ' ink=(1560,826) ocr=(1560,826) dpx=0  box01=(0.812,0.709) vs truth01=(0.812,0.709) d01=0.000
+   WORST top-left px error=2  WORST box01 error vs true content rect=0.000
+== rv-pillar-email: engine contentRect=(40,0,1920,1080) confident=True truth=(40,0,1920,1080) variant=scale2
+   'Loan Recall Request                   ' ink=(120,89) ocr=(123,88) dpx=3  box01=(0.043,0.082) vs truth01=(0.043,0.082) d01=0.000
+   'From: Head of Recruitment             ' ink=(120,175) ocr=(122,174) dpx=2  box01=(0.042,0.162) vs truth01=(0.042,0.162) d01=0.000
+   'Boss,                                 ' ink=(120,266) ocr=(122,266) dpx=2  box01=(0.042,0.246) vs truth01=(0.042,0.246) d01=0.000
+   'The parent club wants their goalkeeper' ink=(120,326) ocr=(120,326) dpx=0  box01=(0.042,0.301) vs truth01=(0.042,0.301) d01=0.000
+   'They will cover 60% of his wages if we' ink=(120,386) ocr=(120,386) dpx=0  box01=(0.042,0.357) vs truth01=(0.042,0.357) d01=0.000
+   'Let me know if you would like to negot' ink=(120,446) ocr=(122,446) dpx=2  box01=(0.042,0.412) vs truth01=(0.042,0.412) d01=0.000
+   'Press X to reply, O to go back.       ' ink=(120,604) ocr=(120,604) dpx=0  box01=(0.042,0.559) vs truth01=(0.042,0.559) d01=0.000
+   WORST top-left px error=3  WORST box01 error vs true content rect=0.000
+== rv-dark-edge: engine contentRect=(300,148,705,578) confident=False truth=(0,0,1920,1080) variant=scale2
+   'Squad Morale                          ' ink=(300,148) ocr=(301,148) dpx=1  box01=(0.001,0.000) vs truth01=(0.157,0.137) d01=0.155
+   'Team chemistry is improving after thre' ink=(300,266) ocr=(300,266) dpx=0  box01=(0.000,0.203) vs truth01=(0.156,0.246) d01=0.156
+   'Two senior players are unhappy with pl' ink=(300,366) ocr=(300,366) dpx=0  box01=(0.000,0.376) vs truth01=(0.156,0.338) d01=0.156
+   'Back                                  ' ink=(300,706) ocr=(302,706) dpx=2  box01=(0.002,0.965) vs truth01=(0.157,0.653) d01=0.311
+   WORST top-left px error=2  WORST box01 error vs true content rect=0.311

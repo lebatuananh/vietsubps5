@@ -1,0 +1,6 @@
+-- t3
+focused=false TextView   'Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)' [96,419][1824,497]
+focused=true  Button     'TẮT LỚP PHỦ' [96,828][316,924]
+-- t9
+focused=false TextView   'Lớp phủ: ĐANG TẮT' [96,419][1824,497]
+focused=true  Button     'BẬT LỚP PHỦ' [96,828][318,924]

@@ -1,0 +1,10 @@
+== D. auto_off_ms=8000
+Starting: Intent { cmp=vn.vietsub.ps5.tv/.MainActivity (has extras) }
+Warning: Activity not started, its current task has been brought to the front
+t+3s services:
+1
+t+12s services:
+0
+11-16 08:22:07.679  5263  5263 I VietSubOverlay: overlay bật; tự tắt sau 8000 ms
+11-16 08:22:15.680  5263  5263 I VietSubOverlay: tự tắt sau hạn — gỡ cửa sổ + dừng service
+0

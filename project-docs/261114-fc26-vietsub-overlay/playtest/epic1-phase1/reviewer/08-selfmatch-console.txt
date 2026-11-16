@@ -1,0 +1,6 @@
+﻿conhost started PID=31364; NO window titled RvwSelfMatchZ exists other than the console running the command
+conhost PID=31364 exited
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [engine] LỖI (2): Không tìm thấy cửa sổ nhìn thấy nào có tiêu đề chứa "RvwSelfMatchZ".
+    exit=0  
+NOTE: 'exit=0' line above is cmd parse-time %ERRORLEVEL% expansion, not the engine exit code; engine printed LỖI (2). Self-match NOT reproduced (cmd /c in conhost).

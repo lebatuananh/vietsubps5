@@ -1,0 +1,45 @@
+﻿=== A: smoke 3 - ffplay software renderer, reviewer letterbox image 1920x1200, --frames 3
+ffplay started PID=28568 HWND=0xB901B8 title=RvwCapA windowRect=1936x1239 env=SDL_RENDER_DRIVER=software
+--- engine [A] exit=0 elapsed=2.7s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0xB901B8 "RvwCapA" 1936x1239
+    [capture] frames=3 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-A
+    [capture] frame-001.png: 1920x1200 (WGC 1922x1232, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1200 }) meanLuma=45,5
+    [capture] frame-002.png: 1920x1200 (WGC 1922x1232, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1200 }) meanLuma=45,5
+    [capture] frame-003.png: 1920x1200 (WGC 1922x1232, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1200 }) meanLuma=45,5
+    [capture] contentRect=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True fallback=none → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-A\capture.json
+ffplay PID=28568 stopped
+=== done; remaining ffplay processes:
+=== C: moving source (lavfi testsrc2 + running timestamp), --frames 3 --interval-ms 700
+ffplay started PID=16448 HWND=0x320CCA title=RvwCapC windowRect=1296x759 env=SDL_RENDER_DRIVER=software
+--- engine [C] exit=0 elapsed=2.6s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x320CCA "RvwCapC" 1296x759
+    [capture] frames=3 interval=700ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-C
+    [capture] frame-001.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=127,0
+    [capture] frame-002.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=126,6
+    [capture] frame-003.png: 1280x720 (WGC 1282x752, client trong khung ContentRect { X = 1, Y = 31, Width = 1280, Height = 720 }) meanLuma=126,3
+    [capture] contentRect=ContentRect { X = 0, Y = 0, Width = 1280, Height = 720 } confident=True fallback=none → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-C\capture.json
+ffplay PID=16448 stopped
+=== done; remaining ffplay processes:
+=== D: window GROWS mid-capture (960x540 -> 1700x1000 client-ish) --frames 3 --interval-ms 2500
+ffplay started PID=27908 HWND=0x2C0CD8 title=RvwCapD windowRect=976x579 env=SDL_RENDER_DRIVER=software
+    resized own window to 1716x1039 during capture
+--- engine [D] exit=6 elapsed=6.1s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x2C0CD8 "RvwCapD" 976x579
+    [capture] frames=3 interval=2500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-D
+    [engine] LỖI (6): Cửa sổ đổi kích thước giữa lúc chụp (khung 1702x1032, pool 962x572). Không đổi cỡ/ phóng to cửa sổ khi đang chụp; chạy lại.
+ffplay PID=27908 stopped
+=== done; remaining ffplay processes:
+=== E: MAXIMIZED own window
+ffplay started PID=27476 HWND=0x3A0C4E title=RvwCapE windowRect=1296x759 env=SDL_RENDER_DRIVER=software
+    maximized windowRect=(-8,-8)-(2888,1760)
+--- engine [E] exit=0 elapsed=1.4s
+    [engine] DPI PerMonitorV2: set=True hiệu lực=True
+    [capture] cửa sổ: HWND=0x3A0C4E "RvwCapE" 2896x1768
+    [capture] frames=1 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-E
+    [capture] frame-001.png: 2880x1729 (WGC 2880x1752, client trong khung ContentRect { X = 0, Y = 23, Width = 2880, Height = 1729 }) meanLuma=119,2
+    [capture] contentRect=ContentRect { X = 0, Y = 54, Width = 2880, Height = 1620 } confident=True fallback=none → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/re-cap-E\capture.json
+ffplay PID=27476 stopped
+=== done; remaining ffplay processes:

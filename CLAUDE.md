@@ -23,7 +23,7 @@ File này là entry point — nó **trỏ tới** tài liệu chi tiết chứ k
 
 | | |
 |---|---|
-| **Sản phẩm** | **VietSub PS5** — dịch chữ tiếng Anh trong game PS5 sang tiếng Việt và **vẽ thẳng lên màn hình TV**, đè đúng chỗ chữ gốc, trông như game có sẵn tiếng Việt. Game đầu tiên: **EA SPORTS FC 26** (menu, Ultimate Team, mô tả cầu thủ, chiến thuật). Cơ chế: lấy bản sao hình game qua **Remote Play** (PS5 → máy xử lý trong LAN) ⇒ OCR ⇒ dịch (có glossary theo game) ⇒ gửi chữ + toạ độ qua LAN tới **app trên Google TV** vẽ lớp phủ trong suốt lên nguồn HDMI. **Hình game luôn đi thẳng HDMI PS5 → TV** |
+| **Sản phẩm** | **VietSub PS5** — dịch chữ tiếng Anh trong game PS5 sang tiếng Việt và **vẽ thẳng lên màn hình TV**, đè đúng chỗ chữ gốc, trông như game có sẵn tiếng Việt. Game đầu tiên: **EA SPORTS FC 26 — Career Mode, chơi offline** (Ultimate Team/online ngoài phạm vi hiện tại). Cơ chế: lấy bản sao hình game qua **Remote Play** (PS5 → máy xử lý trong LAN) ⇒ OCR ⇒ dịch (có glossary theo game) ⇒ gửi chữ + toạ độ qua LAN tới **app trên Google TV** vẽ lớp phủ trong suốt lên nguồn HDMI. **Hình game luôn đi thẳng HDMI PS5 → TV** |
 | **Người dùng** | User và gia đình chơi PS5 trên TV ở nhà; sau này có thể chia sẻ cho **anh em bạn bè** (phi thương mại) |
 | **Kênh phát hành** | APK cài tay (sideload) lên Google TV · lõi xử lý chạy trên máy tính Windows trong LAN (giai đoạn đầu) — **không** phát hành Play Store |
 | **Thiết bị thật** | TV **Sony 65" Google TV** · PS5 · máy tính Windows 11 — cả ba cùng mạng LAN nhà User |
@@ -73,13 +73,12 @@ Ngoài risk gate chung ([team-leader §5](workflow/roles/team-leader.md)), dự 
 | Nhánh chuẩn của module `main` + `dev` | Cả repo: `main` + `dev` |
 | "deploy môi trường dev" | Cài bản build lên **TV + máy tính thật** của User (không có server) |
 
-**Chưa có module nào.** Dự kiến (mở bằng đợt riêng khi tới lượt, **không** dựng sẵn):
+| Module | README | Vai trò | Chạy (từ root repo) |
+|---|---|---|---|
+| `engine/` | [README](engine/README.md) | Lõi Windows: chụp cửa sổ PS Remote Play (WGC) ⇒ OCR (`Windows.Media.Ocr`) ⇒ (Phase 3: dịch, gửi lên TV). C# **.NET 10** | `dotnet run --project engine/src/Engine -- <capture\|ocr\|ocr-score> …` · test `dotnet test engine` |
+| `tv-overlay/` | [README](tv-overlay/README.md) | App Google TV: lớp phủ trong suốt `TYPE_APPLICATION_OVERLAY` vẽ lên nguồn HDMI. Kotlin, AGP 9 / Gradle 9.1, `minSdk 29` | trong `tv-overlay/`: `gradlew :app:testDebugUnitTest`, `gradlew :app:assembleDebug` — cần `JAVA_HOME` = JBR của Android Studio, `ANDROID_HOME` = SDK (đặt trong tiến trình, xem `project-docs/automation/README.md`) |
 
-| Module (dự kiến) | Vai trò | Stack (chốt ở discovery) |
-|---|---|---|
-| `tv-overlay/` | App Google TV: nhận chữ + toạ độ qua LAN, vẽ lớp phủ trong suốt lên nguồn HDMI, màn hiệu chỉnh tỉ lệ | Android (Kotlin) |
-| `engine/` | Lõi xử lý: lấy khung hình Remote Play ⇒ OCR ⇒ dịch (glossary, cache) ⇒ gửi lên TV | Windows trước (chụp cửa sổ PS Remote Play chính thức) |
-| `mobile/` | Đưa lõi xử lý lên điện thoại để không cần bật máy tính (Remote Play bằng chiaki-ng — AGPL) | Android — đợt sau, chỉ khi lõi Windows đã ổn |
+**Chưa lên kế hoạch**: `mobile/` (lõi trên điện thoại — không đạt "không cần bật gì", discovery đợt 261114 §3.4).
 
 **README của module là nguồn chân lý của module đó** — nhưng **chỉ chứa thứ đọc code rồi chạy thẳng vẫn dễ vấp, và vấp thì tốn công đáng kể** (bẫy môi trường, build, runtime, quy ước code không tự nói ra). Không kế hoạch, không mô tả lại thứ đọc code là thấy. Code xong có đổi quy ước hoặc gặp bẫy mới thoả tiêu chí đó ⇒ cập nhật README ngay.
 

@@ -1,0 +1,251 @@
+{
+ "rv-letterbox-messages": [
+  {
+   "text": "MESSAGES",
+   "box": [
+    60,
+    93,
+    248,
+    32
+   ]
+  },
+  {
+   "text": "Head of Recruitment",
+   "box": [
+    70,
+    226,
+    312,
+    25
+   ]
+  },
+  {
+   "text": "Winger shortlist is ready to view",
+   "box": [
+    620,
+    226,
+    477,
+    32
+   ]
+  },
+  {
+   "text": "Mon 14 Jul",
+   "box": [
+    1560,
+    226,
+    148,
+    22
+   ]
+  },
+  {
+   "text": "Club Secretary",
+   "box": [
+    70,
+    376,
+    225,
+    32
+   ]
+  },
+  {
+   "text": "Registration window closes Friday",
+   "box": [
+    620,
+    376,
+    516,
+    32
+   ]
+  },
+  {
+   "text": "Sun 13 Jul",
+   "box": [
+    1560,
+    376,
+    143,
+    22
+   ]
+  },
+  {
+   "text": "Assistant Manager",
+   "box": [
+    69,
+    526,
+    283,
+    32
+   ]
+  },
+  {
+   "text": "Pre-season friendly confirmed vs Porto",
+   "box": [
+    620,
+    526,
+    584,
+    32
+   ]
+  },
+  {
+   "text": "Sat 12 Jul",
+   "box": [
+    1560,
+    526,
+    134,
+    22
+   ]
+  },
+  {
+   "text": "Finance Director",
+   "box": [
+    70,
+    676,
+    251,
+    25
+   ]
+  },
+  {
+   "text": "Wage budget set at $310K per week",
+   "box": [
+    620,
+    675,
+    548,
+    33
+   ]
+  },
+  {
+   "text": "Thu 10 Jul",
+   "box": [
+    1560,
+    676,
+    141,
+    22
+   ]
+  },
+  {
+   "text": "Physio Department",
+   "box": [
+    70,
+    826,
+    290,
+    32
+   ]
+  },
+  {
+   "text": "Midfielder returns to full training",
+   "box": [
+    620,
+    826,
+    473,
+    32
+   ]
+  },
+  {
+   "text": "Tue 8 Jul",
+   "box": [
+    1560,
+    826,
+    124,
+    22
+   ]
+  }
+ ],
+ "rv-pillar-email": [
+  {
+   "text": "Loan Recall Request",
+   "box": [
+    120,
+    89,
+    472,
+    45
+   ]
+  },
+  {
+   "text": "From: Head of Recruitment",
+   "box": [
+    120,
+    175,
+    311,
+    19
+   ]
+  },
+  {
+   "text": "Boss,",
+   "box": [
+    120,
+    266,
+    75,
+    26
+   ]
+  },
+  {
+   "text": "The parent club wants their goalkeeper back before the derby.",
+   "box": [
+    120,
+    326,
+    831,
+    28
+   ]
+  },
+  {
+   "text": "They will cover 60% of his wages if we agree by Thursday.",
+   "box": [
+    120,
+    386,
+    783,
+    28
+   ]
+  },
+  {
+   "text": "Let me know if you would like to negotiate (or decline).",
+   "box": [
+    120,
+    446,
+    727,
+    28
+   ]
+  },
+  {
+   "text": "Press X to reply, O to go back.",
+   "box": [
+    120,
+    604,
+    275,
+    19
+   ]
+  }
+ ],
+ "rv-dark-edge": [
+  {
+   "text": "Squad Morale",
+   "box": [
+    300,
+    148,
+    260,
+    37
+   ]
+  },
+  {
+   "text": "Team chemistry is improving after three wins",
+   "box": [
+    300,
+    266,
+    641,
+    29
+   ]
+  },
+  {
+   "text": "Two senior players are unhappy with playing time",
+   "box": [
+    300,
+    366,
+    707,
+    29
+   ]
+  },
+  {
+   "text": "Back",
+   "box": [
+    300,
+    706,
+    63,
+    20
+   ]
+  }
+ ]
+}

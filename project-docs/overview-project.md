@@ -6,4 +6,4 @@ Trạng thái: `OPEN` · `HANDED_OVER` (đã bàn giao, chờ dev/tester) · `CL
 
 | Đợt | Chủ đề | Nhánh | Repo bị đụng | Trạng thái | Overview |
 |---|---|---|---|---|---|
-| [261114](261114-fc26-vietsub-overlay/261114-draft.md) | Dịch FC 26 (Career Mode) lên TV | chưa tạo | (monorepo) | `OPEN` | chưa có |
+| [261114](261114-fc26-vietsub-overlay/261114-draft.md) | Dịch FC 26 (Career Mode) lên TV | `features/261114-fc26-vietsub-overlay` | (monorepo) | `OPEN` | chưa có |

@@ -1,0 +1,18 @@
+VietSub-261114-Dev fix round after review 2b (resume, delta only)
+
+Reviewer verdict on turn 2b: FAIL, 2 blocking (project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-review-2b.md). Both appear only when the buttons are pressed with remote keys, which your smoke did not do.
+
+Fix exactly:
+* B1: the battery-optimization intent resolves to com.android.tv.settings/.EmptyStubActivity on Google TV, which closes immediately, so no ActivityNotFoundException and the fallback hint never shows. Fix: after the user returns (onResume), if still not ignoring battery optimizations after a press => show the fallback hint (adb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv); also treat a resolved EmptyStubActivity as no screen. Apply the same "still not granted after returning" logic to the overlay-permission button (show the appops fallback).
+* B2: visible focus on all buttons (e.g. focused state = background #FFD400 with black text, unfocused = clearly different), must be visible after a D-pad key press.
+* N1: wrap wm.addView in try/catch (BadTokenException, SecurityException) => log + shutdown, no crash before startForeground.
+* N2: overlay-permission hint text tells the user to look for the line VietSub - lop phu kiem tra in the list.
+Nothing else.
+
+Verify on YOUR emulator (emulator-5556, detached start, stop your tree after): press each button with real input keyevent DPAD/ENTER (not appops/am start shortcuts) and capture screenshots proving (1) the battery fallback hint appears after pressing the battery button, (2) the focused button is visibly highlighted after a D-pad key. Rerun gradlew testDebugUnitTest + assembleDebug (0 warnings). Update tv-overlay/README.md for the new behaviour.
+
+Report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-fix2b.md . FIRST line DEV-FIX2B IN PROGRESS, exactly DEV-FIX2B DONE when finished. Per item: file:line changed, evidence paths (prefix fix2b- in playtest/epic1-phase1/dev/), test counts, git status --short.
+
+NOT YOURS: unchanged from turn 2b (no TV/PS5/LAN/adb connect; only emulator-5556 you start; never touch emulator-5558; git read-only; only tv-overlay/ code, its README and your report).
+
+Open question: anything else a real remote-only user would get stuck on in this app?

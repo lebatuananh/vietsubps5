@@ -1,0 +1,25 @@
+﻿LABEL: SYNTHETIC images (3), NOT R-D. (b) now multiset (Rev 2.3), (a) multiplicity-aware.
+=== ocr --scale 1
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] synth-dark.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=1 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ocr-fix-x1\synth-dark.ocr.json
+[ocr] synth-email.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=6 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ocr-fix-x1\synth-email.ocr.json
+[ocr] synth-inbox-list.png 1920x1080 scaleApplied=1 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=19 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ocr-fix-x1\synth-inbox-list.ocr.json
+=== ocr-score x1
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] synth-dark: đoạn 1/1 (a)=100,0% · từ 3/3 (b)=100,0%
+[score] synth-email: đoạn 6/6 (a)=100,0% · từ 30/30 (b)=100,0%
+[score] synth-inbox-list: đoạn 19/19 (a)=100,0% · từ 52/52 (b)=100,0%
+[score] TỔNG 3 ảnh: đoạn 26/26 (a)=100,0% · từ 85/85 (b)=100,0%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+=== ocr --scale 2
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] synth-dark.png 1920x1080 scaleApplied=2 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=1 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ocr-fix-x2\synth-dark.ocr.json
+[ocr] synth-email.png 1920x1080 scaleApplied=2 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=6 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ocr-fix-x2\synth-email.ocr.json
+[ocr] synth-inbox-list.png 1920x1080 scaleApplied=2 content=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True lines=19 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/ocr-fix-x2\synth-inbox-list.ocr.json
+=== ocr-score x2
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] synth-dark: đoạn 1/1 (a)=100,0% · từ 3/3 (b)=100,0%
+[score] synth-email: đoạn 6/6 (a)=100,0% · từ 30/30 (b)=100,0%
+[score] synth-inbox-list: đoạn 19/19 (a)=100,0% · từ 52/52 (b)=100,0%
+[score] TỔNG 3 ảnh: đoạn 26/26 (a)=100,0% · từ 85/85 (b)=100,0%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT

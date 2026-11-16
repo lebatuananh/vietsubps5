@@ -1,0 +1,74 @@
+=== 0. manifest facts (aapt2)
+package: vn.vietsub.ps5.tv
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_SPECIAL_USE'
+permission: vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+targetSdkVersion:'35'
+launchable-activity: name='vn.vietsub.ps5.tv.MainActivity'  label='' icon=''
+leanback-launchable-activity: name='vn.vietsub.ps5.tv.MainActivity'  label='' icon='' banner=''
+  uses-feature-not-required: name='android.software.leanback'
+INTERNET/POST_NOTIFICATIONS count: 0
+=== 7. install
+  Success
+=== 8a. dump 1 (no permission yet)
+  dump 2b-08a-dump1.xml: pkgs=['vn.vietsub.ps5.tv'] focused='CẤP QUYỀN HIỂN THỊ TRÊN ỨNG DỤNG KHÁC' Button [96,588][728,684] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']
+  screenshot 2b-08a-main-no-perm.png
+--- extra: press the focused GRANT button (DPAD_CENTER) — what opens on Google TV?
+  top after press: mResumedActivity: ActivityRecord{58999d6 u0 com.android.tv.settings/.device.apps.specialaccess.SystemAlertActivity t13}
+  screenshot 2b-08a-after-grant-press.png
+  dump 2b-08a-after-grant-press.xml: pkgs=['com.android.tv.settings'] focused='' LinearLayout [220,505][900,632] status=[]
+  top after BACK: mResumedActivity: ActivityRecord{cea09b8 u0 vn.vietsub.ps5.tv/.MainActivity t13}
+=== 8b. dump 2 (after appops allow + reopen)
+  dump 2b-08b-dump2.xml: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,708][330,804] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']
+--- extra: press the focused BATTERY button
+  top after press: mResumedActivity: ActivityRecord{386a2ec u0 vn.vietsub.ps5.tv/.MainActivity t14}
+  screenshot 2b-08b-after-battery-press.png
+  dump 2b-08b-after-battery-press.xml: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,708][330,804] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']
+=== 8c. dump 3 (after deviceidle whitelist + reopen)
+Added: vn.vietsub.ps5.tv
+  dump 2b-08c-dump3.xml: pkgs=['vn.vietsub.ps5.tv'] focused='BẬT LỚP PHỦ' Button [96,828][318,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG TẮT']
+  screenshot 2b-08c-main-all-granted.png
+=== 8d. overlay on deterministically (force-stop first), HOME, open Settings
+  services: 1  overlay windows: 1
+  screenshot 2b-08d-overlay-over-settings.png
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=shortEdges ty=APPLICATION_OVERLAY fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCHABLE LAYOUT_IN_SCREEN LAYOUT_NO_LIMITS HARDWARE_ACCELERATED
+      pfl=USE_BLAST
+    Requested w=1920 h=1080 mLayoutSeq=456
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+  * ServiceRecord{23316f8 u0 vn.vietsub.ps5.tv/.OverlayService}
+    isForeground=true foregroundId=1 foregroundNoti=Notification(channel=overlay shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)
+=== 9. overlay must not eat keys (Settings focus moves under overlay)
+  dump 2b-09-settings-before.xml: pkgs=['com.android.tv.settings'] focused='' LinearLayout [220,446][900,573] status=[]
+  dump 2b-09-settings-after.xml: pkgs=['com.android.tv.settings'] focused='' LinearLayout [220,575][900,701] status=[]
+  screenshot 2b-09-settings-after-key.png
+=== 10. turn overlay OFF through the app's own button (DPAD_CENTER on focused toggle)
+  dump 2b-10-main-before-off.xml: pkgs=['vn.vietsub.ps5.tv'] focused='TẮT LỚP PHỦ' Button [96,828][316,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)']
+  services: 0  overlay windows: 0
+  dump 2b-10-main-after-off.xml: pkgs=['vn.vietsub.ps5.tv'] focused='BẬT LỚP PHỦ' Button [96,828][318,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG TẮT']
+  screenshot 2b-10-home-overlay-off.png
+  dumpsys services: ACTIVITY MANAGER SERVICES (dumpsys activity services)   (nothing) 
+=== 10b. turn ON through the app's own button, then off via extra
+  after button ON: services 1 windows 1
+  dump 2b-10b-main-after-on.xml: pkgs=['vn.vietsub.ps5.tv'] focused='TẮT LỚP PHỦ' Button [96,828][316,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)']
+  after extra OFF (singleTop, app on top): services 0 windows 0
+=== 11. auto_off_ms 6000
+  t~3s services 1 windows 1
+  dump 2b-11-main-t3.xml: pkgs=['vn.vietsub.ps5.tv'] focused='TẮT LỚP PHỦ' Button [96,828][316,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)']
+  t~10s services 0 windows 0
+  dump 2b-11-main-t10.xml: pkgs=['vn.vietsub.ps5.tv'] focused='BẬT LỚP PHỦ' Button [96,828][318,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG TẮT']
+--------- beginning of main
+11-16 08:36:25.444  6101  6101 I VietSubOverlay: overlay bật; tự tắt sau 6000 ms
+11-16 08:36:25.458  6101  6101 I VietSubGlyph: range U+1EA0-U+1EF9: total=90 ok=90 missing=0 []
+11-16 08:36:25.461  6101  6101 I VietSubGlyph: sample string missing glyphs: []
+11-16 08:36:25.497  6101  6101 I VietSubGlyph: control (CJK, expect false): {日=true, 한=true}
+11-16 08:36:31.447  6101  6101 I VietSubOverlay: tự tắt sau hạn — gỡ cửa sổ + dừng service
+=== 12. process killed while overlay on (am crash) -> reopen shows state
+  before crash: services 1 windows 1 pid=6210
+  after crash: services 0 windows 0 pid=
+  dump 2b-12-main-after-crash-reopen.xml: pkgs=['vn.vietsub.ps5.tv'] focused='BẬT LỚP PHỦ' Button [96,828][318,924] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: ĐÃ MIỄN', 'Lớp phủ: ĐANG TẮT']
+  after reopen: services 0 windows 0
+=== done

@@ -1,0 +1,53 @@
+=== install + reset permissions (setup only; buttons below are driven by keyevents only)
+  Success
+  appops: SYSTEM_ALERT_WINDOW: default; time=+13m24s366ms ago; duration=+2s705ms
+  dump re2b-03-start: pkgs=['vn.vietsub.ps5.tv'] focused='CẤP QUYỀN HIỂN THỊ TRÊN ỨNG DỤNG KHÁC' Button [96,588][776,684] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']
+  screenshot re2b-03-start.png
+=== B2: focused button highlighted after a D-pad key
+  key KEYCODE_DPAD_DOWN
+  dump re2b-04-down-battery: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,708][378,804] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']
+  screenshot re2b-04-down-battery-focused.png
+=== B1: press battery button (ENTER) => fallback hint
+  key KEYCODE_ENTER
+  top: mResumedActivity: ActivityRecord{a4164b8 u0 vn.vietsub.ps5.tv/.MainActivity t26}
+  dump re2b-05-battery-pressed: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,813][378,909] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT', 'Miễn tối ưu pin vẫn CHƯA được (TV này không có màn thật). Chạy lệnh (trên máy tính, do bạn chạy):\nadb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv']
+HINT=Miễn tối ưu pin vẫn CHƯA được (TV này không có màn thật). Chạy lệnh (trên máy tính, do bạn chạy): / adb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv
+  screenshot re2b-05-battery-hint.png
+=== N2/B1: overlay button => settings opens; BACK => fallback hint naming the VietSub line
+  key KEYCODE_DPAD_UP
+  dump re2b-06-up-grant: pkgs=['vn.vietsub.ps5.tv'] focused='CẤP QUYỀN HIỂN THỊ TRÊN ỨNG DỤNG KHÁC' Button [96,693][776,789] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT', 'Miễn tối ưu pin vẫn CHƯA được (TV này không có màn thật). Chạy lệnh (trên máy tính, do bạn chạy):\nadb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv']
+  screenshot re2b-06-up-grant-focused.png
+  key KEYCODE_ENTER
+  top: mResumedActivity: ActivityRecord{b29fb05 u0 com.android.tv.settings/.device.apps.specialaccess.SystemAlertActivity t26}
+  screenshot re2b-07-overlay-settings-opened.png
+  key KEYCODE_BACK
+  top: mResumedActivity: ActivityRecord{a4164b8 u0 vn.vietsub.ps5.tv/.MainActivity t26}
+  dump re2b-08-after-back: pkgs=['vn.vietsub.ps5.tv'] focused='CẤP QUYỀN HIỂN THỊ TRÊN ỨNG DỤNG KHÁC' Button [96,731][776,827] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT', 'Quyền hiển thị trên ứng dụng khác vẫn CHƯA cấp. Trong danh sách, tìm dòng “VietSub — lớp phủ kiểm tra” và bật; nếu TV không có màn này, chạy lệnh (trên máy tính, do bạn chạy):\nadb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow']
+HINT=Quyền hiển thị trên ứng dụng khác vẫn CHƯA cấp. Trong danh sách, tìm dòng “VietSub — lớp phủ kiểm tra” và bật; nếu TV không có màn này, chạy lệnh (trên máy tính, do bạn chạy): / adb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow
+  screenshot re2b-08-after-back-overlay-hint.png
+=== ScrollView vs D-pad: walk down to the 3rd button with the hint shown
+  key KEYCODE_DPAD_DOWN
+  key KEYCODE_DPAD_DOWN
+  dump re2b-09-toggle: pkgs=['vn.vietsub.ps5.tv'] focused='BẬT LỚP PHỦ' Button [96,971][366,1067] status=['Quyền hiển thị trên ứng dụng khác: CHƯA CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT', 'Quyền hiển thị trên ứng dụng khác vẫn CHƯA cấp. Trong danh sách, tìm dòng “VietSub — lớp phủ kiểm tra” và bật; nếu TV không có màn này, chạy lệnh (trên máy tính, do bạn chạy):\nadb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow']
+  screenshot re2b-09-toggle-focused-with-hint.png
+=== grant via the TV list with the remote only, BACK => hint hidden, focus moves on
+  key KEYCODE_DPAD_UP
+  key KEYCODE_DPAD_UP
+  key KEYCODE_ENTER
+  VietSub row focused after 8 DPAD_DOWN
+  key KEYCODE_ENTER
+  appops: SYSTEM_ALERT_WINDOW: allow; time=+14m33s772ms ago; duration=+2s705ms
+  key KEYCODE_BACK
+  dump re2b-10-after-grant-back: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,708][378,804] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG TẮT']
+HINT=NONE
+  screenshot re2b-10-after-grant-back.png
+=== toggle with ENTER (overlay ON) then reopen app and ENTER again (OFF) — remote only
+  key KEYCODE_DPAD_DOWN
+  key KEYCODE_ENTER
+  services: 1
+  dump re2b-11-after-on: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,708][378,804] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)']
+  screenshot re2b-11-overlay-on-over-app.png
+  key KEYCODE_ENTER
+  services after 2nd ENTER: 1
+  dump re2b-12-after-off: pkgs=['vn.vietsub.ps5.tv'] focused='BỎ TỐI ƯU PIN' Button [96,813][378,909] status=['Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP', 'Miễn tối ưu pin: CHƯA MIỄN', 'Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)', 'Miễn tối ưu pin vẫn CHƯA được (TV này không có màn thật). Chạy lệnh (trên máy tính, do bạn chạy):\nadb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv']
+=== done

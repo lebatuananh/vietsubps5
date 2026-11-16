@@ -1,0 +1,26 @@
+﻿LABEL: ffplay substitute window + SYNTHETIC image - NOT PS Remote Play, NOT real R-C/R-D.
+ffplay PID=2892
+MainWindowHandle=0xF0C2A title='VietSubTest'
+=== smoke 3: capture --frames 3
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[capture] cửa sổ: HWND=0xF0C2A "VietSubTest" 1936x1119
+[capture] frames=3 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap
+[capture] frame-001.png: 1920x1080 (WGC 1922x1112, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1080 }) meanLuma=33,4
+[capture] frame-002.png: 1920x1080 (WGC 1922x1112, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1080 }) meanLuma=33,4
+[capture] frame-003.png: 1920x1080 (WGC 1922x1112, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1080 }) meanLuma=33,4
+[capture] contentRect=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap\capture.json
+exit=0
+=== smoke 4: minimize the window then capture again
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[capture] cửa sổ: HWND=0xF0C2A "VietSubTest" 237x39
+[capture] frames=3 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap-min
+dotnet : [engine] LỖI (3): Cửa sổ đang thu nhỏ (minimized) — WGC không có khung mới. Mở lại cửa sổ: HWND=0xF0C2A 
+"VietSubTest" 237x39
+At D:\Project\vietsubps5\project-docs\261114-fc26-vietsub-overlay\playtest\epic1-phase1\dev\smoke34.ps1:30 char:28
++ ... e-Command { dotnet run --project engine/src/Engine --no-build -- capt ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([engine] LỖI (3...SubTest" 237x39:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+exit=3  elapsed=0.7 s
+ffplay PID=2892 stopped: True

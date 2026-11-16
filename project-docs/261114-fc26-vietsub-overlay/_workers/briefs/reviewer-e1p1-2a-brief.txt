@@ -1,0 +1,26 @@
+VietSub-261114-Reviewer
+You are the Reviewer for batch 261114 of project VietSub PS5: an INDEPENDENT session. You did not write this code. Review Dev turn 2a of Epic 1 Phase 1.
+
+Read fully:
+1. CLAUDE.md
+2. workflow/roles/reviewer.md
+3. project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase1.md (Rev 2.2 + the two Rev 2.3 rows in the section Quyet dinh sau phan hoi Dev) - source of truth. Scope of 2a = Buoc 1, 2, 3 only (engine/). tv-overlay is NOT in scope.
+4. project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-2a.md (Dev claims - verify, do not trust)
+
+What to check:
+* Code vs plan: every BINDING decision G1 to G12, DPI call at top of Main, CreateFreeThreaded, CreateForWindow interop (not TryCreateFromWindowId), client crop before DetectContentRect, error paths with exit codes, Vortice + xUnit v2, README content (call form, TFM, licenses, schema, traps). Give file:line for every claim you mark OK.
+* TDD: tests match the doc tables (numbers, cases), no weakened assertions; red evidence exists. Note: the (b) metric definition was just changed in Rev 2.3 (multiset, order-independent) - the code still has the old LCS version; report it as expected follow-up, not as a Dev defect.
+* Rerun smoke yourself (plan says Reviewer reruns): dotnet build engine, dotnet test engine, steps 3 and 5 of the Blackbox section with YOUR OWN synthetic images and YOUR OWN ffplay window (use SDL_RENDER_DRIVER=software, see the Dev report). Put evidence in project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ . Do not reuse the Dev outputs as evidence.
+* Things that do not show in green tests: COM lifetime/leaks, frame pool disposal, what happens when the window resizes, wrong pixel format, unsafe code correctness, path handling, anything that would make capturing the real PS Remote Play window fail silently.
+* .gitignore: bin/obj/_local ignored; nothing large or private would be committed.
+
+Report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-review-2a.md . FIRST line exactly REVIEW-2A IN PROGRESS while working, exactly REVIEW-2A DONE when finished; then Verdict: PASS or FAIL with a numbered list of blocking items (file:line, why, suggested fix) and non-blocking notes.
+
+NOT YOURS - do not touch:
+* You do NOT edit code under engine/ or any doc. Read-only on code; write only your report and files in playtest/epic1-phase1/reviewer/.
+* Real TV, PS5, LAN IPs, adb, emulator: never in this review.
+* Windows you did not start (including any PS Remote Play window): never capture, click or close. Stop only PIDs you recorded.
+* Git: only status, diff, log, show, ls-files, check-ignore. Never add, commit, checkout, stash, reset, clean.
+* Credentials: none needed.
+
+Open question: what important thing did the Leader not ask you to check? Is anything in the Phase doc itself wrong now that code exists?

@@ -1,0 +1,9 @@
+VietSub-261114-Dev turn 1 continued (resume, delta only)
+
+Your previous run was cut off by the usage limit before you wrote the feedback file. Your probe already succeeded (token file written). Continue the SAME task from your turn 1 brief: read-only feedback on project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase1.md (Rev 2.1). Still NO code, no config changes.
+
+Write project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-feedback.md now. FIRST line exactly DEV-FEEDBACK IN PROGRESS while writing, exactly DEV-FEEDBACK DONE when finished. Write a first version EARLY (checkpoint) and then refine, so a cut-off does not lose everything.
+
+Content as asked in turn 1: places you would have to guess, contradictions, wrong order, exact shell commands you expect to need in turn 2, intended approach per Bước 1 to 5 (dependencies with license), risks given that the User is away (no PS5, no TV, no real fixtures yet), explicit statement if the doc is enough, and the open question.
+
+Only read-only commands. If a command you want is denied, do not retry variants; list it in the feedback as a permission you need in turn 2.

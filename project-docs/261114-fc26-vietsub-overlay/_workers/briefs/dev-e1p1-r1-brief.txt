@@ -1,0 +1,32 @@
+VietSub-261114-Dev
+You are the Dev for batch 261114 of project VietSub PS5. This is TURN 1 of Epic 1 Phase 1: READ the Phase doc and give feedback. DO NOT write or change any code, project, config or .gitignore in this turn. The only files you may create are the two listed under Output.
+
+Read fully:
+1. CLAUDE.md
+2. workflow/roles/dev.md
+3. project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase1.md (Rev 2.1) - the source of truth for this Phase
+4. project-docs/261114-fc26-vietsub-overlay/261114-epic1.md (section Dinh huong User da chot)
+5. Every file listed in the Phase doc section Files bat buoc doc truoc khi code
+6. project-docs/automation/README.md (tools installed on this machine and their paths)
+
+Capability probe first (do exactly, report results):
+* Read D:/Temp/claude/d9d3e1a64600903d/e9665b82-ba7d-4af5-805e-bccc099e6d39/scratchpad/probe/dev-token-in.txt and write D:/Temp/claude/d9d3e1a64600903d/e9665b82-ba7d-4af5-805e-bccc099e6d39/scratchpad/probe/dev-token-out.txt containing that token followed by -dev
+* Run git rev-parse --short=8 HEAD and dotnet --list-sdks and report outputs verbatim.
+
+Task: answer in a feedback file, Vietnamese prose, identifiers in English:
+* Is the doc enough to code without guessing? List every place you would have to guess, every contradiction, every step whose order looks wrong, and every tool or permission you will need in turn 2 (exact shell commands you expect to run, so the Leader can grant them).
+* For each Bước 1 to 5: your intended approach in 2 to 5 lines (libraries/NuGet/Gradle dependencies with license, how you will structure the code), without writing code.
+* Risks you see in the order Bước 1 to 5 given that the User is away from home: no PS5, no TV, no real fixtures yet (only synthetic images until the User sends F1 to F4).
+* If the doc is fine, say explicitly: da doc, du de code, khong nghi ngo. Silence is not agreement.
+
+Output:
+* project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-feedback.md . FIRST line exactly DEV-FEEDBACK IN PROGRESS while writing, exactly DEV-FEEDBACK DONE when finished.
+* the probe token file above.
+
+NOT YOURS - do not touch:
+* The real TV, the PS5, any LAN IP: never run adb connect or any command against a device. No emulator in this turn.
+* Git: only status / diff / log / show / rev-parse. Never commit, checkout, stash, reset.
+* Do not edit any existing file (docs, logs, CLAUDE.md, workflow). If you think a doc is wrong, say it in the feedback.
+* Credentials: none are needed in this Phase. Never look for or use PSN or API keys.
+
+Open question (answer even if the doc looks complete): What important thing did the Leader NOT ask? Which concept in the Phase doc is merged or named wrong? Is a basic assumption wrong?

@@ -1,0 +1,21 @@
+VietSub-261114-Dev turn 2a (resume, delta only)
+
+Leader answered your feedback: the Phase doc is now Rev 2.2. Read its new section Quyet dinh sau phan hoi Dev (Rev 2.2 - rang buoc) right under the Revision line: it is BINDING and overrides vague text in the body. Almost all your proposals were accepted (G1 to G12, Vortice MIT, xUnit v2, ffplay, DPI call in Main, split into 2a and 2b, etc.). playtest evidence images/JSON are committed; scripts there are already ignored by project-docs/.gitignore.
+
+Consensus confirmed. Now CODE turn 2a = Phase doc Buoc 1, 2, 3 only (engine/). Do NOT start tv-overlay (that is turn 2b).
+* Follow TDD Stub -> Red -> Green for DetectContentRect, Normalize, ScoreOcr (tables in the doc, plus the extra word-boundary case). Save the red output in your report.
+* Smoke steps 1 to 5 of the Blackbox section, using synthetic images (G8) because F1 does not exist yet. Report numbers clearly labelled not R-D.
+* Update engine/README.md and root .gitignore as Buoc 1 says (plus .gitkeep). Do NOT edit CLAUDE.md or automation/README.md in this turn (Leader does Buoc 8 docs after both turns).
+* Network allowed only for build dependencies (NuGet.org).
+* If COM/WGC interop blocks you for more than one attempt cycle: stop and report, do not switch to GraphicsCapturePicker.
+
+Report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-2a.md . FIRST line exactly DEV-2A IN PROGRESS while working (write it early, update as you go), exactly DEV-2A DONE when finished. Content: what you built (files), test counts before/after, red then green output, smoke results per step with evidence paths, a section Chua chung minh duoc, deviations from the doc with reason, and git status --short at the end.
+
+NOT YOURS - do not touch:
+* Real TV, PS5, any LAN IP, adb connect: never. No emulator in turn 2a.
+* PS Remote Play window or any window you did not start: never click, close, move. Capture only the ffplay window titled VietSubTest that YOU started; stop only the PID you recorded.
+* Git: only status, diff, log, show, rev-parse, ls-files, check-ignore. Never add, commit, checkout, stash, reset, clean.
+* Existing docs under project-docs (except your report and playtest/epic1-phase1/dev/), workflow/, CLAUDE.md: do not edit. If one is wrong, say it in the report.
+* Credentials: none needed. Never look for PSN data or API keys.
+
+Open question: what did the Leader's decisions miss, or which decision is wrong in practice? Say it in the report.

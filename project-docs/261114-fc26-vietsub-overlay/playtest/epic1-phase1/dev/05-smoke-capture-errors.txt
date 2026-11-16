@@ -1,0 +1,20 @@
+﻿LABEL: capture error paths with own ffplay windows (synthetic).
+=== no window matches
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (2): Không tìm thấy cửa sổ nhìn thấy nào có tiêu đề chứa "NoSuchWindowXyz123".
+exit=2
+PIDs 11160,20952
+=== two windows match
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (2): 2 cửa sổ khớp "VietSubTest" — dùng --hwnd để chỉ định:
+  HWND=0x160C22 "VietSubTest" 1936x1119
+  HWND=0x3102AA "VietSubTest" 1936x1119
+exit=2
+=== --hwnd selects one
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[capture] cửa sổ: HWND=0x3102AA "VietSubTest" 1936x1119
+[capture] frames=1 interval=500ms timeout=5000ms out=project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap-hwnd
+[capture] frame-001.png: 1920x1080 (WGC 1922x1112, client trong khung ContentRect { X = 1, Y = 31, Width = 1920, Height = 1080 }) meanLuma=32,5
+[capture] contentRect=ContentRect { X = 0, Y = 0, Width = 1920, Height = 1080 } confident=True → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/dev/cap-hwnd\capture.json
+exit=0
+stopped: True

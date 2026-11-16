@@ -1,0 +1,29 @@
+=== logcat around pressing BỎ TỐI ƯU PIN (focused) on emulator-5558
+11-16 08:37:11.878   535  1079 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=vn.vietsub.ps5.tv/.MainActivity} from uid 2000
+11-16 08:37:11.880   535  1079 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=20 attached=false
+11-16 08:37:11.917   535   588 I ActivityManager: Start proc 6345:vn.vietsub.ps5.tv/u0a87 for pre-top-activity {vn.vietsub.ps5.tv/vn.vietsub.ps5.tv.MainActivity}
+11-16 08:37:11.924  6345  6345 I .vietsub.ps5.t: Late-enabling -Xcheck:jni
+11-16 08:37:11.957  6345  6345 W .vietsub.ps5.t: Unexpected CPU variant for X86 using defaults: x86
+11-16 08:37:12.131  6345  6345 V GraphicsEnvironment: ANGLE Developer option for 'vn.vietsub.ps5.tv' set to: 'default'
+11-16 08:37:12.723   535   575 I ActivityTaskManager: Displayed vn.vietsub.ps5.tv/.MainActivity: +842ms
+11-16 08:37:12.761  1523  1523 W BootModeAppToBackground: LauncherX to background, vn.vietsub.ps5.tv in foreground
+11-16 08:37:13.029   535  2498 W InputManager-JNI: Input channel object 'bc94efd Splash Screen vn.vietsub.ps5.tv (client)' was disposed without first being removed with the input manager!
+11-16 08:37:15.024   535  2498 I ActivityTaskManager: START u0 {act=android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS dat=package:vn.vietsub.ps5.tv cmp=com.android.tv.settings/.EmptyStubActivity} from uid 10087
+11-16 08:37:15.062   535  2498 W ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (239816)
+=== resolve the intent
+priority=1 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=true
+ActivityInfo:
+  name=com.android.tv.settings.EmptyStubActivity
+  packageName=com.android.tv.settings
+  enabled=true exported=true directBootAware=true
+  taskAffinity=com.android.tv.settings targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+  launchMode=0 flags=0x220 privateFlags=0x2 theme=0x1030055
+  screenOrientation=-1 configChanges=0x3 softInputMode=0x0
+  lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+  resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+  ApplicationInfo:
+    name=com.android.tv.settings.TvSettingsApplication
+=== resolve ACTION_MANAGE_OVERLAY_PERMISSION
+  name=com.android.tv.settings.device.apps.specialaccess.SystemAlertActivity
+  packageName=com.android.tv.settings
+    name=com.android.tv.settings.TvSettingsApplication

@@ -1,0 +1,16 @@
+VietSub-261114-Reviewer review of Dev turn 2b (resume, delta only)
+
+Review Dev turn 2b of Epic 1 Phase 1 = Buoc 4 and 5, tv-overlay/ only. Source of truth: the Phase doc (BINDING rows in section Quyet dinh sau phan hoi Dev, Rev 2.2 to 2.5). Dev report: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-dev-report-2b.md (verify, do not trust). Leader already reran gradlew testDebugUnitTest: 6/6 green.
+
+Check:
+* Every BINDING item for Buoc 4/5 with file:line: specialUse 4 items, no INTERNET / POST_NOTIFICATIONS, overlay window added BEFORE startForeground, START_NOT_STICKY + 30 min auto-off, window flags, both intents wrapped with fallback commands shown on screen, WindowMetricsCalculator, focus to next pending action, onResume refresh, Vietnamese labels, debug-only extras (overlay_on, auto_off_ms) unreachable in release, L-corner geometry and 10% grid, sample text, font files named correctly with OFL license, wrapper committed without distribution, licenses in README.
+* Dev deviations (section 5 of the report): AGP 9 built-in Kotlin, Build-Tools 36 auto-installed, FontCoverage cmap test instead of hasGlyph, singleTop, 1 s label refresh, layout move. Judge each: acceptable or not.
+* TDD: mapper red then green evidence; FontCoverage really parses cmap of the bundled TTFs (not a stub that always passes) - try mentally or by a quick negative check.
+* Rerun smoke yourself on YOUR OWN emulator: same AVD image, port 5558 (serial emulator-5558) - create your own AVD name (vietsub_rv) or reuse vietsub_dev only if you copy it; start detached; steps 7, 8 (three dumps), 9, 10, auto_off_ms short, then stop your process tree and confirm adb devices clean. Remember force-stop before am start extras if needed. Evidence in playtest/epic1-phase1/reviewer/ with prefix 2b-.
+* Things green tests miss: service lifecycle leaks, handler callbacks after stopSelf, WindowManager removeView on destroy, behaviour on API 29-30 code paths (read code), release build guard.
+
+Write project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase1-review-2b.md . FIRST line REVIEW-2B IN PROGRESS while working, exactly REVIEW-2B DONE when finished; then Verdict PASS or FAIL with blocking items (file:line, why, fix) and non-blocking notes.
+
+NOT YOURS: no real TV, PS5, LAN IP, adb connect; only the emulator YOU start (emulator-5558) and its process tree; never touch emulator-5556 if it exists; git read-only; do not edit code or docs except your report and reviewer evidence; no credentials.
+
+Open question: what will the real Sony TV most likely break that the emulator did not show, and what should the User check first when installing?

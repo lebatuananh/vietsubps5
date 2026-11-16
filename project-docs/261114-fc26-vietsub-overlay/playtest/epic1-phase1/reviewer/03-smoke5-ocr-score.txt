@@ -1,0 +1,29 @@
+LABEL: reviewer-own SYNTHETIC images (PIL, Arial) - NOT FC 26, NOT R-D
+=== ocr --scale 1
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] rv-dark-edge.png 1920x1080 scaleApplied=1 content=ContentRect { X = 300, Y = 148, Width = 705, Height = 578 } confident=False lines=4 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-x1\rv-dark-edge.ocr.json
+[ocr] rv-letterbox-messages.png 1920x1200 scaleApplied=1 content=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True lines=16 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-x1\rv-letterbox-messages.ocr.json
+[ocr] rv-pillar-email.png 2000x1080 scaleApplied=1 content=ContentRect { X = 40, Y = 0, Width = 1920, Height = 1080 } confident=True lines=7 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-x1\rv-pillar-email.ocr.json
+exit=0
+=== ocr-score x1
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] rv-dark-edge: đoạn 4/4 (a)=100,0% · từ 18/18 (b)=100,0%
+[score] rv-letterbox-messages: đoạn 16/16 (a)=100,0% · từ 34/54 (b)=63,0%
+[score] rv-pillar-email: đoạn 7/7 (a)=100,0% · từ 49/49 (b)=100,0%
+[score] TỔNG 3 ảnh: đoạn 27/27 (a)=100,0% · từ 101/121 (b)=83,5%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+exit=0
+=== ocr --scale 2
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[ocr] rv-dark-edge.png 1920x1080 scaleApplied=2 content=ContentRect { X = 300, Y = 148, Width = 705, Height = 578 } confident=False lines=4 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-x2\rv-dark-edge.ocr.json
+[ocr] rv-letterbox-messages.png 1920x1200 scaleApplied=2 content=ContentRect { X = 0, Y = 60, Width = 1920, Height = 1080 } confident=True lines=16 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-x2\rv-letterbox-messages.ocr.json
+[ocr] rv-pillar-email.png 2000x1080 scaleApplied=2 content=ContentRect { X = 40, Y = 0, Width = 1920, Height = 1080 } confident=True lines=7 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase1/reviewer/ocr-x2\rv-pillar-email.ocr.json
+exit=0
+=== ocr-score x2
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[score] rv-dark-edge: đoạn 4/4 (a)=100,0% · từ 18/18 (b)=100,0%
+[score] rv-letterbox-messages: đoạn 16/16 (a)=100,0% · từ 34/54 (b)=63,0%
+[score] rv-pillar-email: đoạn 7/7 (a)=100,0% · từ 49/49 (b)=100,0%
+[score] TỔNG 3 ảnh: đoạn 27/27 (a)=100,0% · từ 101/121 (b)=83,5%
+[score] ngưỡng tham khảo (a) ≥ 95%: ĐẠT
+exit=0
