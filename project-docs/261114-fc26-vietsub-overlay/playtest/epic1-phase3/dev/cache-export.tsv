@@ -1,0 +1,197 @@
+﻿status	source	vi	short_vi	provider	attempts	last_error
+machine	A new contract offer is waiting for your response.	Một đề nghị hợp đồng mới đang chờ ông phản hồi.		seed	0	
+machine	A player has been injured in training.	Một cầu thủ bị chấn thương trong buổi tập.		seed	0	
+machine	Are you sure you want to continue?	Ông có chắc muốn tiếp tục không?		seed	0	
+machine	Best regards,	Trân trọng,		seed	0	
+machine	Board Confidence	Niềm tin của ban lãnh đạo		seed	0	
+machine	Congratulations on your new contract.	Chúc mừng ông với bản hợp đồng mới.		seed	0	
+machine	Contract Update	Cập nhật hợp đồng		seed	0	
+machine	Contract expires in {N1} months	Hợp đồng hết hạn sau {N1} tháng		seed	0	
+machine	Contract length: {N1} years	Thời hạn hợp đồng: {N1} năm		seed	0	
+machine	Contract offer for {N1}	Đề nghị hợp đồng cho {N1}		seed	0	
+machine	Deadline Day	Ngày chốt sổ chuyển nhượng		seed	0	
+machine	Dear Manager,	Kính gửi ông,		seed	0	
+machine	Do you want to save your changes?	Ông có muốn lưu thay đổi không?		seed	0	
+machine	Fan reaction	Phản ứng của người hâm mộ		seed	0	
+machine	Finance update	Cập nhật tài chính		seed	0	
+machine	Fixture update	Cập nhật lịch thi đấu		seed	0	
+machine	Free agent signed	Đã ký cầu thủ tự do		seed	0	
+machine	Injury Report	Báo cáo chấn thương		seed	0	
+machine	Injury update	Cập nhật chấn thương		seed	0	
+machine	Kind regards,	Trân trọng,		seed	0	
+machine	Loan deal agreed	Đã thống nhất thương vụ cho mượn		seed	0	
+machine	Manager of the Month	HLV xuất sắc nhất tháng		seed	0	
+machine	Match Preview	Xem trước trận đấu		seed	0	
+machine	Match Report	Báo cáo trận đấu		seed	0	
+machine	Media expectations	Kỳ vọng của truyền thông		seed	0	
+machine	Medical Team	Đội ngũ y tế		seed	0	
+machine	Negotiation in progress	Đang đàm phán		seed	0	
+machine	New Message	Thư mới		seed	0	
+machine	New prospects have arrived at the academy.	Các cầu thủ triển vọng mới đã gia nhập học viện.		seed	0	
+machine	New transfer target available	Có mục tiêu chuyển nhượng mới		seed	0	
+machine	No new messages.	Không có thư mới.		seed	0	
+machine	Objective completed	Đã hoàn thành mục tiêu		seed	0	
+machine	Objective failed	Chưa đạt mục tiêu		seed	0	
+machine	Offer accepted	Đề nghị đã được chấp nhận		seed	0	
+machine	Offer rejected	Đề nghị đã bị từ chối		seed	0	
+machine	Offer withdrawn	Đề nghị đã bị rút lại		seed	0	
+machine	Player Morale	Tinh thần cầu thủ		seed	0	
+machine	Player development report	Báo cáo phát triển cầu thủ		seed	0	
+machine	Player has joined the club	Cầu thủ đã gia nhập câu lạc bộ		seed	0	
+machine	Player has left the club	Cầu thủ đã rời câu lạc bộ		seed	0	
+machine	Player of the Month	Cầu thủ xuất sắc nhất tháng		seed	0	
+machine	Please complete the registration before the deadline.	Vui lòng hoàn tất đăng ký trước hạn chót.		seed	0	
+machine	Press conference	Họp báo		seed	0	
+machine	Scout report available	Có báo cáo tuyển trạch mới		seed	0	
+machine	Season Objectives Update	Cập nhật mục tiêu mùa giải		seed	0	
+machine	Season review	Tổng kết mùa giải		seed	0	
+machine	Squad update	Cập nhật đội hình		seed	0	
+machine	Staff update	Cập nhật ban huấn luyện		seed	0	
+machine	The board has set new objectives for the season.	Ban lãnh đạo đã đặt ra mục tiêu mới cho mùa giải.		seed	0	
+machine	The club would like to renew your contract.	Câu lạc bộ muốn gia hạn hợp đồng với ông.		seed	0	
+machine	The player has accepted your contract offer.	Cầu thủ đã chấp nhận đề nghị hợp đồng của ông.		seed	0	
+machine	The player has rejected your contract offer.	Cầu thủ đã từ chối đề nghị hợp đồng của ông.		seed	0	
+machine	The transfer window will close in {N1} days.	Kỳ chuyển nhượng sẽ đóng cửa sau {N1} ngày.		seed	0	
+machine	Training update	Cập nhật tập luyện		seed	0	
+machine	Transfer Budget: {N1}	Ngân sách chuyển nhượng: {N1}		seed	0	
+machine	Transfer fee: {N1}	Phí chuyển nhượng: {N1}		seed	0	
+machine	Transfer window is now open.	Kỳ chuyển nhượng đã mở cửa.		seed	0	
+machine	Wage Budget: {N1}	Ngân sách lương: {N1}		seed	0	
+machine	Weekly wage: {N1}	Lương tuần: {N1}		seed	0	
+machine	You have {N1} unread messages.	Ông có {N1} thư chưa đọc.		seed	0	
+machine	Your contract offer has been accepted.	Đề nghị hợp đồng của ông đã được chấp nhận.		seed	0	
+machine	Your contract offer has been rejected.	Đề nghị hợp đồng của ông đã bị từ chối.		seed	0	
+machine	Your next match is in {N1} days.	Trận đấu tiếp theo của ông diễn ra sau {N1} ngày.		seed	0	
+machine	Your scout has completed a report.	Tuyển trạch viên của ông đã hoàn thành một báo cáo.		seed	0	
+machine	Your transfer offer has been accepted.	Đề nghị chuyển nhượng của ông đã được chấp nhận.		seed	0	
+machine	Your transfer offer has been rejected.	Đề nghị chuyển nhượng của ông đã bị từ chối.		seed	0	
+machine	Youth Academy Report	Báo cáo học viện trẻ		seed	0	
+glossary	Inbox	Hộp thư	Thư	glossary	0	
+glossary	Reply	Trả lời		glossary	0	
+glossary	From	Từ		glossary	0	
+glossary	Subject	Tiêu đề		glossary	0	
+glossary	Date	Ngày		glossary	0	
+glossary	Today	Hôm nay		glossary	0	
+glossary	Yesterday	Hôm qua		glossary	0	
+glossary	Tomorrow	Ngày mai		glossary	0	
+glossary	This Week	Tuần này		glossary	0	
+glossary	Last Week	Tuần trước		glossary	0	
+glossary	New	Mới		glossary	0	
+glossary	Unread	Chưa đọc		glossary	0	
+glossary	Read	Đã đọc		glossary	0	
+glossary	Delete	Xóa		glossary	0	
+glossary	Delete All	Xóa tất cả	Xóa hết	glossary	0	
+glossary	Mark as Read	Đánh dấu đã đọc	Đã đọc	glossary	0	
+glossary	Continue	Tiếp tục		glossary	0	
+glossary	Back	Quay lại		glossary	0	
+glossary	Select	Chọn		glossary	0	
+glossary	Confirm	Xác nhận		glossary	0	
+glossary	Cancel	Hủy		glossary	0	
+glossary	Accept	Chấp nhận		glossary	0	
+glossary	Decline	Từ chối		glossary	0	
+glossary	Reject	Từ chối		glossary	0	
+glossary	Negotiate	Đàm phán		glossary	0	
+glossary	Make Offer	Đưa ra đề nghị	Đề nghị	glossary	0	
+glossary	Submit Offer	Gửi đề nghị	Đề nghị	glossary	0	
+glossary	Apply	Áp dụng		glossary	0	
+glossary	Save	Lưu		glossary	0	
+glossary	Settings	Cài đặt		glossary	0	
+glossary	Options	Tùy chọn		glossary	0	
+glossary	Help	Trợ giúp		glossary	0	
+glossary	Quit	Thoát		glossary	0	
+glossary	Yes	Có		glossary	0	
+glossary	No	Không		glossary	0	
+glossary	News	Tin tức		glossary	0	
+glossary	Calendar	Lịch		glossary	0	
+glossary	Fixtures	Lịch thi đấu	Lịch đấu	glossary	0	
+glossary	Results	Kết quả		glossary	0	
+glossary	Standings	Bảng xếp hạng	BXH	glossary	0	
+glossary	League Table	Bảng xếp hạng	BXH	glossary	0	
+glossary	Match Day	Ngày thi đấu		glossary	0	
+glossary	Matchday	Ngày thi đấu		glossary	0	
+glossary	Career Mode	Chế độ Sự nghiệp		glossary	0	
+glossary	Manager Career	Sự nghiệp huấn luyện viên	Sự nghiệp HLV	glossary	0	
+glossary	Player Career	Sự nghiệp cầu thủ		glossary	0	
+glossary	Squad	Đội hình		glossary	0	
+glossary	Squad Hub	Trung tâm đội hình	TT đội hình	glossary	0	
+glossary	Squad Role	Vai trò trong đội	Vai trò	glossary	0	
+glossary	Key Player	Cầu thủ chủ chốt	Chủ chốt	glossary	0	
+glossary	Rotation	Luân phiên		glossary	0	
+glossary	Starter	Đá chính		glossary	0	
+glossary	Substitute	Dự bị		glossary	0	
+glossary	Bench	Băng ghế dự bị	Ghế dự bị	glossary	0	
+glossary	Player	Cầu thủ		glossary	0	
+glossary	Players	Cầu thủ		glossary	0	
+glossary	Hot Prospect	Cầu thủ triển vọng	Triển vọng	glossary	0	
+glossary	Youth Players	Cầu thủ trẻ		glossary	0	
+glossary	Youth Academy	Học viện trẻ	HV trẻ	glossary	0	
+glossary	Training	Tập luyện		glossary	0	
+glossary	Training Plans	Kế hoạch tập luyện	KH tập luyện	glossary	0	
+glossary	Tactics	Chiến thuật		glossary	0	
+glossary	Formation	Sơ đồ chiến thuật	Sơ đồ	glossary	0	
+glossary	Overall	Chỉ số tổng		glossary	0	
+glossary	Potential	Tiềm năng		glossary	0	
+glossary	Age	Tuổi		glossary	0	
+glossary	Position	Vị trí		glossary	0	
+glossary	Nationality	Quốc tịch		glossary	0	
+glossary	Value	Giá trị		glossary	0	
+glossary	Morale	Tinh thần		glossary	0	
+glossary	Fitness	Thể lực		glossary	0	
+glossary	Form	Phong độ		glossary	0	
+glossary	Injured	Chấn thương		glossary	0	
+glossary	Injury	Chấn thương		glossary	0	
+glossary	Suspended	Bị treo giò		glossary	0	
+glossary	Rating	Điểm đánh giá	Điểm	glossary	0	
+glossary	Average Rating	Điểm trung bình		glossary	0	
+glossary	Goals	Bàn thắng		glossary	0	
+glossary	Assists	Kiến tạo		glossary	0	
+glossary	Appearances	Số trận ra sân	Số trận	glossary	0	
+glossary	Clean Sheets	Giữ sạch lưới		glossary	0	
+glossary	Yellow Cards	Thẻ vàng		glossary	0	
+glossary	Red Cards	Thẻ đỏ		glossary	0	
+glossary	Goalkeeper	Thủ môn		glossary	0	
+glossary	Defender	Hậu vệ		glossary	0	
+glossary	Midfielder	Tiền vệ		glossary	0	
+glossary	Attacker	Tiền đạo		glossary	0	
+glossary	Striker	Tiền đạo cắm	Tiền đạo	glossary	0	
+glossary	Winger	Cầu thủ chạy cánh	Chạy cánh	glossary	0	
+glossary	Centre Back	Trung vệ		glossary	0	
+glossary	Full Back	Hậu vệ biên		glossary	0	
+glossary	Transfers	Chuyển nhượng		glossary	0	
+glossary	Transfer Hub	Trung tâm chuyển nhượng	TT chuyển nhượng	glossary	0	
+glossary	Transfer Budget	Ngân sách chuyển nhượng	Ngân sách CN	glossary	0	
+glossary	Transfer Offer	Đề nghị chuyển nhượng	Đề nghị CN	glossary	0	
+glossary	Transfer Window	Kỳ chuyển nhượng		glossary	0	
+glossary	Transfer List	Danh sách chuyển nhượng	DS chuyển nhượng	glossary	0	
+glossary	Free Agent	Cầu thủ tự do		glossary	0	
+glossary	Free Agents	Cầu thủ tự do		glossary	0	
+glossary	Release Clause	Điều khoản giải phóng hợp đồng	Điều khoản giải phóng	glossary	0	
+glossary	Loan	Cho mượn		glossary	0	
+glossary	Loans	Cho mượn		glossary	0	
+glossary	Loan Offer	Đề nghị mượn cầu thủ	Đề nghị mượn	glossary	0	
+glossary	Wage	Lương		glossary	0	
+glossary	Wages	Lương		glossary	0	
+glossary	Wage Budget	Ngân sách lương	Quỹ lương	glossary	0	
+glossary	Budget	Ngân sách		glossary	0	
+glossary	Finances	Tài chính		glossary	0	
+glossary	Contract	Hợp đồng		glossary	0	
+glossary	Contracts	Hợp đồng		glossary	0	
+glossary	Contract Offer	Đề nghị hợp đồng	Đề nghị HĐ	glossary	0	
+glossary	Contract Renewal	Gia hạn hợp đồng	Gia hạn HĐ	glossary	0	
+glossary	Board	Ban lãnh đạo	Ban LĐ	glossary	0	
+glossary	Board Objectives	Mục tiêu từ ban lãnh đạo	Mục tiêu BLĐ	glossary	0	
+glossary	Season Objectives	Mục tiêu mùa giải		glossary	0	
+glossary	Objectives	Mục tiêu		glossary	0	
+glossary	Manager	Huấn luyện viên	HLV	glossary	0	
+glossary	Coach	HLV		glossary	0	
+glossary	Staff	Ban huấn luyện		glossary	0	
+glossary	Scouting	Tuyển trạch		glossary	0	
+glossary	Scout Report	Báo cáo tuyển trạch	Báo cáo	glossary	0	
+glossary	Scouts	Tuyển trạch viên		glossary	0	
+glossary	Chief Scout	Trưởng bộ phận tuyển trạch	Trưởng tuyển trạch	glossary	0	
+glossary	Director of Football	Giám đốc bóng đá	GĐ bóng đá	glossary	0	
+glossary	Club	Câu lạc bộ	CLB	glossary	0	
+glossary	Clubs	Câu lạc bộ	CLB	glossary	0	
+glossary	League	Giải đấu		glossary	0	
+glossary	Cup	Cúp		glossary	0	
+glossary	EA SPORTS FC	EA SPORTS FC		glossary	0	

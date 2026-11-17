@@ -1,0 +1,689 @@
+{
+ "version": 1,
+ "terms": [
+  {
+   "term_en": "Inbox",
+   "term_vi": "Hộp thư",
+   "kind": "ui",
+   "short_vi": "Thư"
+  },
+  {
+   "term_en": "Reply",
+   "term_vi": "Trả lời",
+   "kind": "ui"
+  },
+  {
+   "term_en": "From",
+   "term_vi": "Từ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Subject",
+   "term_vi": "Tiêu đề",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Date",
+   "term_vi": "Ngày",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Today",
+   "term_vi": "Hôm nay",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Yesterday",
+   "term_vi": "Hôm qua",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Tomorrow",
+   "term_vi": "Ngày mai",
+   "kind": "ui"
+  },
+  {
+   "term_en": "This Week",
+   "term_vi": "Tuần này",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Last Week",
+   "term_vi": "Tuần trước",
+   "kind": "ui"
+  },
+  {
+   "term_en": "New",
+   "term_vi": "Mới",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Unread",
+   "term_vi": "Chưa đọc",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Read",
+   "term_vi": "Đã đọc",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Delete",
+   "term_vi": "Xóa",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Delete All",
+   "term_vi": "Xóa tất cả",
+   "kind": "ui",
+   "short_vi": "Xóa hết"
+  },
+  {
+   "term_en": "Mark as Read",
+   "term_vi": "Đánh dấu đã đọc",
+   "kind": "ui",
+   "short_vi": "Đã đọc"
+  },
+  {
+   "term_en": "Continue",
+   "term_vi": "Tiếp tục",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Back",
+   "term_vi": "Quay lại",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Select",
+   "term_vi": "Chọn",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Confirm",
+   "term_vi": "Xác nhận",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Cancel",
+   "term_vi": "Hủy",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Accept",
+   "term_vi": "Chấp nhận",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Decline",
+   "term_vi": "Từ chối",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Reject",
+   "term_vi": "Từ chối",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Negotiate",
+   "term_vi": "Đàm phán",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Make Offer",
+   "term_vi": "Đưa ra đề nghị",
+   "kind": "ui",
+   "short_vi": "Đề nghị"
+  },
+  {
+   "term_en": "Submit Offer",
+   "term_vi": "Gửi đề nghị",
+   "kind": "ui",
+   "short_vi": "Đề nghị"
+  },
+  {
+   "term_en": "Apply",
+   "term_vi": "Áp dụng",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Save",
+   "term_vi": "Lưu",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Settings",
+   "term_vi": "Cài đặt",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Options",
+   "term_vi": "Tùy chọn",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Help",
+   "term_vi": "Trợ giúp",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Quit",
+   "term_vi": "Thoát",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Yes",
+   "term_vi": "Có",
+   "kind": "ui"
+  },
+  {
+   "term_en": "No",
+   "term_vi": "Không",
+   "kind": "ui"
+  },
+  {
+   "term_en": "News",
+   "term_vi": "Tin tức",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Calendar",
+   "term_vi": "Lịch",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Fixtures",
+   "term_vi": "Lịch thi đấu",
+   "kind": "ui",
+   "short_vi": "Lịch đấu"
+  },
+  {
+   "term_en": "Results",
+   "term_vi": "Kết quả",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Standings",
+   "term_vi": "Bảng xếp hạng",
+   "kind": "ui",
+   "short_vi": "BXH"
+  },
+  {
+   "term_en": "League Table",
+   "term_vi": "Bảng xếp hạng",
+   "kind": "ui",
+   "short_vi": "BXH"
+  },
+  {
+   "term_en": "Match Day",
+   "term_vi": "Ngày thi đấu",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Matchday",
+   "term_vi": "Ngày thi đấu",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Career Mode",
+   "term_vi": "Chế độ Sự nghiệp",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Manager Career",
+   "term_vi": "Sự nghiệp huấn luyện viên",
+   "kind": "ui",
+   "short_vi": "Sự nghiệp HLV"
+  },
+  {
+   "term_en": "Player Career",
+   "term_vi": "Sự nghiệp cầu thủ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Squad",
+   "term_vi": "Đội hình",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Squad Hub",
+   "term_vi": "Trung tâm đội hình",
+   "kind": "ui",
+   "short_vi": "TT đội hình"
+  },
+  {
+   "term_en": "Squad Role",
+   "term_vi": "Vai trò trong đội",
+   "kind": "ui",
+   "short_vi": "Vai trò"
+  },
+  {
+   "term_en": "Key Player",
+   "term_vi": "Cầu thủ chủ chốt",
+   "kind": "ui",
+   "short_vi": "Chủ chốt"
+  },
+  {
+   "term_en": "Rotation",
+   "term_vi": "Luân phiên",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Starter",
+   "term_vi": "Đá chính",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Substitute",
+   "term_vi": "Dự bị",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Bench",
+   "term_vi": "Băng ghế dự bị",
+   "kind": "ui",
+   "short_vi": "Ghế dự bị"
+  },
+  {
+   "term_en": "Player",
+   "term_vi": "Cầu thủ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Players",
+   "term_vi": "Cầu thủ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Hot Prospect",
+   "term_vi": "Cầu thủ triển vọng",
+   "kind": "ui",
+   "short_vi": "Triển vọng"
+  },
+  {
+   "term_en": "Youth Players",
+   "term_vi": "Cầu thủ trẻ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Youth Academy",
+   "term_vi": "Học viện trẻ",
+   "kind": "ui",
+   "short_vi": "HV trẻ"
+  },
+  {
+   "term_en": "Training",
+   "term_vi": "Tập luyện",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Training Plans",
+   "term_vi": "Kế hoạch tập luyện",
+   "kind": "ui",
+   "short_vi": "KH tập luyện"
+  },
+  {
+   "term_en": "Tactics",
+   "term_vi": "Chiến thuật",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Formation",
+   "term_vi": "Sơ đồ chiến thuật",
+   "kind": "ui",
+   "short_vi": "Sơ đồ"
+  },
+  {
+   "term_en": "Overall",
+   "term_vi": "Chỉ số tổng",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Potential",
+   "term_vi": "Tiềm năng",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Age",
+   "term_vi": "Tuổi",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Position",
+   "term_vi": "Vị trí",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Nationality",
+   "term_vi": "Quốc tịch",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Value",
+   "term_vi": "Giá trị",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Morale",
+   "term_vi": "Tinh thần",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Fitness",
+   "term_vi": "Thể lực",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Form",
+   "term_vi": "Phong độ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Injured",
+   "term_vi": "Chấn thương",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Injury",
+   "term_vi": "Chấn thương",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Suspended",
+   "term_vi": "Bị treo giò",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Rating",
+   "term_vi": "Điểm đánh giá",
+   "kind": "ui",
+   "short_vi": "Điểm"
+  },
+  {
+   "term_en": "Average Rating",
+   "term_vi": "Điểm trung bình",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Goals",
+   "term_vi": "Bàn thắng",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Assists",
+   "term_vi": "Kiến tạo",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Appearances",
+   "term_vi": "Số trận ra sân",
+   "kind": "ui",
+   "short_vi": "Số trận"
+  },
+  {
+   "term_en": "Clean Sheets",
+   "term_vi": "Giữ sạch lưới",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Yellow Cards",
+   "term_vi": "Thẻ vàng",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Red Cards",
+   "term_vi": "Thẻ đỏ",
+   "kind": "ui"
+  },
+  {
+   "term_en": "Goalkeeper",
+   "term_vi": "Thủ môn",
+   "kind": "position"
+  },
+  {
+   "term_en": "Defender",
+   "term_vi": "Hậu vệ",
+   "kind": "position"
+  },
+  {
+   "term_en": "Midfielder",
+   "term_vi": "Tiền vệ",
+   "kind": "position"
+  },
+  {
+   "term_en": "Attacker",
+   "term_vi": "Tiền đạo",
+   "kind": "position"
+  },
+  {
+   "term_en": "Striker",
+   "term_vi": "Tiền đạo cắm",
+   "kind": "position",
+   "short_vi": "Tiền đạo"
+  },
+  {
+   "term_en": "Winger",
+   "term_vi": "Cầu thủ chạy cánh",
+   "kind": "position",
+   "short_vi": "Chạy cánh"
+  },
+  {
+   "term_en": "Centre Back",
+   "term_vi": "Trung vệ",
+   "kind": "position"
+  },
+  {
+   "term_en": "Full Back",
+   "term_vi": "Hậu vệ biên",
+   "kind": "position"
+  },
+  {
+   "term_en": "Transfers",
+   "term_vi": "Chuyển nhượng",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Transfer Hub",
+   "term_vi": "Trung tâm chuyển nhượng",
+   "kind": "finance",
+   "short_vi": "TT chuyển nhượng"
+  },
+  {
+   "term_en": "Transfer Budget",
+   "term_vi": "Ngân sách chuyển nhượng",
+   "kind": "finance",
+   "short_vi": "Ngân sách CN"
+  },
+  {
+   "term_en": "Transfer Offer",
+   "term_vi": "Đề nghị chuyển nhượng",
+   "kind": "finance",
+   "short_vi": "Đề nghị CN"
+  },
+  {
+   "term_en": "Transfer Window",
+   "term_vi": "Kỳ chuyển nhượng",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Transfer List",
+   "term_vi": "Danh sách chuyển nhượng",
+   "kind": "finance",
+   "short_vi": "DS chuyển nhượng"
+  },
+  {
+   "term_en": "Free Agent",
+   "term_vi": "Cầu thủ tự do",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Free Agents",
+   "term_vi": "Cầu thủ tự do",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Release Clause",
+   "term_vi": "Điều khoản giải phóng hợp đồng",
+   "kind": "finance",
+   "short_vi": "Điều khoản giải phóng"
+  },
+  {
+   "term_en": "Loan",
+   "term_vi": "Cho mượn",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Loans",
+   "term_vi": "Cho mượn",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Loan Offer",
+   "term_vi": "Đề nghị mượn cầu thủ",
+   "kind": "finance",
+   "short_vi": "Đề nghị mượn"
+  },
+  {
+   "term_en": "Wage",
+   "term_vi": "Lương",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Wages",
+   "term_vi": "Lương",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Wage Budget",
+   "term_vi": "Ngân sách lương",
+   "kind": "finance",
+   "short_vi": "Quỹ lương"
+  },
+  {
+   "term_en": "Budget",
+   "term_vi": "Ngân sách",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Finances",
+   "term_vi": "Tài chính",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Contract",
+   "term_vi": "Hợp đồng",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Contracts",
+   "term_vi": "Hợp đồng",
+   "kind": "finance"
+  },
+  {
+   "term_en": "Contract Offer",
+   "term_vi": "Đề nghị hợp đồng",
+   "kind": "finance",
+   "short_vi": "Đề nghị HĐ"
+  },
+  {
+   "term_en": "Contract Renewal",
+   "term_vi": "Gia hạn hợp đồng",
+   "kind": "finance",
+   "short_vi": "Gia hạn HĐ"
+  },
+  {
+   "term_en": "Board",
+   "term_vi": "Ban lãnh đạo",
+   "kind": "staff",
+   "short_vi": "Ban LĐ"
+  },
+  {
+   "term_en": "Board Objectives",
+   "term_vi": "Mục tiêu từ ban lãnh đạo",
+   "kind": "staff",
+   "short_vi": "Mục tiêu BLĐ"
+  },
+  {
+   "term_en": "Season Objectives",
+   "term_vi": "Mục tiêu mùa giải",
+   "kind": "staff"
+  },
+  {
+   "term_en": "Objectives",
+   "term_vi": "Mục tiêu",
+   "kind": "staff"
+  },
+  {
+   "term_en": "Manager",
+   "term_vi": "Huấn luyện viên",
+   "kind": "staff",
+   "short_vi": "HLV"
+  },
+  {
+   "term_en": "Coach",
+   "term_vi": "HLV",
+   "kind": "staff"
+  },
+  {
+   "term_en": "Staff",
+   "term_vi": "Ban huấn luyện",
+   "kind": "staff"
+  },
+  {
+   "term_en": "Scouting",
+   "term_vi": "Tuyển trạch",
+   "kind": "staff"
+  },
+  {
+   "term_en": "Scout Report",
+   "term_vi": "Báo cáo tuyển trạch",
+   "kind": "staff",
+   "short_vi": "Báo cáo"
+  },
+  {
+   "term_en": "Scouts",
+   "term_vi": "Tuyển trạch viên",
+   "kind": "staff"
+  },
+  {
+   "term_en": "Chief Scout",
+   "term_vi": "Trưởng bộ phận tuyển trạch",
+   "kind": "staff",
+   "short_vi": "Trưởng tuyển trạch"
+  },
+  {
+   "term_en": "Director of Football",
+   "term_vi": "Giám đốc bóng đá",
+   "kind": "staff",
+   "short_vi": "GĐ bóng đá"
+  },
+  {
+   "term_en": "Club",
+   "term_vi": "Câu lạc bộ",
+   "kind": "staff",
+   "short_vi": "CLB"
+  },
+  {
+   "term_en": "Clubs",
+   "term_vi": "Câu lạc bộ",
+   "kind": "staff",
+   "short_vi": "CLB"
+  },
+  {
+   "term_en": "League",
+   "term_vi": "Giải đấu",
+   "kind": "competition"
+  },
+  {
+   "term_en": "Cup",
+   "term_vi": "Cúp",
+   "kind": "competition"
+  },
+  {
+   "term_en": "EA SPORTS FC",
+   "term_vi": "EA SPORTS FC",
+   "kind": "brand",
+   "doNotTranslate": true
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[run] bắt đầu — cửa sổ "VietSubTest" · translator=fake · gửi TV: 127.0.0.1:47821 · Ctrl+C để dừng
+[tv] đã kết nối 127.0.0.1:47821
+[run] chụp HWND=0x2A0C7A "VietSubTest" 1936x1119
+[tv] đã kết nối 127.0.0.1:47821
+[run] Không nhận được khung nào sau 5000 ms từ HWND=0x2A0C7A "VietSubTest" 1936x1119. Cửa sổ có thể không vẽ lại (nội dung đứng yên bị che/ tắt). — thử lại sau 2 s
+[run] chụp HWND=0x2A0C7A "VietSubTest" 1100x700
+[tv] đã kết nối 127.0.0.1:47821
+[tv] đã kết nối 127.0.0.1:47821
+[run] Không nhận được khung nào sau 5000 ms từ HWND=0x2A0C7A "VietSubTest" 1100x700. Cửa sổ có thể không vẽ lại (nội dung đứng yên bị che/ tắt). — thử lại sau 2 s
+[run] chụp HWND=0x2A0C7A "VietSubTest" 1100x700
+[tv] đã kết nối 127.0.0.1:47821
+[run] Không nhận được khung nào sau 5000 ms từ HWND=0x2A0C7A "VietSubTest" 1100x700. Cửa sổ có thể không vẽ lại (nội dung đứng yên bị che/ tắt). — thử lại sau 2 s
+[tv] đã kết nối 127.0.0.1:47821
+[usage] ký tự LLM hôm nay: 0/100000 · gọi backend: 0 · HTTP thật: 0

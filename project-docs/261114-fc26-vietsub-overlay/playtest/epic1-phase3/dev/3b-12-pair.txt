@@ -1,0 +1,17 @@
+﻿VIETSUB_HOME=D:\Temp\vs3b-020705 (temp)
+forward: 47820
+=== pair WRONG (valid alphabet) code ACDEFHJM
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[pair] đã ghi D:\Temp\vs3b-020705\engine.local.json (host=127.0.0.1 port=47820; mã không in ra).
+[engine] LỖI (3): TV từ chối: token — sai mã ghép cặp.
+exit=3
+=== pair RIGHT code (lowercase, no dash)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[pair] đã ghi D:\Temp\vs3b-020705\engine.local.json (host=127.0.0.1 port=47820; mã không in ra).
+[pair] OK — TV chấp nhận mã.
+exit=0
+logcat: --------- beginning of main
+logcat: 11-18 02:07:17.528  3351  3351 I VietSubOverlay: server nghe cổng 47820
+logcat: 11-18 02:07:42.324  3351  3454 I VietSubOverlay: [server] từ chối hello: token
+logcat: 11-18 02:07:43.257  3351  3458 I VietSubOverlay: engine đã kết nối
+logcat: 11-18 02:07:43.261  3351  3458 I VietSubOverlay: engine ngắt kết nối

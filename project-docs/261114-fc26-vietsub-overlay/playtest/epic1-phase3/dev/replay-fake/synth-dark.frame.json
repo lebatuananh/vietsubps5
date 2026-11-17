@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "sessionId": "4e8260f6d130485fb46cbc4eb428986c",
+  "seq": 3,
+  "ttlMs": 3000,
+  "display": {
+    "minFontPx": 24,
+    "holdMs": 0
+  },
+  "items": [
+    {
+      "id": "c873f3be9be1",
+      "box": {
+        "x": 0.3375,
+        "y": 0.47129629629629627,
+        "w": 0.3260416666666667,
+        "h": 0.05740740740740741
+      },
+      "text": "[VI] Dark Screen Message",
+      "fontPx": 48,
+      "group": "solo-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF0A0A0A"
+      },
+      "room": {
+        "x": 0.175,
+        "y": 0.44537037037037036,
+        "w": 0.6510416666666667,
+        "h": 0.11296296296296299
+      }
+    }
+  ]
+}

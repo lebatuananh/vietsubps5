@@ -1,0 +1,261 @@
+// Reviewer 3a harness — drives the REAL engine classes with fake transports / fake OCR / synthetic frames.
+// No network: every IClaudeTransport here is in-process. Temp dirs only (never %LOCALAPPDATA%\VietSub).
+using System.Text.Json;
+using Engine.Config;
+using Engine.Geometry;
+using Engine.Layout;
+using Engine.Pipeline;
+using Engine.Protocol;
+using Engine.Translation;
+
+static string Tmp() => Directory.CreateTempSubdirectory("rv3a-").FullName;
+var glossary = new Glossary { Version = 1, Terms = [new GlossaryTerm("Board", "Ban lãnh đạo", null, null), new GlossaryTerm("Today", "Hôm nay", null, null)] };
+string Word(int i) => new string(new[] { (char)('a' + i % 26), (char)('a' + (i / 26) % 26), 'x' });
+var keys40 = Enumerable.Range(1, 40).Select(i => $"Your scout has found a promising young player called {Word(i)} {Word(i * 7)}").Select(k => SourceNormalizer.Normalize(k)).ToList();
+int chars40 = keys40.Sum(k => k.Key.Length);
+Console.WriteLine($"lô 40 câu, {chars40} ký tự nguồn (sau che slot)");
+
+DateTime now = new(2026, 11, 18, 20, 0, 0, DateTimeKind.Utc);
+(TranslationService svc, TranslationCache cache, UsageCounter usage, CountingTransport tr) Make(string home, Func<ClaudeRequest, ClaudeRawResponse> behaviour, int cap = 100000)
+{
+    var cache = TranslationCache.Load(null, Path.Combine(home, "cache", "fc26.json"));
+    var usage = new UsageCounter(Path.Combine(home, "usage"), cap, () => new DateOnly(2026, 11, 18));
+    var tr = new CountingTransport(behaviour);
+    var t = new TuningConfig { DailyCapChars = cap };
+    var svc = new TranslationService(glossary, cache, new ClaudeBackend(tr, glossary), usage, () => now, t);
+    return (svc, cache, usage, tr);
+}
+string Attempts(TranslationCache c) => string.Join(",", keys40.Select(k => c.Get("fc26", k.Key)?.Attempts ?? -1).Distinct().OrderBy(x => x));
+
+// ---------- A. non-transient API error (401 key sai / 400 schema) ----------
+Console.WriteLine("\n=== A. lỗi API không tạm thời (401/400) cho mọi lời gọi");
+{
+    var home = Tmp();
+    var s = Make(home, _ => throw new ClaudeTransportException(false, "API: 401 invalid x-api-key"));
+    for (int pass = 1; pass <= 3; pass++)
+    {
+        await s.svc.ProcessAsync(keys40, default);
+        Console.WriteLine($"  lần ProcessAsync {pass} (cùng phiên): HTTP tích luỹ={s.tr.Calls}, ký tự trừ trần tích luỹ={s.usage.Used}, attempts các câu={{{Attempts(s.cache)}}}, status={s.cache.Get("fc26", keys40[0].Key)?.Status}");
+    }
+    s.cache.Save();
+    var s2 = Make(home, _ => new ClaudeRawResponse("{\"items\":[]}", "end_turn", 0, 0, 0, 0)); // phiên mới, khoá đã sửa
+    await s2.svc.ProcessAsync(keys40, default);
+    Console.WriteLine($"  PHIÊN MỚI sau khi sửa khoá: HTTP={s2.tr.Calls} ⇒ {(s2.tr.Calls == 0 ? "40 câu bị khoá 'rejected' vĩnh viễn (tới khi đổi promptVersion/glossaryVersion)" : "được thử lại")}");
+}
+
+// ---------- B. transient mãi mãi (mạng/429/5xx) ----------
+Console.WriteLine("\n=== B. lỗi tạm thời mãi mãi; đồng hồ +31 s mỗi vòng, 200 vòng");
+{
+    var home = Tmp();
+    var s = Make(home, _ => throw new ClaudeTransportException(true, "5xx"));
+    for (int i = 0; i < 200; i++) { await s.svc.ProcessAsync(keys40, default); now = now.AddSeconds(31); }
+    Console.WriteLine($"  HTTP={s.tr.Calls}, ký tự trừ trần={s.usage.Used}/100000, attempts={{{Attempts(s.cache)}}} (−1 = không có entry)");
+    Console.WriteLine($"  ⇒ số lời gọi bị chặn bởi trần: tối đa {100000 / chars40} lô × {chars40} ký tự");
+}
+
+// ---------- C. slot sai: thử lại ngay trong CÙNG phiên? ----------
+Console.WriteLine("\n=== C. bản dịch sai slot cho 1 câu (lô 1 câu)");
+{
+    var home = Tmp();
+    var one = new List<NormalizedSource> { SourceNormalizer.Normalize("Transfer budget is €45.0M") };
+    var s = Make(home, _ => new ClaudeRawResponse("{\"items\":[{\"id\":\"s1\",\"vi\":\"Ngân sách chuyển nhượng\"}]}", "end_turn", 0, 0, 0, 0));
+    for (int pass = 1; pass <= 3; pass++)
+    {
+        await s.svc.ProcessAsync(one, default);
+        Console.WriteLine($"  ProcessAsync {pass} (cùng phiên): HTTP={s.tr.Calls}, attempts={s.cache.Get("fc26", one[0].Key)?.Attempts}");
+    }
+}
+
+// ---------- D. hai ProcessAsync đồng thời, cùng câu ----------
+Console.WriteLine("\n=== D. hai ProcessAsync chạy song song cùng 40 câu (transport chậm 300 ms)");
+{
+    var home = Tmp();
+    var s = Make(home, r => { Thread.Sleep(300); return OkAll(r); });
+    await Task.WhenAll(s.svc.ProcessAsync(keys40, default), s.svc.ProcessAsync(keys40, default), Task.Run(() => s.svc.ProcessAsync(keys40, default)));
+    Console.WriteLine($"  HTTP={s.tr.Calls} (kỳ vọng 1), câu đã dịch={keys40.Count(k => s.svc.Lookup(k.Key) is not null)}/40");
+}
+
+// ---------- E. file usage hỏng ----------
+Console.WriteLine("\n=== E. file usage/YYYY-MM-DD.json hỏng");
+foreach (var content in new[] { "{\"chars\":99990}", "{\"chars\":999", "", "[1]", "{\"chars\":\"x\"}" })
+{
+    var dir = Tmp();
+    File.WriteAllText(Path.Combine(dir, "2026-11-18.json"), content);
+    var u = new UsageCounter(dir, 100000, () => new DateOnly(2026, 11, 18));
+    string r;
+    try { r = $"Used={u.Used}, TryReserve(1000)={u.TryReserve(1000)}"; }
+    catch (Exception ex) { r = "NÉM " + ex.GetType().Name; }
+    Console.WriteLine($"  nội dung {JsonSerializer.Serialize(content),-18} ⇒ {r}");
+}
+
+// ---------- F. Dropped (refusal) cho cả lô, đếm chi phí tách đôi ----------
+Console.WriteLine("\n=== F. stop_reason=refusal cho MỌI lô (billed) — chi phí tách đôi");
+{
+    var home = Tmp();
+    var s = Make(home, _ => new ClaudeRawResponse(null, "refusal", 100, 10, 0, 0));
+    await s.svc.ProcessAsync(keys40, default);
+    int c1 = s.tr.Calls, u1 = s.usage.Used;
+    await s.svc.ProcessAsync(keys40, default);
+    await s.svc.ProcessAsync(keys40, default);
+    Console.WriteLine($"  lần 1: HTTP={c1}, ký tự={u1} ({u1 / (double)chars40:0.0}× lô); sau 3 lần: HTTP={s.tr.Calls}, ký tự={s.usage.Used}, attempts={{{Attempts(s.cache)}}}");
+}
+
+// ---------- G. entry reviewed không bị ghi đè ----------
+Console.WriteLine("\n=== G. entry reviewed trong cache người dùng");
+{
+    var home = Tmp();
+    var p = Path.Combine(home, "cache", "fc26.json");
+    Directory.CreateDirectory(Path.GetDirectoryName(p)!);
+    File.WriteAllText(p, "{\"entries\":[{\"gameId\":\"fc26\",\"sourceKey\":\"Hello coach\",\"target\":\"Chào HLV\",\"status\":\"reviewed\"}]}");
+    var c = TranslationCache.Load(null, p);
+    bool put = c.Put(new TranslationEntry { SourceKey = "Hello coach", Target = "XXX", Status = "machine" });
+    bool rej = c.Put(new TranslationEntry { SourceKey = "Hello coach", Status = "rejected", Attempts = 1 });
+    c.Save();
+    Console.WriteLine($"  Put(machine)={put}, Put(rejected)={rej}, file sau Save chứa 'Chào HLV': {File.ReadAllText(p).Contains("Chào HLV")}, status={TranslationCache.Load(null, p).Get("fc26", "Hello coach")?.Status}");
+}
+
+// ---------- H. Save đồng thời ----------
+Console.WriteLine("\n=== H. TranslationCache.Save gọi đồng thời (2 luồng × 200)");
+{
+    var home = Tmp();
+    var c = TranslationCache.Load(null, Path.Combine(home, "c.json"));
+    for (int i = 0; i < 300; i++) c.Put(new TranslationEntry { SourceKey = "k" + i, Target = "v" + i });
+    int errors = 0;
+    await Task.WhenAll(Enumerable.Range(0, 2).Select(_ => Task.Run(() => { for (int i = 0; i < 200; i++) try { c.Save(); } catch (IOException) { Interlocked.Increment(ref errors); } })));
+    var ok = TranslationCache.Load(null, Path.Combine(home, "c.json")).All.Count;
+    Console.WriteLine($"  IOException={errors}/400, file cuối đọc được {ok} entry (kỳ vọng 300)");
+}
+
+// ---------- I. id trùng trong cùng một gói ----------
+Console.WriteLine("\n=== I. hai hàng liền nhau cùng chữ 'Board' (cách 80 px) trong một khung 1920×1080");
+{
+    var cfg = new EngineConfig();
+    var home = Tmp();
+    var svc = new TranslationService(glossary, TranslationCache.Load(null, Path.Combine(home, "c.json")), null,
+        new UsageCounter(Path.Combine(home, "u"), 100000, () => new DateOnly(2026, 11, 18)), () => now, cfg.Tuning);
+    var content = new ContentRect(0, 0, 1920, 1080);
+    var frame = Solid(1920, 1080, 30);
+    var rows = new[] { 250.0, 330.0, 410.0, 490.0 };
+    var lines = rows.SelectMany(y => new[] { Line("Board", 100, y, 90, 28), Line("Today", 1500, y, 80, 28) }).ToList();
+    var blocks = LayoutBuilder.Build(lines, content, cfg.Tuning, cfg.Display.FontScale);
+    var built = ItemBuilder.Build(frame, content, blocks, svc, cfg);
+    var dupe = built.Items.GroupBy(i => i.Id).Where(g => g.Count() > 1).ToList();
+    Console.WriteLine($"  {built.Items.Count} item, {built.Items.Select(i => i.Id).Distinct().Count()} id khác nhau; id trùng: {string.Join("; ", dupe.Select(g => $"{g.Key}×{g.Count()} ({string.Join(",", g.Select(i => $"y={i.Box.Y:0.000}"))})"))}");
+}
+
+// ---------- J. nền động dưới item: nhấp nháy? ----------
+Console.WriteLine("\n=== J. ô chứa item có nền động liên tục (vd nền menu chuyển động) — 10 s, 4 khung/s");
+await Flicker(animateItemCell: true);
+Console.WriteLine("\n=== K. vùng động ở ô KHÁC (góc dưới phải), item tĩnh ở góc trên trái — khe giữa 2 gói khi item đang vẽ");
+await Flicker(animateItemCell: false);
+
+// ---------- L. đổi trang toàn màn (menu) ⇒ chế độ trận? ----------
+Console.WriteLine("\n=== L. đổi trang menu toàn màn một lần (A → B rồi đứng yên)");
+{
+    var cfg = new EngineConfig();
+    var home = Tmp();
+    var svc = new TranslationService(glossary, TranslationCache.Load(null, Path.Combine(home, "c.json")), null,
+        new UsageCounter(Path.Combine(home, "u"), 100000, () => new DateOnly(2026, 11, 18)), () => now, cfg.Tuning);
+    var sink = new RecSink();
+    var ocr = new FakeOcr([Line("Board", 100, 250, 90, 28)]);
+    var pipe = new FramePipeline(cfg, ocr, svc, sink, "s", m => { if (m.Contains("trận")) Console.WriteLine("  log: " + m); });
+    var a = Solid(1920, 1080, 30); var b = Solid(1920, 1080, 120);
+    long t = 0;
+    for (; t <= 2000; t += 250) await pipe.OnFrameAsync(a with { TimestampMs = t }, default);
+    long switchAt = t;
+    long? firstItem = null; bool seenEmpty = false;
+    for (; t <= 8000; t += 250)
+    {
+        await pipe.OnFrameAsync(b with { TimestampMs = t }, default);
+        if (sink.LastItems == 0) seenEmpty = true;
+        if (firstItem is null && seenEmpty && sink.LastItems > 0) firstItem = t;
+    }
+    Console.WriteLine($"  đổi trang lúc t={switchAt} ms ⇒ item hiện lại lúc t={firstItem} ms (trễ {firstItem - switchAt} ms; StableMs={cfg.Tuning.StableMs}, MatchModeCalmMs={cfg.Tuning.MatchModeCalmMs})");
+}
+
+// ---------- M. giới hạn giao thức: > 200 item ----------
+Console.WriteLine("\n=== M. màn dày chữ: 280 dòng có bản dịch ⇒ engine có cắt về ≤ 200 item không?");
+{
+    var cfg = new EngineConfig();
+    var home = Tmp();
+    var cache = TranslationCache.Load(null, Path.Combine(home, "c.json"));
+    var lines = new List<OcrLineData>();
+    for (int i = 0; i < 280; i++)
+    {
+        string txt = $"Player name entry {(char)('a' + i % 26)}{(char)('a' + i / 26)}";
+        cache.Put(new TranslationEntry { SourceKey = SourceNormalizer.Normalize(txt).Key, Target = "Tên " + i });
+        lines.Add(Line(txt, 10 + (i % 8) * 238, 10 + (i / 8) * 30, 200, 14));
+    }
+    var svc = new TranslationService(glossary, cache, null, new UsageCounter(Path.Combine(home, "u"), 100000, () => new DateOnly(2026, 11, 18)), () => now, cfg.Tuning);
+    var blocks = LayoutBuilder.Build(lines, new ContentRect(0, 0, 1920, 1080), cfg.Tuning, cfg.Display.FontScale);
+    var built = ItemBuilder.Build(Solid(1920, 1080, 30), new ContentRect(0, 0, 1920, 1080), blocks, svc, cfg);
+    var sink = new RecSink(); var pipe = new FramePipeline(cfg, new FakeOcr(lines), svc, sink, "s");
+    for (long t = 0; t <= 1000; t += 250) await pipe.OnFrameAsync(Solid(1920, 1080, 30) with { TimestampMs = t }, default);
+    Console.WriteLine($"  ItemBuilder: {built.Items.Count} item; gói gửi: {sink.LastItems} item, {sink.LastBytes} byte ⇒ {(sink.LastItems > 200 ? "VƯỢT giới hạn 200 — TV sẽ bỏ cả gói" : "trong giới hạn")}");
+}
+
+// ===================== helpers =====================
+async Task Flicker(bool animateItemCell)
+{
+    var cfg = new EngineConfig();
+    var home = Tmp();
+    var svc = new TranslationService(glossary, TranslationCache.Load(null, Path.Combine(home, "c.json")), null,
+        new UsageCounter(Path.Combine(home, "u"), 100000, () => new DateOnly(2026, 11, 18)), () => now, cfg.Tuning);
+    var sink = new RecSink();
+    var ocr = new FakeOcr([Line("Board", 20, 20, 90, 28)]);
+    var pipe = new FramePipeline(cfg, ocr, svc, sink, "s");
+    var basePx = Solid(1920, 1080, 30).Bgra;
+    int transitions = 0; bool prev = false; long lastSendWithItem = -1, maxGap = 0, ocrCalls0 = 0;
+    for (long t = 0; t <= 10000; t += 250)
+    {
+        var px = (byte[])basePx.Clone();
+        byte v = (byte)((t / 250) % 2 == 0 ? 60 : 110);
+        int cx0 = animateItemCell ? 0 : 1800, cy0 = animateItemCell ? 0 : 960;
+        for (int y = cy0; y < cy0 + 120; y++) for (int x = cx0; x < cx0 + 120; x++) { int i = (y * 1920 + x) * 4; if (animateItemCell && x >= 20 && x < 110 && y >= 20 && y < 48) continue; px[i] = px[i + 1] = px[i + 2] = v; }
+        int before = sink.Count;
+        await pipe.OnFrameAsync(new SourceFrame(px, 1920, 1080, t, null), default);
+        bool has = sink.LastItems > 0;
+        if (sink.Count > before)
+        {
+            if (has != prev) transitions++;
+            prev = has;
+            if (has) { if (lastSendWithItem >= 0) maxGap = Math.Max(maxGap, t - lastSendWithItem); lastSendWithItem = t; }
+        }
+        else if (prev && lastSendWithItem >= 0) maxGap = Math.Max(maxGap, t - lastSendWithItem);
+    }
+    Console.WriteLine($"  gói gửi={sink.Count}, OCR={ocr.Calls}, số lần item hiện↔mất={transitions}, khe dài nhất không có gói khi item đang hiện={maxGap} ms (ttlMs={cfg.Tuning.TtlMs}), trạng thái cuối={pipe.State}");
+}
+
+static ClaudeRawResponse OkAll(ClaudeRequest r)
+{
+    using var doc = JsonDocument.Parse(r.User);
+    var items = doc.RootElement.EnumerateArray().Select(e => new { id = e.GetProperty("id").GetString(), vi = "VI " + e.GetProperty("en").GetString() });
+    return new ClaudeRawResponse(JsonSerializer.Serialize(new { items }), "end_turn", 1, 1, 0, 0);
+}
+static SourceFrame Solid(int w, int h, byte v) { var p = new byte[w * h * 4]; for (int i = 0; i < p.Length; i += 4) { p[i] = p[i + 1] = p[i + 2] = v; p[i + 3] = 255; } return new SourceFrame(p, w, h, 0, null); }
+static OcrLineData Line(string text, double x, double y, double w, double h)
+{
+    var parts = text.Split(' '); double cw = w / Math.Max(1, text.Length); double cx = x; var words = new List<OcrWordData>();
+    foreach (var p in parts) { words.Add(new OcrWordData(p, new Box(cx, y, p.Length * cw, h))); cx += (p.Length + 1) * cw; }
+    return new OcrLineData(text, new Box(x, y, w, h), words);
+}
+
+sealed class CountingTransport(Func<ClaudeRequest, ClaudeRawResponse> f) : IClaudeTransport
+{
+    public int Calls;
+    public Task<ClaudeRawResponse> SendAsync(ClaudeRequest r, CancellationToken ct) { Interlocked.Increment(ref Calls); return Task.FromResult(f(r)); }
+}
+sealed class FakeOcr(IReadOnlyList<OcrLineData> lines) : IOcrProvider
+{
+    public int Calls;
+    public Task<IReadOnlyList<OcrLineData>> RecognizeAsync(SourceFrame frame, CancellationToken ct) { Calls++; return Task.FromResult(lines); }
+}
+sealed class RecSink : IFrameSink
+{
+    public int Count, LastItems, LastBytes; public long LastAt = -1;
+    public void Send(string line)
+    {
+        Count++; LastBytes = System.Text.Encoding.UTF8.GetByteCount(line);
+        var f = ProtocolJson.ParseFrame(line)!; LastItems = f.Items.Count;
+    }
+}

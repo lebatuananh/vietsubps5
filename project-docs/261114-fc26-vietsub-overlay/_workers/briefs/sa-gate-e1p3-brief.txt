@@ -1,0 +1,18 @@
+VietSub-261114-SA SA gate Epic 1 Phase 3 (resume, delta only)
+
+Since your mockup round 2: Leader critique PASS; the User has NOT yet seen the mockup on the TV. The User then wrote (verbatim): "Cứ tiếp tục code hết đi nhé tôi uỷ quyền cho bạn nhé" - explicit authorization to code Phase 3 without waiting for mockup approval. Leader's mitigation: every display choice the User has not decided is configuration, not code.
+
+Read:
+* project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase3.md (doc under review)
+* engine/README.md, tv-overlay/README.md and the code they describe (verify the doc matches the real code: reuse points, CoordinateMapper, OverlayService ordering)
+* your mockup report incl. Vong 2 and the Leader critique (C1/C2/C3 must be carried into Phase 3)
+* project-docs/present/backlog-and-techdebt.md
+
+Gate per handbook section 5, six criteria. Weight: criterion 3 (enough for Dev without guessing - two separate code turns 3a engine / 3b tv-overlay meet at the protocol), criterion 5 (CLAUDE.md constraints: paid LLM cap and no repeated paid calls, LAN-only token, font), criterion 6 (does the result on the real TV look like the mockup).
+Also judge: (1) is "translate every static screen, quality-checked only on Inbox" acceptable or a trap (cost, garbage on gameplay screens - note the overlay must never show during a match, R2.6); (2) is the frame-signature + stableMs approach enough to avoid flicker; (3) is the color sampling (D7) sound for the selected-row highlight; (4) anything in D9 (Anthropic C# SDK, structured output, prompt caching) that will not work as written.
+
+BLOCKER only if (verbatim): (1) causes repeated paid calls or wrong money grants; (2) loss or wrong deletion of data; (3) spec missing to the point that Dev has to guess. Plus any violation of the hard constraints in CLAUDE.md. Everything else is a NOTE. Be concise: this gate is on the critical path for the User's evening.
+
+Write project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase3-sa-review.md (handbook format). FIRST line SA-GATE-P3 IN PROGRESS while working, exactly SA-GATE-P3 DONE when finished; verdict on line 3. Write only that file; git read-only.
+
+Open question: what will make the User say "this is ugly / unplayable" in the first 5 minutes on the real TV, that this doc does not prevent?

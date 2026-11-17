@@ -1,0 +1,51 @@
+=== inbox
+  PEEK   74 px  item 'Hộp thư'  at x=94..179 y=108..122  (box px 90,95-210,133; room=yes)
+  PEEK   78 px  item 'Đội ngũ y tế'  at x=103..237 y=237..258  (box px 99,233-304,262; room=yes)
+  PEEK   67 px  item 'Cập nhật chấn thương'  at x=623..747 y=242..262  (box px 620,233-809,268; room=yes)
+  PEEK   37 px  item 'Hôm nay'  at x=1568..1638 y=243..256  (box px 1557,233-1647,267; room=yes)
+  PEEK   78 px  item 'Đội ngũ y tế'  at x=103..237 y=317..338  (box px 99,313-304,342; room=yes)
+  PEEK   86 px  item 'Báo cáo chấn thương'  at x=623..737 y=321..342  (box px 620,313-808,348; room=yes)
+  PEEK   37 px  item 'Hôm nay'  at x=1568..1638 y=323..336  (box px 1557,313-1647,347; room=yes)
+  PEEK   70 px  item 'Ban lãnh đạo'  at x=103..182 y=400..417  (box px 99,393-187,422; room=yes)
+  PEEK  232 px  item 'Cập nhật mục tiêu mùa giải'  at x=624..996 y=402..419  (box px 618,393-1002,428; room=yes)
+  PEEK   35 px  item 'Hôm nay'  at x=1568..1638 y=403..416  (box px 1557,393-1647,427; room=yes)
+  PEEK   71 px  item 'Ban lãnh đạo'  at x=103..182 y=480..497  (box px 99,473-187,502; room=yes)
+  PEEK  119 px  item 'Niềm tin của ban lãnh đạo'  at x=623..870 y=481..498  (box px 619,473-880,502; room=yes)
+  PEEK   62 px  item 'Hôm qua'  at x=1569..1675 y=482..497  (box px 1557,473-1699,507; room=yes)
+  PEEK   76 px  item '[VI] Head Scout'  at x=103..255 y=559..577  (box px 99,553-271,582; room=yes)
+  PEEK  168 px  item 'Có báo cáo tuyển trạch mới'  at x=624..929 y=560..580  (box px 618,553-934,588; room=yes)
+  PEEK   62 px  item 'Hôm qua'  at x=1569..1675 y=562..577  (box px 1557,553-1699,587; room=yes)
+  PEEK   87 px  item '[VI] Club Secretary'  at x=104..302 y=640..657  (box px 98,633-316,668; room=yes)
+  PEEK  135 px  item 'Ngày chốt sổ chuyển nhượng'  at x=623..803 y=642..658  (box px 619,633-816,668; room=yes)
+  PEEK   65 px  item '[VI] Press X to open'  at x=102..278 y=988..1003  (box px 99,982-283,1012; room=yes)
+TOTAL original text pixels unchanged inside item boxes (+4px): 1639
+=== email
+  PEEK  714 px  item 'Cập nhật hợp đồng'  at x=163..507 y=137..167  (box px 159,125-519,174; room=yes)
+  PEEK   98 px  item 'Kính gửi ông,'  at x=163..332 y=241..263  (box px 159,233-376,268; room=yes)
+  PEEK    9 px  item 'Đề nghị hợp đồng của ông đã '  at x=191..367 y=327..358  (box px 157,303-569,383; room=yes)
+  PEEK  209 px  item '[VI] Transfer Budget: €45.OM'  at x=183..514 y=441..462  (box px 157,433-519,468; room=yes)
+  PEEK  308 px  item '[VI] The striker wants a big'  at x=183..782 y=513..532  (box px 157,503-787,538; room=yes)
+  PEEK   89 px  item 'Trân trọng,'  at x=163..302 y=611..628  (box px 159,603-352,638; room=yes)
+TOTAL original text pixels unchanged inside item boxes (+4px): 1427
+=== inbox frame: maxLines / fontPx / room h vs box h (px)
+display {'minFontPx': 24, 'holdMs': 0}
+dup ids {}
+  Hộp thư                      group=col-1  maxLines=3 fontPx=23 box.h=38 room.h=74
+  Đội ngũ y tế                 group=col-1  maxLines=3 fontPx=23 box.h=29 room.h=57
+  Cập nhật chấn thương         group=col-2  maxLines=3 fontPx=29 box.h=35 room.h=63
+  Hôm nay                      group=col-3  maxLines=3 fontPx=28 box.h=34 room.h=62
+  Đội ngũ y tế                 group=col-1  maxLines=3 fontPx=23 box.h=29 room.h=57
+  Báo cáo chấn thương          group=col-2  maxLines=3 fontPx=29 box.h=35 room.h=63
+  Hôm nay                      group=col-3  maxLines=3 fontPx=28 box.h=34 room.h=62
+  Ban lãnh đạo                 group=col-1  maxLines=3 fontPx=23 box.h=29 room.h=57
+  Cập nhật mục tiêu mùa giải   group=col-2  maxLines=3 fontPx=29 box.h=35 room.h=63
+  Hôm nay                      group=col-3  maxLines=3 fontPx=28 box.h=34 room.h=62
+  Ban lãnh đạo                 group=col-1  maxLines=3 fontPx=23 box.h=29 room.h=57
+  Niềm tin của ban lãnh đạo    group=col-2  maxLines=3 fontPx=29 box.h=29 room.h=57
+  Hôm qua                      group=col-3  maxLines=3 fontPx=28 box.h=34 room.h=62
+  [VI] Head Scout              group=col-1  maxLines=3 fontPx=23 box.h=29 room.h=57
+  Có báo cáo tuyển trạch mới   group=col-2  maxLines=3 fontPx=29 box.h=35 room.h=63
+  Hôm qua                      group=col-3  maxLines=3 fontPx=28 box.h=34 room.h=62
+  [VI] Club Secretary          group=col-1  maxLines=3 fontPx=23 box.h=35 room.h=63
+  Ngày chốt sổ chuyển nhượng   group=col-2  maxLines=3 fontPx=29 box.h=35 room.h=63
+  [VI] Press X to open         group=col-1  maxLines=3 fontPx=23 box.h=30 room.h=58

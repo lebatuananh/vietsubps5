@@ -1,0 +1,76 @@
+=== smoke 3 (fresh VIETSUB_HOME=D:\Temp\rv3a-clean-rt9b, translator cache, key empty)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[replay] rv-a-inbox.png: 16 item · gói 3 · bộ item đổi 1 lần · chưa dịch 4
+[run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+[replay] rv-b-email.png: 3 item · gói 3 · bộ item đổi 2 lần · chưa dịch 4
+[replay] translator=cache · gọi backend: 0 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 8 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/replay-cache-clean
+exit=0
+=== provider/status of entries written by the FAKE run in the shared home:
+  Club Secretary => [VI] Club Secretary | provider anthropic model claude-sonnet-5-5 status machine
+  Head Scout => [VI] Head Scout | provider anthropic model claude-sonnet-5-5 status machine
+  Press X to open => [VI] Press X to open | provider anthropic model claude-sonnet-5-5 status machine
+  total 7
+=== frame.json analysis
+rv-a-inbox items 16 dup ids {'b6819182771a': 2} display {'minFontPx': 24, 'holdMs': 0}
+   col-1      Hộp thư                        y=0.091 fontPx=18 bf5cbd66034a text=#FFFFFFFF cover=solid/#FF101A28 room=Y alt=Thư
+   col-1      Đội ngũ y tế                   y=0.219 fontPx=18 1faa9b5ec431 text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-2      Cập nhật chấn thương           y=0.219 fontPx=23 387791c26e39 text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-3      Hôm nay                        y=0.219 fontPx=22 01965adc2fca text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-1      Đội ngũ y tế                   y=0.293 fontPx=18 37ab67d5aec5 text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-2      Báo cáo chấn thương            y=0.293 fontPx=23 f92779cb27de text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-3      Hôm nay                        y=0.293 fontPx=22 f7846dfce44b text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-1      Ban lãnh đạo                   y=0.367 fontPx=18 b6819182771a text=#FF14181E cover=solid/#FFE1E6EB room=Y alt=Ban LĐ
+   col-2      Cập nhật mục tiêu mùa giải     y=0.367 fontPx=23 4a1509885627 text=#FF14181E cover=solid/#FFE1E6EB room=Y alt=None
+   col-3      Hôm nay                        y=0.367 fontPx=22 2425675592df text=#FF14181E cover=solid/#FFE1E6EB room=Y alt=None
+   col-1      Ban lãnh đạo                   y=0.441 fontPx=18 b6819182771a text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=Ban LĐ
+   col-2      Niềm tin của ban lãnh đạo      y=0.441 fontPx=23 73df992c80cc text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-3      Hôm qua                        y=0.441 fontPx=22 bff064f157e5 text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-2      Có báo cáo tuyển trạch mới     y=0.515 fontPx=23 b5d2b87936cb text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-3      Hôm qua                        y=0.515 fontPx=22 52ef3093f035 text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+   col-2      Ngày chốt sổ chuyển nhượng     y=0.589 fontPx=23 779a64ef22ca text=#FFEBEBEB cover=solid/#FF1A2638 room=Y alt=None
+rv-b-email items 3 dup ids {} display {'minFontPx': 24, 'holdMs': 0}
+   solo-1     Cập nhật hợp đồng              y=0.119 fontPx=34 9585c40071ec text=#FFFFFFFF cover=solid/#FF0C121E room=Y alt=None
+   col-1      Kính gửi ông,                  y=0.219 fontPx=23 dfe4268d6f3a text=#FFE6E6E6 cover=solid/#FF0C121E room=Y alt=None
+   col-1      Trân trọng,                    y=0.561 fontPx=23 e1014b36bc23 text=#FFE6E6E6 cover=solid/#FF0C121E room=Y alt=None
+[
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "Head Scout",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "Club Secretary",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  },
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "Press X to open",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "Your contract offer has been",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "accepted.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "Transfer Budget: {N1}.OM",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "The striker wants a bigger role next season.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  }
+]

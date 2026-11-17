@@ -1,0 +1,14 @@
+VietSub-261114-Dev FIX ROUND 3a (resume, delta only)
+
+Reviewer review 3a: FAIL (4 blocking) - reviews/261114-epic1-phase3-review-3a.md (read it fully, evidence under playtest/epic1-phase3/reviewer/). Leader decisions: Phase doc row "Sau review 3a - Rev 1.3" in the decision table at the top of 261114-epic1-phase3.md - BINDING. Fix B1-B4 and the listed NBs in engine/, and the TV side of B1 (id unique per frame) and B4 (auto-fit starts at max(fontPx, minFontPx)) in tv-overlay/ + both READMEs.
+
+* Tests first for each blocker: B1 (two identical labels in adjacent rows => distinct ids, stable across frames), B2 (fake HTTP 401 => backend disabled for the session, 1 request total, attempts unchanged, chars refunded), B3 (Reviewer harness case J sequence => <= 1 change in 10 s; case K still fine), B4 (TV AutoFit test). Save red then green.
+* Re-run your smoke 1, 2, 3, 6, 10 and your 3b emulator end-to-end smoke (emulator-5556) after the fixes; screenshots under playtest/epic1-phase3/dev/fix3a/.
+* VIETSUB_HOME temp dir and empty ANTHROPIC_API_KEY in every child process; never call the real API.
+
+Report: reviews/261114-epic1-phase3-dev-report-fix3a.md - FIRST line DEV-FIX3A IN PROGRESS, exactly DEV-FIX3A DONE when finished: per finding what changed + test, NBs done/skipped with reason, tests before/after (engine + tv-overlay), git status --short. Kill your emulator at the end.
+
+NOT YOURS: same as 3b (real TV/PS5/LAN IPs, emulator-5558, other windows, git writes, credentials, phase docs/CLAUDE.md).
+
+Also from your own 3b report: fix the original-text sliver left visible near (1110, 545) in the replay screenshot (engine RoomFinder / cover union - C1 says NO original pixel may peek out). Add a test reproducing it.
+NOTE: the Reviewer is reviewing your 3b TV code IN PARALLEL (read-only). Its findings come in the next round.

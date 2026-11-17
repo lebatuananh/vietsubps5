@@ -1,0 +1,26 @@
+List of devices attached
+emulator-5556	device
+
+Performing Streamed Install
+Success
+    versionName=0.1.0-phase1
+      android.permission.INTERNET
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.INTERNET: granted=true
+== open WITHOUT permission
+Starting: Intent { cmp=vn.vietsub.ps5.tv/.MainActivity }
+focused=false TextView   'VietSub' [90,70][650,183]
+focused=false TextView   'Dịch FC 26 sang tiếng Việt, ngay trên TV.' [90,183][650,308]
+focused=false TextView   'Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại.' [90,308][650,374]
+focused=false TextView   'Chuẩn bị (một lần)' [710,70][1850,142]
+focused=false TextView   'Để chữ tiếng Việt nằm trên hình PS5.' [710,142][1850,212]
+focused=false TextView   '1' [734,243][786,295]
+focused=false TextView   'Hiển thị trên ứng dụng khác' [806,230][1678,275]
+focused=false TextView   'Trong danh sách của TV, kéo xuống tìm dòng VietSub rồi bấm OK để bật.' [806,275][1678,308]
+focused=false TextView   'CHƯA BẬT' [1692,245][1826,292]
+focused=true  Button     'Mở cài đặt' [728,320][1001,420]
+focused=false TextView   '2' [734,497][786,549]
+focused=false TextView   'Không tối ưu pin' [806,468][1590,513]
+focused=false TextView   'Để TV không tắt VietSub khi chuyển sang PS5. Khuyên bật, không bắt buộc.' [806,513][1590,579]
+focused=false TextView   'CHƯA BẬT · khuyên' [1604,500][1826,547]
+focused=false Button     'Thử mở cài đặt' [734,593][1008,689]

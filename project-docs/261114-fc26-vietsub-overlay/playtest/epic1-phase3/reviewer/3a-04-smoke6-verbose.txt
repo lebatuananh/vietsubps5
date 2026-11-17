@@ -1,0 +1,12 @@
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[run] t=250 Đứng yên → OCR (ô bẩn 0, nền động 0)
+[run] t=250 19 item, chưa dịch 1
+[replay] 01-a.png: 19 item · gói 10 · bộ item đổi 1 lần · chưa dịch 1
+[replay] 02-a.png: 19 item · gói 11 · bộ item đổi 0 lần · chưa dịch 1
+[run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+[run] t=22000 Đứng yên → OCR (ô bẩn 138, nền động 0)
+[run] t=22000 7 item, chưa dịch 0
+[replay] 03-b.png: 7 item · gói 10 · bộ item đổi 2 lần · chưa dịch 0
+[replay] 04-b.png: 7 item · gói 10 · bộ item đổi 0 lần · chưa dịch 0
+[replay] translator=cache · gọi backend: 0 · HTTP thật: 0 · ký tự LLM hôm nay: 144/100000 · misses: 2 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/replay-seq
+exit=0

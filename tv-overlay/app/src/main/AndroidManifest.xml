@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Phase 1: KHÔNG INTERNET, KHÔNG POST_NOTIFICATIONS (FGS vẫn chạy, chỉ ẩn thông báo). -->
+    <!-- Phase 3 (N6): INTERNET chỉ để mở ServerSocket 47820 nhận gói từ máy tính TRONG LAN (không gọi ra Internet).
+         Vẫn KHÔNG POST_NOTIFICATIONS (FGS chạy, chỉ ẩn thông báo). -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />

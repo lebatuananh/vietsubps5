@@ -1,0 +1,67 @@
+=== setup: install debug APK, reset state (VIETSUB_HOME=D:\Temp\rv3b-home-zN5r, key empty)
+  Success
+  3b-04a-permission: FOCUS='Mở cài đặt' [728,320][1001,420] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Chuẩn bị (một lần) ¦ Để chữ tiếng Việt nằm trên hình PS5. ¦ 1 ¦ Hiển thị trên ứng dụng khác ¦ Trong danh sách của TV, kéo xuống tìm dòng VietSub rồi bấm OK để bật. ¦ CHƯA BẬT ¦ Mở cài đặt ¦ 2 ¦ Không tối ưu pin ¦ Để TV không tắt VietSub khi chuyển sang PS5. Khuyên bật, không bắt buộc. ¦ CHƯA BẬT · khuyên ¦ Thử mở cài đặt
+  screenshot 3b-04a-permission.png
+=== grant via appops (setup) ⇒ app must move to WAITING by itself
+  3b-04b-waiting: FOCUS='Hướng dẫn cho người cài ▸' [710,506][1101,606] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Ghép với máy tính ¦ Trên máy tính, mở VietSub Engine và nhập mã: ¦ WVUD-4P9U ¦ Địa chỉ TV: 10.0.2.16:47820 ¦ Mã chỉ dùng trong mạng nhà. Ghép một lần, lần sau tự nhận. ¦ Hướng dẫn cho người cài ▸ ¦ Tạo mã mới
+  screenshot 3b-04b-waiting.png
+  code on screen: WV**-**** (masked in log)
+=== installer help collapsed by default; open it with OK (focus is on the toggle)
+  3b-04c-installer-open: FOCUS='Hướng dẫn cho người cài ▾' [710,506][1101,606] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Ghép với máy tính ¦ Trên máy tính, mở VietSub Engine và nhập mã: ¦ WVUD-4P9U ¦ Địa chỉ TV: 10.0.2.16:47820 ¦ Mã chỉ dùng trong mạng nhà. Ghép một lần, lần sau tự nhận. ¦ Hướng dẫn cho người cài ▾ ¦ Cần máy tính một lần, chỉ khi TV không cho làm bằng remote. Máy tính đã bật gỡ lỗi qua mạng với TV, chạy từng lệnh: / 1 · Hiển thị trên ứng dụng khác: / adb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow / 2 · Không tối ưu pin: / adb shell dumpsys deviceidle whitelist +vn.viet
+  screenshot 3b-04c-installer-open.png
+  3b-04d-installer-closed: FOCUS='Hướng dẫn cho người cài ▸' [710,506][1101,606] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Ghép với máy tính ¦ Trên máy tính, mở VietSub Engine và nhập mã: ¦ WVUD-4P9U ¦ Địa chỉ TV: 10.0.2.16:47820 ¦ Mã chỉ dùng trong mạng nhà. Ghép một lần, lần sau tự nhận. ¦ Hướng dẫn cho người cài ▸ ¦ Tạo mã mới
+=== forward host 47830 -> emulator 47820 (not touching any other forward)
+emulator-5558 tcp:47830 tcp:47820
+
+=== step 4: engine pair
+The provided file path does not exist: /d/Project/vietsubps5/engine/src/Engine.
+exit=1
+The provided file path does not exist: /d/Project/vietsubps5/engine/src/Engine.
+exit=1
+=== step 9: hostile input
+v=2            -> {"ok":false,"reason":"version"}
+wrong token    -> {"ok":false,"reason":"token"}
+garbage first  -> <closed, no reply>
+hello no token -> <closed, no reply>
+30 idle pre-auth sockets opened
+valid hello (while 30 idle) -> {"ok":true}
+after 300 KB line -> <closed, no reply>
+valid hello again -> {"ok":true}
+after 7 malformed frames, connection open
+  crash buffer lines: 0  service: 1
+=== seq gate (seq 10 then 5; then new session)
+hello -> {"ok":true}
+  screenshot 3b-09a-seq10-then-5.png
+  screenshot 3b-09b-new-session.png
+=== ttl 2000 and holdMs 2000
+hello -> {"ok":true}
+  screenshot 3b-09c-ttl-at-1s.png
+  screenshot 3b-09d-ttl-at-3s.png
+  screenshot 3b-09e-hold-at-1s-after-empty.png
+  screenshot 3b-09f-hold-at-3s-after-empty.png
+  server log lines:
+--------- beginning of main
+11-18 02:23:30.354  3382  3382 I VietSubOverlay: server nghe cổng 47820
+11-18 02:23:43.712  3382  3572 I VietSubOverlay: [server] từ chối hello: version
+11-18 02:23:43.732  3382  3573 I VietSubOverlay: [server] từ chối hello: token
+11-18 02:23:44.131  3382  3606 I VietSubOverlay: engine đã kết nối
+11-18 02:23:44.149  3382  3606 I VietSubOverlay: [server] đóng kết nối: dòng dài hơn 262144 byte
+11-18 02:23:44.149  3382  3606 I VietSubOverlay: engine ngắt kết nối
+11-18 02:23:44.168  3382  3607 I VietSubOverlay: engine đã kết nối
+11-18 02:23:44.472  3382  3607 I VietSubOverlay: engine ngắt kết nối
+11-18 02:23:47.114  3382  3621 I VietSubOverlay: engine đã kết nối
+11-18 02:23:54.620  3382  3621 I VietSubOverlay: engine ngắt kết nối
+11-18 02:23:55.746  3382  3646 I VietSubOverlay: engine đã kết nối
+11-18 02:24:04.250  3382  3646 I VietSubOverlay: engine ngắt kết nối
+  crash buffer lines: 0
+=== step 4 (rerun): pair with wrong-but-valid code
+[pair] đã ghi D:\Temp\rv3b-home-zN5r\engine.local.json (host=127.0.0.1 port=47830; mã không in ra).
+[engine] LỖI (3): TV từ chối: token — sai mã ghép cặp.
+exit=3
+=== pair with invalid alphabet
+[engine] LỖI (1): Mã ghép cặp không hợp lệ: cần 8 ký tự thuộc ACDEFHJKMNPRTUVWXY3479 (dạng XXXX-XXXX).
+exit=1
+=== pair with the real code, lowercase, no dash
+[pair] đã ghi D:\Temp\rv3b-home-zN5r\engine.local.json (host=127.0.0.1 port=47830; mã không in ra).
+[pair] OK — TV chấp nhận mã.
+exit=0

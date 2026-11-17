@@ -1,0 +1,2 @@
+﻿[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[cache-export] 67 mục cache + 129 glossary → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/cache-export.tsv

@@ -1,0 +1,42 @@
+=== setup: install, clear, grant (setup only), waiting screen
+  Success
+  re3b-04-waiting: FOCUS='Hướng dẫn cho người cài ▸' [710,506][1101,606] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Ghép với máy tính ¦ Trên máy tính, mở VietSub Engine và nhập mã: ¦ CWHH-VETA ¦ Địa chỉ TV: 10.0.2.1
+=== pair
+[pair] đã ghi D:\Temp\rv-re3b-home-EsYI\engine.local.json (host=127.0.0.1 port=47830; mã không in ra).
+[pair] OK — TV chấp nhận mã.
+=== NB3/NB5 server limits
+6 idle pre-auth sockets, closed by TV: [False, False, False, False, True, True]
+dribbled hello: closed after 5.0s
+hello -> {"ok":true}
+half-open: TV closed after 6.0s of silence
+=== blocker: inbox replay over backdrop (fake translator)
+  screenshot re3b-05-inbox-backdrop.png
+  screenshot re3b-05-inbox-overlay.png
+[replay] rv-a-inbox.png: 19 item · gói 10 · bộ item đổi 2 lần · chưa dịch 1
+[replay] translator=fake · gọi backend: 1 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 1 → D:\Project\vietsubps5\project-docs\261114-fc26-vietsub-overlay\playtest\epic1-phase3\reviewer\re3b-replay-inbox
+=== step 8: OFF focus, overlay hidden in foreground, repair hint
+  re3b-08a-connected: FOCUS='Tắt lớp phủ' [710,265][977,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghé
+  screenshot re3b-08a-connected-foreground.png
+  key KEYCODE_HOME
+  screenshot re3b-08b-home-overlay-on.png
+  re3b-08c-opened-off: FOCUS='Về màn hình chính' [992,269][1326,365] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Đã tắt lớp phủ ¦ Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại. ¦ OK để bật lại. ¦ Bật l�
+  key KEYCODE_DPAD_CENTER
+  after OK on default focus, resumed: mResumedActivity: ActivityRecord{ba45c20 u0 com.google.android.apps.tv.launcherx/.profile.chooser.ProfileChooserActivity t32}
+  re3b-08d-reopened: FOCUS='Về màn hình chính' [992,269][1326,365] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Đã tắt lớp phủ ¦ Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại. ¦ OK để bật lại. ¦ Bật l�
+  key KEYCODE_DPAD_LEFT
+  re3b-08e-left: FOCUS='Bật lại lớp phủ' [710,269][985,365] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Đã tắt lớp phủ ¦ Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại. ¦ OK để bật lại. ¦ Bật l�
+  key KEYCODE_DPAD_CENTER
+  re3b-08f-after-enable: FOCUS='Tắt lớp phủ' [710,265][977,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghé
+  key KEYCODE_DPAD_RIGHT
+  re3b-08g-right-3s: FOCUS='Ghép cặp lại' [986,265][1259,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Gh�
+  key KEYCODE_DPAD_CENTER
+  re3b-08h-after-repair: FOCUS='Hướng dẫn cho người cài ▸' [710,557][1101,657] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Ghép với máy tính ¦ Trên máy tính, mở VietSub Engine và nhập mã: ¦ CUUY-N3DX ¦ Địa chỉ TV: 10.0.2.1
+  screenshot re3b-08h-after-repair.png
+  code changed: YES
+  hello with OLD code -> {"ok":false,"reason":"token"}
+  crash lines: 0
+  log (warn/server):
+11-18 02:50:48.410  3159  3205 I VietSubOverlay: [server] hello quá hạn 5000 ms — đóng
+11-18 02:51:52.389  3281  3528 I VietSubOverlay: [server] từ chối hello: token
+11-18 02:51:56.207  3281  3552 I VietSubOverlay: [server] từ chối hello: token
+maxLines values: Counter({1: 19}) dup ids: {}

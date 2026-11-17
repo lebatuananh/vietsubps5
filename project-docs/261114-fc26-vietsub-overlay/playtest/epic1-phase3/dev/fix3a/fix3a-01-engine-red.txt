@@ -1,0 +1,307 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Engine -> D:\Project\vietsubps5\engine\src\Engine\bin\Debug\net10.0-windows10.0.22621.0\Engine.dll
+  Engine.Tests -> D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll
+Test run for D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:01.08]     Engine.Tests.NB7_MatchModeTests.SingleFullScreenPageChange_IsNotMatchMode [FAIL]
+[xUnit.net 00:00:01.09]     Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "{\"chars\":") [FAIL]
+[xUnit.net 00:00:01.10]     Engine.Tests.NB11_NB12_CliConfigTests.CoverMode_Unknown_IsRejectedAtLoad [FAIL]
+  Failed Engine.Tests.NB7_MatchModeTests.SingleFullScreenPageChange_IsNotMatchMode [25 ms]
+  Error Message:
+   Assert.False() Failure
+Expected: False
+Actual:   True
+  Stack Trace:
+     at Engine.Tests.NB7_MatchModeTests.SingleFullScreenPageChange_IsNotMatchMode() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 360
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "{\"chars\":") [73 ms]
+  Error Message:
+   Assert.True() Failure
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(String content) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 215
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.NB11_NB12_CliConfigTests.CoverMode_Unknown_IsRejectedAtLoad [4 ms]
+  Error Message:
+   Assert.Throws() Failure: No exception was thrown
+Expected: typeof(System.ArgumentException)
+  Stack Trace:
+     at Engine.Tests.NB11_NB12_CliConfigTests.CoverMode_Unknown_IsRejectedAtLoad() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 445
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.10]     Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 500, transient: True, refundable: True) [FAIL]
+[xUnit.net 00:00:01.10]     Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 409, transient: True, refundable: False) [FAIL]
+  Failed Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 500, transient: True, refundable: True) [1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.StatusClassification(Int32 status, Boolean transient, Boolean refundable) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 168
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 409, transient: True, refundable: False) [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.StatusClassification(Int32 status, Boolean transient, Boolean refundable) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 168
+   at InvokeStub_B2_FatalApiErrorTests.StatusClassification(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+[xUnit.net 00:00:01.10]     Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 529, transient: True, refundable: True) [FAIL]
+[xUnit.net 00:00:01.10]     Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 408, transient: True, refundable: False) [FAIL]
+[xUnit.net 00:00:01.10]     Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 429, transient: True, refundable: True) [FAIL]
+[xUnit.net 00:00:01.10]     Engine.Tests.NB11_NB12_CliConfigTests.BareBooleanFlag_IsAccepted [FAIL]
+  Failed Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 529, transient: True, refundable: True) [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.StatusClassification(Int32 status, Boolean transient, Boolean refundable) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 168
+   at InvokeStub_B2_FatalApiErrorTests.StatusClassification(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 408, transient: True, refundable: False) [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.StatusClassification(Int32 status, Boolean transient, Boolean refundable) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 168
+   at InvokeStub_B2_FatalApiErrorTests.StatusClassification(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.B2_FatalApiErrorTests.StatusClassification(status: 429, transient: True, refundable: True) [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.StatusClassification(Int32 status, Boolean transient, Boolean refundable) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 168
+   at InvokeStub_B2_FatalApiErrorTests.StatusClassification(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.NB11_NB12_CliConfigTests.BareBooleanFlag_IsAccepted [< 1 ms]
+  Error Message:
+   System.ArgumentException : Thiếu giá trị cho --no-send.
+  Stack Trace:
+     at Engine.Args.Parse(IReadOnlyList`1 args, Int32 start) in D:\Project\vietsubps5\engine\src\Engine\Cli.cs:line 20
+   at Engine.Tests.NB11_NB12_CliConfigTests.BareBooleanFlag_IsAccepted() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 424
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.10]     Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "{\"chars\":\"x\"}") [FAIL]
+[xUnit.net 00:00:01.10]     Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "") [FAIL]
+[xUnit.net 00:00:01.11]     Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "{\"chars\":-5}") [FAIL]
+  Failed Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "{\"chars\":\"x\"}") [24 ms]
+  Error Message:
+   System.InvalidOperationException : The requested operation requires an element of type 'Number', but the target element has type 'String'.
+  Stack Trace:
+     at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.TryGetValue(Int32 index, Int32& value)
+   at System.Text.Json.JsonElement.GetInt32()
+   at Engine.Translation.UsageCounter.Sync() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 223
+   at Engine.Translation.UsageCounter.get_CapReached() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 234
+   at Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(String content) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 215
+   at InvokeStub_NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "") [1 ms]
+  Error Message:
+   Assert.True() Failure
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(String content) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 215
+   at InvokeStub_NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "{\"chars\":-5}") [20 ms]
+  Error Message:
+   Assert.True() Failure
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(String content) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 215
+   at InvokeStub_NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+[xUnit.net 00:00:01.15]     Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "[1]") [FAIL]
+[xUnit.net 00:00:01.16]     Engine.Tests.NB1_NB5_NB6_TranslationTests.FakeTranslator_DoesNotWriteUserCache_NorCountUsage_ButServesInMemory [FAIL]
+  Failed Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(content: "[1]") [20 ms]
+  Error Message:
+   System.InvalidOperationException : The requested operation requires an element of type 'Object', but the target element has type 'Array'.
+  Stack Trace:
+     at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.TryGetNamedPropertyValue(Int32 index, ReadOnlySpan`1 propertyName, JsonElement& value)
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at Engine.Translation.UsageCounter.Sync() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 223
+   at Engine.Translation.UsageCounter.get_CapReached() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 234
+   at Engine.Tests.NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(String content) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 215
+   at InvokeStub_NB3_NB4_UsageTests.CorruptUsageFile_IsFailClosed_NoThrow(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.NB1_NB5_NB6_TranslationTests.FakeTranslator_DoesNotWriteUserCache_NorCountUsage_ButServesInMemory [47 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 0
+Actual:   25
+  Stack Trace:
+     at Engine.Tests.NB1_NB5_NB6_TranslationTests.FakeTranslator_DoesNotWriteUserCache_NorCountUsage_ButServesInMemory() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 252
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:01.17]     Engine.Tests.NB3_NB4_UsageTests.Transient429_RefundsChars_TimeoutKeepsThem [FAIL]
+  Failed Engine.Tests.NB3_NB4_UsageTests.Transient429_RefundsChars_TimeoutKeepsThem [6 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 0
+Actual:   17
+  Stack Trace:
+     at Engine.Tests.NB3_NB4_UsageTests.Transient429_RefundsChars_TimeoutKeepsThem() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 184
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:01.17]     Engine.Tests.NB3_NB4_UsageTests.Usage_WritesAtomically_NoTmpLeft_AndRefundWorks [FAIL]
+  Failed Engine.Tests.NB3_NB4_UsageTests.Usage_WritesAtomically_NoTmpLeft_AndRefundWorks [2 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 60
+Actual:   100
+  Stack Trace:
+     at Engine.Tests.NB3_NB4_UsageTests.Usage_WritesAtomically_NoTmpLeft_AndRefundWorks() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 199
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.24]     Engine.Tests.Sliver_C1_OriginalPixelsMustNotPeekOutTests.OcrBoxTwoPxShort_RoomAndBoxStillCoverAllInk [FAIL]
+[xUnit.net 00:00:01.25]     Engine.Tests.B1_ItemIdUniqueTests.TwoIdenticalLabels_InAdjacentRows_GetDistinctIds_StableAcrossFrames [FAIL]
+  Failed Engine.Tests.Sliver_C1_OriginalPixelsMustNotPeekOutTests.OcrBoxTwoPxShort_RoomAndBoxStillCoverAllInk [58 ms]
+  Error Message:
+   cover x 500..700 không phủ mực 500..702
+  Stack Trace:
+     at Engine.Tests.Sliver_C1_OriginalPixelsMustNotPeekOutTests.OcrBoxTwoPxShort_RoomAndBoxStillCoverAllInk() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 469
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.B1_ItemIdUniqueTests.TwoIdenticalLabels_InAdjacentRows_GetDistinctIds_StableAcrossFrames [65 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 4
+Actual:   2
+  Stack Trace:
+     at Engine.Tests.B1_ItemIdUniqueTests.TwoIdenticalLabels_InAdjacentRows_GetDistinctIds_StableAcrossFrames() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 85
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.25]     Engine.Tests.B1_ItemIdUniqueTests.SameCellSameText_DifferentOccurrence_DifferentId_AndStable [FAIL]
+  Failed Engine.Tests.B1_ItemIdUniqueTests.SameCellSameText_DifferentOccurrence_DifferentId_AndStable [3 ms]
+  Error Message:
+   Assert.NotEqual() Failure: Strings are equal
+Expected: Not "b72b4c7f305b"
+Actual:       "b72b4c7f305b"
+  Stack Trace:
+     at Engine.Tests.B1_ItemIdUniqueTests.SameCellSameText_DifferentOccurrence_DifferentId_AndStable() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 64
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.41]     Engine.Tests.NB1_NB5_NB6_TranslationTests.ConcurrentSaves_DoNotThrow [FAIL]
+[xUnit.net 00:00:01.42]     Engine.Tests.NB1_NB5_NB6_TranslationTests.RejectedSentence_IsNotRetriedInTheSameSession [FAIL]
+  Failed Engine.Tests.NB1_NB5_NB6_TranslationTests.ConcurrentSaves_DoNotThrow [253 ms]
+  Error Message:
+   Assert.Empty() Failure: Collection was not empty
+Collection: [System.IO.IOException: The process cannot access the file 'D:\Temp\vietsub-fix3a-q3uldflj.yky\c.json.tmp' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, ReadOnlySpan`1 contents, Encoding encoding)
+   at System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   at Engine.Translation.TranslationCache.Save() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 190
+   at Engine.Tests.NB1_NB5_NB6_TranslationTests.<>c__DisplayClass3_0.<ConcurrentSaves_DoNotThrow>b__0(Int32 _) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 264, System.IO.IOException: The process cannot access the file 'D:\Temp\vietsub-fix3a-q3uldflj.yky\c.json.tmp' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, ReadOnlySpan`1 contents, Encoding encoding)
+   at System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   at Engine.Translation.TranslationCache.Save() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 190
+   at Engine.Tests.NB1_NB5_NB6_TranslationTests.<>c__DisplayClass3_0.<ConcurrentSaves_DoNotThrow>b__0(Int32 _) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 264, System.IO.IOException: The process cannot access the file 'D:\Temp\vietsub-fix3a-q3uldflj.yky\c.json.tmp' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, ReadOnlySpan`1 contents, Encoding encoding)
+   at System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   at Engine.Translation.TranslationCache.Save() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 190
+   at Engine.Tests.NB1_NB5_NB6_TranslationTests.<>c__DisplayClass3_0.<ConcurrentSaves_DoNotThrow>b__0(Int32 _) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 264, System.IO.IOException: The process cannot access the file 'D:\Temp\vietsub-fix3a-q3uldflj.yky\c.json.tmp' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, ReadOnlySpan`1 contents, Encoding encoding)
+   at System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   at Engine.Translation.TranslationCache.Save() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 190
+   at Engine.Tests.NB1_NB5_NB6_TranslationTests.<>c__DisplayClass3_0.<ConcurrentSaves_DoNotThrow>b__0(Int32 _) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 264, System.IO.IOException: The process cannot access the file because it is being used by another process.
+   at System.IO.FileSystem.MoveFile(String sourceFullPath, String destFullPath, Boolean overwrite)
+   at Engine.Translation.TranslationCache.Save() in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 191
+   at Engine.Tests.NB1_NB5_NB6_TranslationTests.<>c__DisplayClass3_0.<ConcurrentSaves_DoNotThrow>b__0(Int32 _) in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 264, ···]
+  Stack Trace:
+     at Engine.Tests.NB1_NB5_NB6_TranslationTests.ConcurrentSaves_DoNotThrow() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 265
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.NB1_NB5_NB6_TranslationTests.RejectedSentence_IsNotRetriedInTheSameSession [6 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 1
+Actual:   2
+  Stack Trace:
+     at Engine.Tests.NB1_NB5_NB6_TranslationTests.RejectedSentence_IsNotRetriedInTheSameSession() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 234
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:01.98]     Engine.Tests.B2_FatalApiErrorTests.Http401_DisablesBackendForTheSession_OneRequest_NoAttempts_CharsRefunded [FAIL]
+[xUnit.net 00:00:01.98]     Engine.Tests.B2_FatalApiErrorTests.ClaudeBackend_NonTransientTransportError_IsFatal [FAIL]
+  Failed Engine.Tests.B2_FatalApiErrorTests.Http401_DisablesBackendForTheSession_OneRequest_NoAttempts_CharsRefunded [439 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 1
+Actual:   79
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.Http401_DisablesBackendForTheSession_OneRequest_NoAttempts_CharsRefunded() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 114
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.B2_FatalApiErrorTests.ClaudeBackend_NonTransientTransportError_IsFatal [2 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: Fatal
+Actual:   Dropped
+  Stack Trace:
+     at Engine.Tests.B2_FatalApiErrorTests.ClaudeBackend_NonTransientTransportError_IsFatal() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 152
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:02.57]     Engine.Tests.NB8_NB9_NB10_LayoutTests.Frame_IsClampedTo200Items_AndText1000Chars [FAIL]
+[xUnit.net 00:00:02.57]     Engine.Tests.NB8_NB9_NB10_LayoutTests.Email_TwoLinesWithOcrHeightJitter_AreMerged [FAIL]
+[xUnit.net 00:00:02.57]     Engine.Tests.NB8_NB9_NB10_LayoutTests.FontScale_DefaultIsOne [FAIL]
+[xUnit.net 00:00:03.52]     Engine.Tests.B3_DynamicBackgroundUnderItemTests.CaseJ_AnimatedBackgroundAroundStillText_AtMostOneChangeIn10s [FAIL]
+  Failed Engine.Tests.NB8_NB9_NB10_LayoutTests.Frame_IsClampedTo200Items_AndText1000Chars [1 s]
+  Error Message:
+   Assert.InRange() Failure: Value not in range
+Range:  (1 - 200)
+Actual: 280
+  Stack Trace:
+     at Engine.Tests.NB8_NB9_NB10_LayoutTests.Frame_IsClampedTo200Items_AndText1000Chars() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 414
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.NB8_NB9_NB10_LayoutTests.Email_TwoLinesWithOcrHeightJitter_AreMerged [5 ms]
+  Error Message:
+   Assert.Single() Failure: The collection contained 2 items
+Collection: [LayoutBlock { Text = Your contract offer has been, BoxPx = Box { X = 300, Y = 500, W = 520,0000000000001, H = 23 }, Box01 = Box { X = 0,15625, Y = 0,46296296296296297, W = 0,27083333333333337, H = 0,021296296296296313 }, LineCount = 1, LineHeightPx = 23, Group = col-1, FontPx = 23, MaxLines = 3 }, LayoutBlock { Text = accepted., BoxPx = Box { X = 300, Y = 530, W = 130, H = 29 }, Box01 = Box { X = 0,15625, Y = 0,49074074074074076, W = 0,06770833333333334, H = 0,02685185185185185 }, LineCount = 1, LineHeightPx = 29, Group = col-1, FontPx = 23, MaxLines = 3 }]
+  Stack Trace:
+     at Engine.Tests.NB8_NB9_NB10_LayoutTests.Email_TwoLinesWithOcrHeightJitter_AreMerged() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 389
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.NB8_NB9_NB10_LayoutTests.FontScale_DefaultIsOne [< 1 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 1
+Actual:   0,78000000000000003
+  Stack Trace:
+     at Engine.Tests.NB8_NB9_NB10_LayoutTests.FontScale_DefaultIsOne() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 396
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.B3_DynamicBackgroundUnderItemTests.CaseJ_AnimatedBackgroundAroundStillText_AtMostOneChangeIn10s [2 s]
+  Error Message:
+   item hiện↔mất 28 lần (OCR 14)
+  Stack Trace:
+     at Engine.Tests.B3_DynamicBackgroundUnderItemTests.CaseJ_AnimatedBackgroundAroundStillText_AtMostOneChangeIn10s() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 309
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:05.28]     Engine.Tests.B3_DynamicBackgroundUnderItemTests.CaseJ2_TextItselfChanging_StillRemovesItemImmediately [FAIL]
+  Failed Engine.Tests.B3_DynamicBackgroundUnderItemTests.CaseJ2_TextItselfChanging_StillRemovesItemImmediately [1 s]
+  Error Message:
+   item phải đã hiện trước khi đổi chữ
+  Stack Trace:
+     at Engine.Tests.B3_DynamicBackgroundUnderItemTests.CaseJ2_TextItselfChanging_StillRemovesItemImmediately() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3aTests.cs:line 344
+--- End of stack trace from previous location ---
+
+Failed!  - Failed:    28, Passed:   155, Skipped:     0, Total:   183, Duration: 4 s - Engine.Tests.dll (net10.0)

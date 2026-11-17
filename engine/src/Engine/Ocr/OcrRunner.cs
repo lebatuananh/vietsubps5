@@ -36,6 +36,28 @@ public static class OcrRunner
         return engine;
     }
 
+    /// <summary>OCR một khung BGRA (không phóng/thu): trả dòng + từng từ theo pixel ảnh (Phase 3 — bố cục tách đoạn theo khe giữa từ).</summary>
+    public static async Task<IReadOnlyList<Engine.Layout.OcrLineData>> RecognizeLinesAsync(OcrEngine engine, byte[] bgra, int width, int height)
+    {
+        if (Math.Max(width, height) > OcrEngine.MaxImageDimension)
+            throw new EngineException(6, $"Khung {width}x{height} vượt OcrEngine.MaxImageDimension ({OcrEngine.MaxImageDimension}).");
+        var writer = new DataWriter();
+        writer.WriteBytes(bgra);
+        using var bitmap = SoftwareBitmap.CreateCopyFromBuffer(writer.DetachBuffer(), BitmapPixelFormat.Bgra8, width, height, BitmapAlphaMode.Ignore);
+        var result = await engine.RecognizeAsync(bitmap);
+        var lines = new List<Engine.Layout.OcrLineData>();
+        foreach (var line in result.Lines)
+        {
+            var words = line.Words.Select(x => new Engine.Layout.OcrWordData(x.Text,
+                new Box(x.BoundingRect.X, x.BoundingRect.Y, x.BoundingRect.Width, x.BoundingRect.Height))).ToList();
+            if (words.Count == 0) continue;
+            double x1 = words.Min(q => q.BoxPx.X), y1 = words.Min(q => q.BoxPx.Y);
+            double x2 = words.Max(q => q.BoxPx.X + q.BoxPx.W), y2 = words.Max(q => q.BoxPx.Y + q.BoxPx.H);
+            lines.Add(new Engine.Layout.OcrLineData(line.Text, new Box(x1, y1, x2 - x1, y2 - y1), words));
+        }
+        return lines;
+    }
+
     /// <param name="scaleRequested">1 = ảnh gốc; 2 = phóng 2× trước OCR (biến thể tiền xử lý rẻ).</param>
     public static async Task<OcrFileModel> RunAsync(OcrEngine engine, string imagePath, double scaleRequested)
     {

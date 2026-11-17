@@ -1,0 +1,38 @@
+lô 40 câu, 2400 ký tự nguồn (sau che slot)
+=== A. lỗi API không tạm thời (401/400) cho mọi lời gọi
+  lần ProcessAsync 1 (cùng phiên): HTTP tích luỹ=79, ký tự trừ trần tích luỹ=15360, attempts các câu={1}, status=rejected
+  lần ProcessAsync 2 (cùng phiên): HTTP tích luỹ=158, ký tự trừ trần tích luỹ=30720, attempts các câu={2}, status=rejected
+  lần ProcessAsync 3 (cùng phiên): HTTP tích luỹ=158, ký tự trừ trần tích luỹ=30720, attempts các câu={2}, status=rejected
+  PHIÊN MỚI sau khi sửa khoá: HTTP=0 ⇒ 40 câu bị khoá 'rejected' vĩnh viễn (tới khi đổi promptVersion/glossaryVersion)
+=== B. lỗi tạm thời mãi mãi; đồng hồ +31 s mỗi vòng, 200 vòng
+  HTTP=41, ký tự trừ trần=98400/100000, attempts={-1} (−1 = không có entry)
+  ⇒ số lời gọi bị chặn bởi trần: tối đa 41 lô × 2400 ký tự
+=== C. bản dịch sai slot cho 1 câu (lô 1 câu)
+  ProcessAsync 1 (cùng phiên): HTTP=1, attempts=1
+  ProcessAsync 2 (cùng phiên): HTTP=2, attempts=2
+  ProcessAsync 3 (cùng phiên): HTTP=2, attempts=2
+=== D. hai ProcessAsync chạy song song cùng 40 câu (transport chậm 300 ms)
+  HTTP=1 (kỳ vọng 1), câu đã dịch=40/40
+=== E. file usage/YYYY-MM-DD.json hỏng
+  nội dung "{\u0022chars\u0022:99990}" ⇒ Used=99990, TryReserve(1000)=False
+  nội dung "{\u0022chars\u0022:999" ⇒ Used=0, TryReserve(1000)=True
+  nội dung ""                 ⇒ Used=0, TryReserve(1000)=True
+  nội dung "[1]"              ⇒ NÉM InvalidOperationException
+  nội dung "{\u0022chars\u0022:\u0022x\u0022}" ⇒ NÉM InvalidOperationException
+=== F. stop_reason=refusal cho MỌI lô (billed) — chi phí tách đôi
+  lần 1: HTTP=79, ký tự=15360 (6,4× lô); sau 3 lần: HTTP=158, ký tự=30720, attempts={2}
+=== G. entry reviewed trong cache người dùng
+  Put(machine)=False, Put(rejected)=False, file sau Save chứa 'Chào HLV': True, status=reviewed
+=== H. TranslationCache.Save gọi đồng thời (2 luồng × 200)
+  IOException=0/400, file cuối đọc được 300 entry (kỳ vọng 300)
+=== I. hai hàng liền nhau cùng chữ 'Board' (cách 80 px) trong một khung 1920×1080
+  8 item, 6 id khác nhau; id trùng: 42cbba7e6594×2 (y=0,231,y=0,306); ec851a39187f×2 (y=0,231,y=0,306)
+=== J. ô chứa item có nền động liên tục (vd nền menu chuyển động) — 10 s, 4 khung/s
+  gói gửi=28, OCR=14, số lần item hiện↔mất=28, khe dài nhất không có gói khi item đang hiện=500 ms (ttlMs=3000), trạng thái cuối=Moving
+=== K. vùng động ở ô KHÁC (góc dưới phải), item tĩnh ở góc trên trái — khe giữa 2 gói khi item đang vẽ
+  gói gửi=7, OCR=1, số lần item hiện↔mất=1, khe dài nhất không có gói khi item đang hiện=1000 ms (ttlMs=3000), trạng thái cuối=Stable
+=== L. đổi trang menu toàn màn một lần (A → B rồi đứng yên)
+  log: [run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+  đổi trang lúc t=2250 ms ⇒ item hiện lại lúc t=3750 ms (trễ 1500 ms; StableMs=250, MatchModeCalmMs=1500)
+=== M. màn dày chữ: 280 dòng có bản dịch ⇒ engine có cắt về ≤ 200 item không?
+  ItemBuilder: 280 item; gói gửi: 280 item, 106380 byte ⇒ VƯỢT giới hạn 200 — TV sẽ bỏ cả gói

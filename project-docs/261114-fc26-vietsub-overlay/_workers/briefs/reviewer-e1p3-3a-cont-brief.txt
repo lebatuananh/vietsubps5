@@ -1,0 +1,3 @@
+VietSub-261114-Reviewer review 3a - CONTINUE (resume)
+
+Your previous run was cut off by a usage limit; reviews/261114-epic1-phase3-review-3a.md still only has its first line. Continue the SAME brief from where you stopped (do not redo work already done in this session). Note: Dev is now working on tv-overlay/ in parallel - ignore tv-overlay/ changes except the README Giao thuc section. Finish with REVIEW-3A DONE on line 1 and the verdict on line 3.

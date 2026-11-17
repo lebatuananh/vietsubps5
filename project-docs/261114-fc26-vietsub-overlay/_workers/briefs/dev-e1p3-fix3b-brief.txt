@@ -1,0 +1,8 @@
+VietSub-261114-Dev FIX ROUND 3b (resume, delta only)
+
+Reviewer review 3b: FAIL (1 blocking) - reviews/261114-epic1-phase3-review-3b.md (read fully; evidence playtest/epic1-phase3/reviewer/3b-*). Leader decisions: Phase doc table row "Sau review 3b - Rev 1.4" - BINDING. Fix the blocker (AutoFit order shrink -> alt -> extra line only within room height -> floor 0.85*min -> ellipsis last; engine sends maxLines=1 for non-paragraph items) and the 7 listed NBs.
+* Tests first (red then green) for: the two label cases in a narrow row, room height respected, engine maxLines for labels vs paragraphs, LAN-only source filter, hello timeout/pending limit, half-open detection, duplicate id defence.
+* Re-run your emulator end-to-end smoke (emulator-5556; Blackbox 4, 5, 7, 8, 9) and include a zoomed screenshot of the Inbox rows proving labels stay on one line inside their row. Kill your emulator at the end.
+* The Reviewer is re-reviewing fix 3a IN PARALLEL (read-only) and may run Engine.exe - build into a separate output dir if bin is locked, never kill its processes.
+Report: reviews/261114-epic1-phase3-dev-report-fix3b.md - FIRST line DEV-FIX3B IN PROGRESS, exactly DEV-FIX3B DONE when finished; tests before/after (engine + tv-overlay); git status --short.
+NOT YOURS: same as before (real TV/PS5/LAN IPs, emulator-5558, other windows/processes, git writes, credentials, phase docs/CLAUDE.md). Temp VIETSUB_HOME + empty ANTHROPIC_API_KEY for engine.

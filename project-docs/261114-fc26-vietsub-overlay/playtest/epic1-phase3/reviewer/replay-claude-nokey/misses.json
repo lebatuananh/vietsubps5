@@ -1,0 +1,12 @@
+[
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  }
+]

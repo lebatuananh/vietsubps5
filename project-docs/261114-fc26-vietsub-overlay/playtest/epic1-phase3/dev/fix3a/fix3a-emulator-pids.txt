@@ -1,0 +1,3 @@
+cmd PID=29712
+emulator.exe pid=23172 parent=29712
+qemu-system-x86_64-headless.exe pid=12360 parent=23172

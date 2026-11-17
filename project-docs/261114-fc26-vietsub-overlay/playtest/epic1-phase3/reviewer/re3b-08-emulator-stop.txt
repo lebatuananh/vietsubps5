@@ -1,0 +1,11 @@
+﻿launcher cmd PID=11084
+SUCCESS: The process with PID 26480 (child process of PID 22652) has been terminated.
+SUCCESS: The process with PID 32248 (child process of PID 22652) has been terminated.
+SUCCESS: The process with PID 22652 (child process of PID 27620) has been terminated.
+SUCCESS: The process with PID 14468 (child process of PID 11084) has been terminated.
+SUCCESS: The process with PID 27620 (child process of PID 11084) has been terminated.
+SUCCESS: The process with PID 11084 (child process of PID 26168) has been terminated.
+adb devices:
+List of devices attached
+
+vietsub_rv processes left: 

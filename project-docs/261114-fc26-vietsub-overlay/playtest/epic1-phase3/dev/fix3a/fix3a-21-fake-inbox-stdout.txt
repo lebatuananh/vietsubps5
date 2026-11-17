@@ -1,0 +1,4 @@
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[tv] đã kết nối 127.0.0.1:47820
+[replay] synth-inbox-list.png: 15 item · gói 10 · bộ item đổi 2 lần · chưa dịch 4
+[replay] translator=fake · gọi backend: 1 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 4 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/fix3a/replay-tv-fake-inbox

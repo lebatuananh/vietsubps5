@@ -1,0 +1,5 @@
+VietSub-261114-SA SA gate Phase 3 re-check (resume, delta only)
+
+Leader applied ALL your findings as Rev 1.1: see the new section "Quyet dinh sau SA gate (Rev 1.1 - rang buoc)" at the top of project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase3.md. Check only that delta: are B1 and B2 closed, did any Rev 1.1 decision create a new BLOCKER (same 3 BLOCKER definitions + CLAUDE.md), and is anything still contradictory between the decision table and the body (the table overrides the body - only flag contradictions that would make Dev guess).
+
+Append a section "Duyet lai Rev 1.1" to reviews/261114-epic1-phase3-sa-review.md. Change line 1 to SA-GATE-P3R2 IN PROGRESS while working and exactly SA-GATE-P3R2 DONE when finished; put the new verdict (PASS or BLOCKER (n)) on line 3. Short. Write only that file; git read-only.

@@ -1,0 +1,1032 @@
+﻿  Determining projects to restore...
+  Restored D:\Project\vietsubps5\engine\tests\Engine.Tests\Engine.Tests.csproj (in 287 ms).
+  1 of 2 projects are up-to-date for restore.
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(120,14): warning CS9113: Parameter 'glossary' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(120,41): warning CS9113: Parameter 'cache' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(120,69): warning CS9113: Parameter 'backend' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(120,91): warning CS9113: Parameter 'usage' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(121,20): warning CS9113: Parameter 'utcNow' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(121,41): warning CS9113: Parameter 't' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(121,51): warning CS9113: Parameter 'gameId' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs(29,48): warning CS9113: Parameter 't' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(90,41): warning CS9113: Parameter 'dir' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(90,50): warning CS9113: Parameter 'cap' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs(90,70): warning CS9113: Parameter 'today' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs(16,37): warning CS9113: Parameter 'host' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs(16,47): warning CS9113: Parameter 'port' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs(16,60): warning CS9113: Parameter 'token' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs(16,83): warning CS9113: Parameter 'log' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs(16,99): warning CS9113: Parameter 'retryMs' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs(38,52): warning CS9113: Parameter 'transport' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs(38,72): warning CS9113: Parameter 'glossary' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs(38,98): warning CS9113: Parameter 'log' is unread. [D:\Project\vietsubps5\engine\src\Engine\Engine.csproj]
+  Engine -> D:\Project\vietsubps5\engine\src\Engine\bin\Debug\net10.0-windows10.0.22621.0\Engine.dll
+  Engine.Tests -> D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll
+Test run for D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+dotnet : [xUnit.net 00:00:00.90]     
+Engine.Tests.DataFilesTests.SeedCache_ValidSlots_MachineStatus_UniqueKeys_GlossaryDoesNotContradict [FAIL]
+At line:1 char:583
++ ... .FullName; $env:ANTHROPIC_API_KEY=''; dotnet test engine 2>&1 | Out-F ...
++                                           ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([xUnit.net 00:0...ntradict [FAIL]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Failed Engine.Tests.DataFilesTests.SeedCache_ValidSlots_MachineStatus_UniqueKeys_GlossaryDoesNotContradict [128 ms]
+  Error Message:
+   System.IO.FileNotFoundException : D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\data\fc26\seed-cache.json
+  Stack Trace:
+     at Engine.Tests.DataFilesTests.DataFile(String name) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 89
+   at Engine.Tests.DataFilesTests.SeedCache_ValidSlots_MachineStatus_UniqueKeys_GlossaryDoesNotContradict() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 111
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.92]     Engine.Tests.DataFilesTests.Glossary_KeysUnique_ShortViShorter_NonEmpty [FAIL]
+[xUnit.net 00:00:00.92]     Engine.Tests.MotionTrackerTests.ProtectedCell_IsNotIgnoredEvenIfBackground [FAIL]
+[xUnit.net 00:00:00.92]     Engine.Tests.ProtocolTests.Hello_ExactWireFormat [FAIL]
+[xUnit.net 00:00:00.92]     Engine.Tests.LlmEligibilityTests.Eligible(key: "Scout Report", expected: True) [FAIL]
+[xUnit.net 00:00:00.92]     Engine.Tests.LayoutBuilderTests.NoiseLines_AreDropped [FAIL]
+  Failed Engine.Tests.DataFilesTests.Glossary_KeysUnique_ShortViShorter_NonEmpty [< 1 ms]
+  Error Message:
+   System.IO.FileNotFoundException : D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\data\fc26\glossary.json
+  Stack Trace:
+     at Engine.Tests.DataFilesTests.DataFile(String name) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 89
+   at Engine.Tests.DataFilesTests.Glossary_KeysUnique_ShortViShorter_NonEmpty() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 95
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.MotionTrackerTests.ProtectedCell_IsNotIgnoredEvenIfBackground [132 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.ProtectedCell_IsNotIgnoredEvenIfBackground() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 124
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ProtocolTests.Hello_ExactWireFormat [128 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.SerializeHello(String token) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 42
+   at Engine.Tests.ProtocolTests.Hello_ExactWireFormat() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 64
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "Scout Report", expected: True) [128 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.LayoutBuilderTests.NoiseLines_AreDropped [133 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+   at Engine.Tests.LayoutBuilderTests.NoiseLines_AreDropped() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 79
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.93]     Engine.Tests.FrameSignatureTests.Uniform_AllCellsEqualToGray [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.SourceNormalizerTests.MasksMultipleSlots_InOrderOfAppearance [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.UsageCounterTests.Reserve_UpToCap_ThenDenied_AndWarnsOnce [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: "{\"foo\":1}") [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.SlotValidatorTests.Validate(src: "A {N1} B {N2}", vi: "B {N2} A {N1}", ok: 
+True) [FAIL]
+  Failed Engine.Tests.FrameSignatureTests.Uniform_AllCellsEqualToGray [139 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.FrameSignature.Compute(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, ContentRect rect) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 14
+   at Engine.Tests.FrameSignatureTests.Uniform_AllCellsEqualToGray() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 19
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.SourceNormalizerTests.MasksMultipleSlots_InOrderOfAppearance [128 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SourceNormalizer.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 11
+   at Engine.Tests.SourceNormalizerTests.MasksMultipleSlots_InOrderOfAppearance() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 19
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.UsageCounterTests.Reserve_UpToCap_ThenDenied_AndWarnsOnce [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.UsageCounter.TryReserve(Int32 chars) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 96
+   at Engine.Tests.UsageCounterTests.Reserve_UpToCap_ThenDenied_AndWarnsOnce() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 208
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: "{\"foo\":1}") [130 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.ParseResponse(String text, IReadOnlyList`1 requested) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 35
+   at Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(String text) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 76
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "A {N1} B {N2}", vi: "B {N2} A {N1}", ok: True) [128 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.93]     Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJK", ok: True) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ColorSamplerTests.LightSelectionStripe_DarkText_CoverFollowsStripe [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.SourceNormalizerTests.SameSentenceDifferentNumbers_SameKey [FAIL]
+[xUnit.net 00:00:00.93]     
+Engine.Tests.MotionTrackerTests.ContinuouslyChangingCell_BecomesBackground_AndStableIsReachedDespiteIt [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJ0", ok: False) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: "not json") [FAIL]
+  Failed Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJK", ok: True) [128 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.IsValid(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 76
+   at Engine.Tests.ConfigTests.PairCode_IsValid(String raw, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 134
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.ColorSamplerTests.LightSelectionStripe_DarkText_CoverFollowsStripe [131 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.Sample(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, Box rectPx, Int32 rim) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 34
+   at Engine.Tests.ColorSamplerTests.LightSelectionStripe_DarkText_CoverFollowsStripe() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 166
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.SourceNormalizerTests.SameSentenceDifferentNumbers_SameKey [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SourceNormalizer.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 11
+   at Engine.Tests.SourceNormalizerTests.SameSentenceDifferentNumbers_SameKey() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 38
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.MotionTrackerTests.ContinuouslyChangingCell_BecomesBackground_AndStableIsReachedDespiteIt [< 1 ms]
+[xUnit.net 00:00:00.93]     Engine.Tests.LlmEligibilityTests.Eligible(key: "THE BOARD HAS DECIDED TO SACK YOU NOW", 
+expected: True) [FAIL]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.ContinuouslyChangingCell_BecomesBackground_AndStableIsReachedDespiteIt() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 109
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJ0", ok: False) [< 1 ms]
+[xUnit.net 00:00:00.93]     Engine.Tests.SourceNormalizerTests.Restore_PutsOriginalValuesBack [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: null) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJ", ok: False) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.LlmEligibilityTests.Eligible(key: "ACCEPT", expected: False) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.LayoutBuilderTests.ParagraphLines_AreMergedIntoOneBlock [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.SlotValidatorTests.Validate(src: "A {N1}", vi: "A {N1} {N2}", ok: False) 
+[FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ConfigTests.PairCode_IsValid(raw: "acde-fhjk", ok: True) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: "") [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.LlmEligibilityTests.Eligible(key: "OK", expected: False) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJI", ok: False) [FAIL]
+[xUnit.net 00:00:00.93]     Engine.Tests.SlotValidatorTests.Validate(src: "A {N1}", vi: "A {N2}", ok: False) [FAIL]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.IsValid(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 76
+   at Engine.Tests.ConfigTests.PairCode_IsValid(String raw, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 134
+   at InvokeStub_ConfigTests.PairCode_IsValid(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: "not json") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.ParseResponse(String text, IReadOnlyList`1 requested) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 35
+   at Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(String text) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 76
+   at InvokeStub_ClaudePromptTests.ParseResponse_Invalid_IsDropped(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "THE BOARD HAS DECIDED TO SACK YOU NOW", expected: True) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.SourceNormalizerTests.Restore_PutsOriginalValuesBack [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SourceNormalizer.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 11
+   at Engine.Tests.SourceNormalizerTests.Restore_PutsOriginalValuesBack() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 44
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: null) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.ParseResponse(String text, IReadOnlyList`1 requested) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 35
+   at Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(String text) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 76
+   at InvokeStub_ClaudePromptTests.ParseResponse_Invalid_IsDropped(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJ", ok: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.IsValid(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 76
+   at Engine.Tests.ConfigTests.PairCode_IsValid(String raw, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 134
+   at InvokeStub_ConfigTests.PairCode_IsValid(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "ACCEPT", expected: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LayoutBuilderTests.ParagraphLines_AreMergedIntoOneBlock [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+   at Engine.Tests.LayoutBuilderTests.ParagraphLines_AreMergedIntoOneBlock() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 54
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "A {N1}", vi: "A {N1} {N2}", ok: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at InvokeStub_SlotValidatorTests.Validate(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ConfigTests.PairCode_IsValid(raw: "acde-fhjk", ok: True) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.IsValid(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 76
+   at Engine.Tests.ConfigTests.PairCode_IsValid(String raw, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 134
+   at InvokeStub_ConfigTests.PairCode_IsValid(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(text: "") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.ParseResponse(String text, IReadOnlyList`1 requested) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 35
+   at Engine.Tests.ClaudePromptTests.ParseResponse_Invalid_IsDropped(String text) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 76
+   at InvokeStub_ClaudePromptTests.ParseResponse_Invalid_IsDropped(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "OK", expected: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ConfigTests.PairCode_IsValid(raw: "ACDEFHJI", ok: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.IsValid(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 76
+   at Engine.Tests.ConfigTests.PairCode_IsValid(String raw, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 134
+   at InvokeStub_ConfigTests.PairCode_IsValid(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "A {N1}", vi: "A {N2}", ok: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at InvokeStub_SlotValidatorTests.Validate(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "A {N1} B {N2}", vi: "A {N1}", ok: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at InvokeStub_SlotValidatorTests.Validate(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.SourceNormalizerTests.MasksMoney_AndKeepsOriginalSlotValue [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SourceNormalizer.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 11
+   at Engine.Tests.SourceNormalizerTests.MasksMoney_AndKeepsOriginalSlotValue() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 11
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "Scout Report", vi: "Báo cáo tuyển trạch", ok: True) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at InvokeStub_SlotValidatorTests.Validate(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "Scout Report", vi: "Báo cáo {N1}", ok: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at InvokeStub_SlotValidatorTests.Validate(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.MotionTrackerTests.DirtyCells_AccumulateUntilAck [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.DirtyCells_AccumulateUntilAck() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 152
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.UsageCounterTests.PersistsAcrossInstances_AndResetsNextDay [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.UsageCounter.TryReserve(Int32 chars) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 96
+   at Engine.Tests.UsageCounterTests.PersistsAcrossInstances_AndResetsNextDay() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 223
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "Yes", expected: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.SlotValidatorTests.Validate(src: "Budget: {N1}", vi: "Ngân sách: {N1}", ok: True) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SlotValidator.Validate(String sourceKey, String target) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 22
+   at Engine.Tests.SlotValidatorTests.Validate(String src, String vi, Boolean ok) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 67
+   at InvokeStub_SlotValidatorTests.Validate(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LayoutBuilderTests.FontPx_IsLineHeightScaledTo1080_TimesFontScale [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+   at Engine.Tests.LayoutBuilderTests.FontPx_IsLineHeightScaledTo1080_TimesFontScale() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 97
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.SourceNormalizerTests.NoVariables_NoSlots [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SourceNormalizer.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 11
+   at Engine.Tests.SourceNormalizerTests.NoVariables_NoSlots() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 51
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ConfigTests.PairCode_Normalize(raw: "acdef-hjk", expected: "ACDEFHJK") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 74
+   at Engine.Tests.ConfigTests.PairCode_Normalize(String raw, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 126
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "Your contract offer has been accepted", expected: True) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "TRANSFER HUB", expected: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.MotionTrackerTests.Identical_BecomesStableOnce_AfterStableMs [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.Identical_BecomesStableOnce_AfterStableMs() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 68
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.SourceNormalizerTests.NormalizesWhitespaceAndQuotes [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.SourceNormalizer.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 11
+   at Engine.Tests.SourceNormalizerTests.NormalizesWhitespaceAndQuotes() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 32
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.LlmEligibilityTests.Eligible(key: "INBOX", expected: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.LlmEligibility.IsEligible(String normalizedKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 28
+   at Engine.Tests.LlmEligibilityTests.Eligible(String key, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 81
+   at InvokeStub_LlmEligibilityTests.Eligible(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ClaudePromptTests.Schema_AllObjectsClosed_ShortViOptional [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.get_SchemaJson() in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 32
+   at Engine.Tests.ClaudePromptTests.Schema_AllObjectsClosed_ShortViOptional() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 29
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ConfigTests.PairCode_Normalize(raw: " ACDE FHJK ", expected: "ACDEFHJK") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.PairCode.Normalize(String raw) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 74
+   at Engine.Tests.ConfigTests.PairCode_Normalize(String raw, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 126
+   at InvokeStub_ConfigTests.PairCode_Normalize(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.LayoutBuilderTests.FarApartLines_AreNotMerged [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+[xUnit.net 00:00:00.93]     Engine.Tests.SlotValidatorTests.Validate(src: "A {N1} B {N2}", vi: "A {N1}", ok: False) 
+[FAIL]
+   at Engine.Tests.LayoutBuilderTests.FarApartLines_AreNotMerged() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 64
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ColorSamplerTests.GradientBackground_HasLargeRimSpread [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.Sample(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, Box rectPx, Int32 rim) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 34
+   at Engine.Tests.ColorSamplerTests.GradientBackground_HasLargeRimSpread() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 176
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.MotionTrackerTests.SmallDiff_BelowThreshold_IsNotMotion [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.SmallDiff_BelowThreshold_IsNotMotion() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 94
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ProtocolTests.Frame_RoundTrips [2 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.SerializeFrame(OverlayFrame frame) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 37
+   at Engine.Tests.ProtocolTests.Frame_RoundTrips() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 34
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ClaudePromptTests.ParseResponse_Ok_IgnoresUnknownIds [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.ParseResponse(String text, IReadOnlyList`1 requested) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 35
+   at Engine.Tests.ClaudePromptTests.ParseResponse_Ok_IgnoresUnknownIds() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 63
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.LayoutBuilderTests.Box01_IsNormalizedToContentRect [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+   at Engine.Tests.LayoutBuilderTests.Box01_IsNormalizedToContentRect() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 108
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ColorSamplerTests.RimIsClippedAtImageEdge_NoCrash [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+[xUnit.net 00:00:00.93]     Engine.Tests.SourceNormalizerTests.MasksMoney_AndKeepsOriginalSlotValue [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.SlotValidatorTests.Validate(src: "Scout Report", vi: "Báo cáo tuyển trạch", 
+ok: True) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.SlotValidatorTests.Validate(src: "Scout Report", vi: "Báo cáo {N1}", ok: 
+False) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.MotionTrackerTests.DirtyCells_AccumulateUntilAck [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.UsageCounterTests.PersistsAcrossInstances_AndResetsNextDay [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LlmEligibilityTests.Eligible(key: "Yes", expected: False) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.SlotValidatorTests.Validate(src: "Budget: {N1}", vi: "Ngân sách: {N1}", ok: 
+True) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LayoutBuilderTests.FontPx_IsLineHeightScaledTo1080_TimesFontScale [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.SourceNormalizerTests.NoVariables_NoSlots [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ConfigTests.PairCode_Normalize(raw: "acdef-hjk", expected: "ACDEFHJK") [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LlmEligibilityTests.Eligible(key: "Your contract offer has been accepted", 
+expected: True) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LlmEligibilityTests.Eligible(key: "TRANSFER HUB", expected: False) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.MotionTrackerTests.Identical_BecomesStableOnce_AfterStableMs [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.SourceNormalizerTests.NormalizesWhitespaceAndQuotes [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LlmEligibilityTests.Eligible(key: "INBOX", expected: False) [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ClaudePromptTests.Schema_AllObjectsClosed_ShortViOptional [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ConfigTests.PairCode_Normalize(raw: " ACDE FHJK ", expected: "ACDEFHJK") 
+[FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LayoutBuilderTests.FarApartLines_AreNotMerged [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ColorSamplerTests.GradientBackground_HasLargeRimSpread [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.MotionTrackerTests.SmallDiff_BelowThreshold_IsNotMotion [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ProtocolTests.Frame_RoundTrips [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ClaudePromptTests.ParseResponse_Ok_IgnoresUnknownIds [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.LayoutBuilderTests.Box01_IsNormalizedToContentRect [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ColorSamplerTests.RimIsClippedAtImageEdge_NoCrash [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ItemIdTests.SameCell_SameText_SameId_EvenIfBboxShiftsAFewPx [FAIL]
+[xUnit.net 00:00:00.94]     Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(line: "{\"v\":1}") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ClaudePromptTests.System_IsDeterministic_AndContainsGlossaryAndRules [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "solid", spread: 99, expected: 
+"solid") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.MotionTrackerTests.Change_AfterStable_BecomesMoving_WithChangedCells [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ItemIdTests.DifferentCellOrText_DifferentId [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ConfigTests.Load_MissingFile_GivesDefaults [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.TranslationCacheTests.MayAttempt_Policy(status: "rejected", attempts: 1, pv: 
+1, gv: 1, expected: True) [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(line: "{}") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(line: "not json") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "card", spread: 0, expected: 
+"card") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "auto", spread: 5, expected: 
+"solid") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ClaudePromptTests.User_IsJsonArrayWithIds [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.MotionTrackerTests.MatchMode_WhenMostCellsChange_StaysMovingUntilCalm [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.LayoutBuilderTests.MergedRow_SplitsIntoThreeBlocks_WithThreeColumnGroups 
+[FAIL]
+     at Engine.Layout.ColorSampler.Sample(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, Box rectPx, Int32 rim) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 34
+   at Engine.Tests.ColorSamplerTests.RimIsClippedAtImageEdge_NoCrash() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 184
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ItemIdTests.SameCell_SameText_SameId_EvenIfBboxShiftsAFewPx [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ItemId.Compute(Box box01, String normalizedSource) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 25
+   at Engine.Tests.ItemIdTests.SameCell_SameText_SameId_EvenIfBboxShiftsAFewPx() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 120
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(line: "{\"v\":1}") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.ParseFrame(String line) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 40
+   at Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(String line) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 60
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.ClaudePromptTests.System_IsDeterministic_AndContainsGlossaryAndRules [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.BuildSystem(Glossary glossary) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 26
+   at Engine.Tests.ClaudePromptTests.System_IsDeterministic_AndContainsGlossaryAndRules() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 17
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "solid", spread: 99, expected: "solid") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.DecideCoverMode(String configured, Double rimSpread, Double threshold) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 38
+   at Engine.Tests.ColorSamplerTests.CoverMode_Decision(String cfg, Double spread, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 195
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed Engine.Tests.MotionTrackerTests.Change_AfterStable_BecomesMoving_WithChangedCells [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.Change_AfterStable_BecomesMoving_WithChangedCells() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 81
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ItemIdTests.DifferentCellOrText_DifferentId [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ItemId.Compute(Box box01, String normalizedSource) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 25
+   at Engine.Tests.ItemIdTests.DifferentCellOrText_DifferentId() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 129
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ConfigTests.Load_MissingFile_GivesDefaults [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.EngineConfig.Load(String home) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 64
+   at Engine.Tests.ConfigTests.Load_MissingFile_GivesDefaults() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 95
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TranslationCacheTests.MayAttempt_Policy(status: "rejected", attempts: 1, pv: 1, gv: 1, expected: True) [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.MayAttempt(TranslationEntry e, Int32 maxAttempts, Int32 promptVersion, Int32 glossaryVersion) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 87
+   at Engine.Tests.TranslationCacheTests.MayAttempt_Policy(String status, Int32 attempts, Int32 pv, Int32 gv, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 186
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithManyArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(line: "{}") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.ParseFrame(String line) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 40
+   at Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(String line) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 60
+   at InvokeStub_ProtocolTests.ParseFrame_InvalidReturnsNull(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(line: "not json") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.ParseFrame(String line) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 40
+   at Engine.Tests.ProtocolTests.ParseFrame_InvalidReturnsNull(String line) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 60
+   at InvokeStub_ProtocolTests.ParseFrame_InvalidReturnsNull(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "card", spread: 0, expected: "card") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.DecideCoverMode(String configured, Double rimSpread, Double threshold) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 38
+   at Engine.Tests.ColorSamplerTests.CoverMode_Decision(String cfg, Double spread, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 195
+   at InvokeStub_ColorSamplerTests.CoverMode_Decision(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "auto", spread: 5, expected: "solid") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.DecideCoverMode(String configured, Double rimSpread, Double threshold) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 38
+   at Engine.Tests.ColorSamplerTests.CoverMode_Decision(String cfg, Double spread, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 195
+   at InvokeStub_ColorSamplerTests.CoverMode_Decision(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ClaudePromptTests.User_IsJsonArrayWithIds [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudePrompt.BuildUser(IReadOnlyList`1 items) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 29
+   at Engine.Tests.ClaudePromptTests.User_IsJsonArrayWithIds() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 51
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.MotionTrackerTests.MatchMode_WhenMostCellsChange_StaysMovingUntilCalm [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.MotionTracker.Update(Int64 nowMs, Byte[] signature, IReadOnlySet`1 protectedCells) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 39
+   at Engine.Tests.MotionTrackerTests.MatchMode_WhenMostCellsChange_StaysMovingUntilCalm() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 136
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.LayoutBuilderTests.MergedRow_SplitsIntoThreeBlocks_WithThreeColumnGroups [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+   at Engine.Tests.LayoutBuilderTests.MergedRow_SplitsIntoThreeBlocks_WithThreeColumnGroups() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 36
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "none", spread: 99, expected: "none") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.DecideCoverMode(String configured, Double rimSpread, Double threshold) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 38
+   at Engine.Tests.ColorSamplerTests.CoverMode_Decision(String cfg, Double spread, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 195
+   at InvokeStub_ColorSamplerTests.CoverMode_Decision(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.TranslationCacheTests.MayAttempt_Policy(status: "machine", attempts: 0, pv: 1, gv: 1, expected: True) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.MayAttempt(TranslationEntry e, Int32 maxAttempts, Int32 promptVersion, Int32 glossaryVersion) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 87
+   at Engine.Tests.TranslationCacheTests.MayAttempt_Policy(String status, Int32 attempts, Int32 pv, Int32 gv, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 186
+   at InvokeStub_TranslationCacheTests.MayAttempt_Policy(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithManyArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "auto", spread: 30, expected: "card") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.DecideCoverMode(String configured, Double rimSpread, Double threshold) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 38
+   at Engine.Tests.ColorSamplerTests.CoverMode_Decision(String cfg, Double spread, String expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 195
+   at InvokeStub_ColorSamplerTests.CoverMode_Decision(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.TranslationCacheTests.MayAttempt_Policy(status: "rejected", attempts: 2, pv: 1, gv: 1, expected: False) [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.MayAttempt(TranslationEntry e, Int32 maxAttempts, Int32 promptVersion, Int32 glossaryVersion) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 87
+   at Engine.Tests.TranslationCacheTests.MayAttempt_Policy(String status, Int32 attempts, Int32 pv, Int32 gv, Boolean expected) in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 186
+   at InvokeStub_TranslationCacheTests.MayAttempt_Policy(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithManyArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+  Failed Engine.Tests.ProtocolTests.Argb_IsUppercaseEightHexDigits [7 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.Argb(Byte a, Byte r, Byte g, Byte b) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 47
+   at Engine.Tests.ProtocolTests.Argb_IsUppercaseEightHexDigits() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 77
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TvClientTests.Reconnects_AfterServerDropsConnection [132 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.TvClient.DisposeAsync() in D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs:line 27
+   at Engine.Tests.TvClientTests.Reconnects_AfterServerDropsConnection() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 196
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.ClaudeBackendTests.RefusalOrMaxTokens_DropsTheBatch(stop: "refusal") [132 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudeBackend.TranslateAsync(IReadOnlyList`1 items, CancellationToken ct) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 45
+   at Engine.Tests.ClaudeBackendTests.RefusalOrMaxTokens_DropsTheBatch(String stop) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 112
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.TransientError_DoesNotCountAttempt_ButBacksOff30s [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.TransientError_DoesNotCountAttempt_ButBacksOff30s() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 355
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.LayoutBuilderTests.SingleRowOfTightLabels_GetOneRowGroup [7 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.LayoutBuilder.Build(IReadOnlyList`1 lines, ContentRect content, TuningConfig t, Double fontScale) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 19
+   at Engine.Tests.LayoutBuilderTests.SingleRowOfTightLabels_GetOneRowGroup() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 87
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ProtocolTests.Frame_IsSingleLine_CamelCase_AndOmitsNulls [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.SerializeFrame(OverlayFrame frame) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 37
+   at Engine.Tests.ProtocolTests.Frame_IsSingleLine_CamelCase_AndOmitsNulls() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 20
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ClaudeBackendTests.RefusalOrMaxTokens_DropsTheBatch(stop: "max_tokens") [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudeBackend.TranslateAsync(IReadOnlyList`1 items, CancellationToken ct) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 45
+   at Engine.Tests.ClaudeBackendTests.RefusalOrMaxTokens_DropsTheBatch(String stop) in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 112
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.ColorSamplerTests.DarkBackground_WhiteText [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Layout.ColorSampler.Sample(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, Box rectPx, Int32 rim) in D:\Project\vietsubps5\engine\src\Engine\Layout\Layout.cs:line 34
+   at Engine.Tests.ColorSamplerTests.DarkBackground_WhiteText() in D:\Project\vietsubps5\engine\tests\Engine.Tests\LayoutTests.cs:line 154
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ConfigTests.SaveThenLoad_RoundTrips_AndPartialFileKeepsDefaults [8 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.EngineConfig.Save(String home) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 66
+   at Engine.Tests.ConfigTests.SaveThenLoad_RoundTrips_AndPartialFileKeepsDefaults() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 110
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ProtocolTests.EmptyItems_SerializesAsEmptyArray [< 1 ms]
+  Error Message:
+[xUnit.net 00:00:00.95]     Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "none", spread: 99, expected: 
+"none") [FAIL]
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.SerializeFrame(OverlayFrame frame) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 37
+   at Engine.Tests.ProtocolTests.EmptyItems_SerializesAsEmptyArray() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 51
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TranslationCacheTests.Save_IsAtomic_AndReloadEqual [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationCacheTests.Save_IsAtomic_AndReloadEqual() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 170
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ProtocolTests.Reply_Parsing [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.ProtocolJson.ParseReply(String line) in D:\Project\vietsubps5\engine\src\Engine\Protocol\Protocol.cs:line 44
+   at Engine.Tests.ProtocolTests.Reply_Parsing() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 69
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TvClientTests.Send_DoesNotBlock_WhenNoServer [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.TvClient.DisposeAsync() in D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs:line 27
+   at Engine.Tests.TvClientTests.Send_DoesNotBlock_WhenNoServer() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 207
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.NoBackend_MeansCacheOnly_NoException [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.NoBackend_MeansCacheOnly_NoException() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 405
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.ConfigTests.Home_UsesEnvVar_ElseLocalAppData [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Config.VietSubHome.Resolve(Func`2 env) in D:\Project\vietsubps5\engine\src\Engine\Config\EngineConfig.cs:line 10
+   at Engine.Tests.ConfigTests.Home_UsesEnvVar_ElseLocalAppData() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 87
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.ClaudeBackendTests.TransientTransportError_IsTransient_Others_AreDropped [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudeBackend.TranslateAsync(IReadOnlyList`1 items, CancellationToken ct) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 45
+   at Engine.Tests.ClaudeBackendTests.TransientTransportError_IsTransient_Others_AreDropped() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 123
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationCacheTests.UserWinsOverSeed_ExceptReviewedSeed [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationCacheTests.UserWinsOverSeed_ExceptReviewedSeed() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 147
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TranslationCacheTests.KeyOf_IsStable_AndDistinguishesGame [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.KeyOf(String gameId, String sourceKey) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 70
+   at Engine.Tests.TranslationCacheTests.KeyOf_IsStable_AndDistinguishesGame() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 136
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TvClientTests.TestHello_ReturnsReply_OrNullWhenUnreachable [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.TvClient.TestHelloAsync(String host, Int32 port, String token, Int32 timeoutMs) in D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs:line 31
+   at Engine.Tests.TvClientTests.TestHello_ReturnsReply_OrNullWhenUnreachable() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 214
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.ClaudeBackendTests.Ok_BuildsRequestAsSpecified_AndReadsUsage [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.ClaudeBackend.TranslateAsync(IReadOnlyList`1 items, CancellationToken ct) in D:\Project\vietsubps5\engine\src\Engine\Translation\Claude.cs:line 45
+   at Engine.Tests.ClaudeBackendTests.Ok_BuildsRequestAsSpecified_AndReadsUsage() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 95
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.BatchIsCappedAtBatchMax [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.BatchIsCappedAtBatchMax() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 414
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationCacheTests.Reviewed_IsNotOverwrittenByPut [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationCacheTests.Reviewed_IsNotOverwrittenByPut() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 160
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TranslationCacheTests.MayAttempt_RetriesWhenPromptOrGlossaryVersionChanged_AndNullEntryAlways [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.MayAttempt(TranslationEntry e, Int32 maxAttempts, Int32 promptVersion, Int32 glossaryVersion) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 87
+   at Engine.Tests.TranslationCacheTests.MayAttempt_RetriesWhenPromptOrGlossaryVersionChanged_AndNullEntryAlways() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 193
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.TvClientTests.Hello_ThenFrame_Delivered [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.TvClient.DisposeAsync() in D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs:line 27
+   at Engine.Tests.TvClientTests.Hello_ThenFrame_Delivered() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 164
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.IneligibleShortUppercase_IsNeverSentToBackend [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.IneligibleShortUppercase_IsNeverSentToBackend() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 296
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TvClientTests.WrongToken_IsRejected_AndClientStopsRetrying [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Protocol.TvClient.DisposeAsync() in D:\Project\vietsubps5\engine\src\Engine\Protocol\TvClient.cs:line 27
+   at Engine.Tests.TvClientTests.WrongToken_IsRejected_AndClientStopsRetrying() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 181
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.InFlight_SentenceIsNotSentTwice_WhileWaiting [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.InFlight_SentenceIsNotSentTwice_WhileWaiting() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 375
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.BadSlot_IsRejected_Persisted_AttemptsCapAtTwo_AcrossSessions [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.BadSlot_IsRejected_Persisted_AttemptsCapAtTwo_AcrossSessions() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 305
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.DroppedBatch_IsSplitInHalves_AndAttemptsOnlyCountOnSingleSentences [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.DroppedBatch_IsSplitInHalves_AndAttemptsOnlyCountOnSingleSentences() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 339
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.NewSentences_AreTranslated_Cached_AndCounted [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.NewSentences_AreTranslated_Cached_AndCounted() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 279
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.RejectedSentence_IsRetriedAfterPromptVersionChange [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.RejectedSentence_IsRetriedAfterPromptVersionChange() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 327
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.DailyCap_StopsBackendCalls_ButCacheStillServed [1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.DailyCap_StopsBackendCalls_ButCacheStillServed() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 390
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.TranslationServiceTests.Glossary_IsUsedWithoutBackend [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Translation.TranslationCache.Load(String seedPath, String userPath) in D:\Project\vietsubps5\engine\src\Engine\Translation\Translation.cs:line 73
+   at Engine.Tests.TranslationServiceTests.Env..ctor() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 260
+   at Engine.Tests.TranslationServiceTests.Glossary_IsUsedWithoutBackend() in D:\Project\vietsubps5\engine\tests\Engine.Tests\TranslationTests.cs:line 269
+--- End of stack trace from previous location ---
+  Failed Engine.Tests.FrameSignatureTests.ChangingRegion_ChangesOnlyIntersectingCells [28 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.FrameSignature.Compute(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, ContentRect rect) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 14
+   at Engine.Tests.FrameSignatureTests.ChangingRegion_ChangesOnlyIntersectingCells() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 32
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.FrameSignatureTests.ContentRect_OffsetIsRespected [20 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.FrameSignature.Compute(ReadOnlySpan`1 bgra, Int32 width, Int32 height, Int32 stride, ContentRect rect) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 14
+   at Engine.Tests.FrameSignatureTests.ContentRect_OffsetIsRespected() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 43
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Engine.Tests.FrameSignatureTests.CellsOf_BoxCoversExpectedCells [< 1 ms]
+  Error Message:
+   System.NotImplementedException : The method or operation is not implemented.
+  Stack Trace:
+     at Engine.Pipeline.FrameSignature.CellsOf(Box box01) in D:\Project\vietsubps5\engine\src\Engine\Pipeline\Motion.cs:line 17
+   at Engine.Tests.FrameSignatureTests.CellsOf_BoxCoversExpectedCells() in D:\Project\vietsubps5\engine\tests\Engine.Tests\MotionTests.cs:line 51
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.95]     Engine.Tests.TranslationCacheTests.MayAttempt_Policy(status: "machine", attempts: 0, pv: 
+1, gv: 1, expected: True) [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ColorSamplerTests.CoverMode_Decision(cfg: "auto", spread: 30, expected: 
+"card") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.TranslationCacheTests.MayAttempt_Policy(status: "rejected", attempts: 2, pv: 
+1, gv: 1, expected: False) [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ProtocolTests.Argb_IsUppercaseEightHexDigits [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.TvClientTests.Reconnects_AfterServerDropsConnection [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ClaudeBackendTests.RefusalOrMaxTokens_DropsTheBatch(stop: "refusal") [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.TranslationServiceTests.TransientError_DoesNotCountAttempt_ButBacksOff30s 
+[FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.LayoutBuilderTests.SingleRowOfTightLabels_GetOneRowGroup [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ProtocolTests.Frame_IsSingleLine_CamelCase_AndOmitsNulls [FAIL]
+[xUnit.net 00:00:00.95]     Engine.Tests.ClaudeBackendTests.RefusalOrMaxTokens_DropsTheBatch(stop: "max_tokens") [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ColorSamplerTests.DarkBackground_WhiteText [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ConfigTests.SaveThenLoad_RoundTrips_AndPartialFileKeepsDefaults [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ProtocolTests.EmptyItems_SerializesAsEmptyArray [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationCacheTests.Save_IsAtomic_AndReloadEqual [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ProtocolTests.Reply_Parsing [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TvClientTests.Send_DoesNotBlock_WhenNoServer [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.NoBackend_MeansCacheOnly_NoException [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ConfigTests.Home_UsesEnvVar_ElseLocalAppData [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ClaudeBackendTests.TransientTransportError_IsTransient_Others_AreDropped 
+[FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationCacheTests.UserWinsOverSeed_ExceptReviewedSeed [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationCacheTests.KeyOf_IsStable_AndDistinguishesGame [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TvClientTests.TestHello_ReturnsReply_OrNullWhenUnreachable [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.ClaudeBackendTests.Ok_BuildsRequestAsSpecified_AndReadsUsage [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.BatchIsCappedAtBatchMax [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationCacheTests.Reviewed_IsNotOverwrittenByPut [FAIL]
+[xUnit.net 00:00:00.96]     
+Engine.Tests.TranslationCacheTests.MayAttempt_RetriesWhenPromptOrGlossaryVersionChanged_AndNullEntryAlways [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TvClientTests.Hello_ThenFrame_Delivered [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.IneligibleShortUppercase_IsNeverSentToBackend [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TvClientTests.WrongToken_IsRejected_AndClientStopsRetrying [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.InFlight_SentenceIsNotSentTwice_WhileWaiting [FAIL]
+[xUnit.net 00:00:00.96]     
+Engine.Tests.TranslationServiceTests.BadSlot_IsRejected_Persisted_AttemptsCapAtTwo_AcrossSessions [FAIL]
+[xUnit.net 00:00:00.96]     
+Engine.Tests.TranslationServiceTests.DroppedBatch_IsSplitInHalves_AndAttemptsOnlyCountOnSingleSentences [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.NewSentences_AreTranslated_Cached_AndCounted [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.RejectedSentence_IsRetriedAfterPromptVersionChange 
+[FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.DailyCap_StopsBackendCalls_ButCacheStillServed [FAIL]
+[xUnit.net 00:00:00.96]     Engine.Tests.TranslationServiceTests.Glossary_IsUsedWithoutBackend [FAIL]
+[xUnit.net 00:00:00.97]     Engine.Tests.FrameSignatureTests.ChangingRegion_ChangesOnlyIntersectingCells [FAIL]
+[xUnit.net 00:00:00.97]     Engine.Tests.FrameSignatureTests.ContentRect_OffsetIsRespected [FAIL]
+[xUnit.net 00:00:00.97]     Engine.Tests.FrameSignatureTests.CellsOf_BoxCoversExpectedCells [FAIL]
+
+Failed!  - Failed:   109, Passed:    28, Skipped:     0, Total:   137, Duration: 636 ms - Engine.Tests.dll (net10.0)

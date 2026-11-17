@@ -1,0 +1,407 @@
+{
+  "v": 1,
+  "sessionId": "4e8260f6d130485fb46cbc4eb428986c",
+  "seq": 9,
+  "ttlMs": 3000,
+  "display": {
+    "minFontPx": 24,
+    "holdMs": 0
+  },
+  "items": [
+    {
+      "id": "bf5cbd66034a",
+      "box": {
+        "x": 0.044270833333333336,
+        "y": 0.046296296296296294,
+        "w": 0.06822916666666667,
+        "h": 0.037037037037037035
+      },
+      "text": "Hộp thư",
+      "alt": "Thư",
+      "fontPx": 31,
+      "group": "solo-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.0109375,
+        "y": 0.027777777777777776,
+        "w": 0.13489583333333335,
+        "h": 0.07407407407407407
+      }
+    },
+    {
+      "id": "8dcca2a1f3b3",
+      "box": {
+        "x": 0.053125,
+        "y": 0.18518518518518517,
+        "w": 0.04791666666666667,
+        "h": 0.02407407407407408
+      },
+      "text": "Ban lãnh đạo",
+      "alt": "Ban LĐ",
+      "fontPx": 20,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.030208333333333334,
+        "y": 0.17407407407407408,
+        "w": 0.09583333333333333,
+        "h": 0.04629629629629631
+      }
+    },
+    {
+      "id": "d44e96c3e6db",
+      "box": {
+        "x": 0.2921875,
+        "y": 0.18518518518518517,
+        "w": 0.22083333333333338,
+        "h": 0.030555555555555558
+      },
+      "text": "Cập nhật mục tiêu mùa giải",
+      "fontPx": 26,
+      "group": "col-2",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.18177083333333333,
+        "y": 0.17037037037037037,
+        "w": 0.44166666666666665,
+        "h": 0.0601851851851852
+      }
+    },
+    {
+      "id": "ac0e56b317c7",
+      "box": {
+        "x": 0.78125,
+        "y": 0.18518518518518517,
+        "w": 0.050000000000000044,
+        "h": 0.030555555555555558
+      },
+      "text": "Hôm nay",
+      "fontPx": 20,
+      "group": "col-3",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.75625,
+        "y": 0.17037037037037037,
+        "w": 0.09999999999999998,
+        "h": 0.0601851851851852
+      }
+    },
+    {
+      "id": "9c9ef14743ed",
+      "box": {
+        "x": 0.05260416666666667,
+        "y": 0.28703703703703703,
+        "w": 0.16354166666666667,
+        "h": 0.02407407407407408
+      },
+      "text": "[VI] Transfer Committee",
+      "fontPx": 20,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.0005208333333333333,
+        "y": 0.2759259259259259,
+        "w": 0.29062499999999997,
+        "h": 0.046296296296296335
+      }
+    },
+    {
+      "id": "8677954d82a8",
+      "box": {
+        "x": 0.2921875,
+        "y": 0.28703703703703703,
+        "w": 0.21145833333333336,
+        "h": 0.02407407407407408
+      },
+      "text": "[VI] Contract offer for J. Smith",
+      "fontPx": 26,
+      "group": "col-2",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.2171875,
+        "y": 0.2759259259259259,
+        "w": 0.421875,
+        "h": 0.046296296296296335
+      }
+    },
+    {
+      "id": "af7273f1565c",
+      "box": {
+        "x": 0.78125,
+        "y": 0.28703703703703703,
+        "w": 0.08281249999999996,
+        "h": 0.030555555555555558
+      },
+      "text": "Hôm qua",
+      "fontPx": 20,
+      "group": "col-3",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.7416666666666667,
+        "y": 0.2722222222222222,
+        "w": 0.1640625,
+        "h": 0.06018518518518523
+      }
+    },
+    {
+      "id": "4af3fe6212ff",
+      "box": {
+        "x": 0.053125,
+        "y": 0.3888888888888889,
+        "w": 0.15625,
+        "h": 0.02407407407407408
+      },
+      "text": "Giám đốc bóng đá",
+      "alt": "GĐ bóng đá",
+      "fontPx": 20,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.0010416666666666667,
+        "y": 0.37777777777777777,
+        "w": 0.28958333333333336,
+        "h": 0.04629629629629628
+      }
+    },
+    {
+      "id": "ac258700f3ee",
+      "box": {
+        "x": 0.2921875,
+        "y": 0.3888888888888889,
+        "w": 0.28125000000000006,
+        "h": 0.030555555555555558
+      },
+      "text": "[VI] Scout report: new striker available",
+      "fontPx": 26,
+      "group": "col-2",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.2109375,
+        "y": 0.37407407407407406,
+        "w": 0.5625,
+        "h": 0.060185185185185175
+      }
+    },
+    {
+      "id": "45002b88ab85",
+      "box": {
+        "x": 0.053125,
+        "y": 0.49074074074074076,
+        "w": 0.09583333333333333,
+        "h": 0.02407407407407408
+      },
+      "text": "Trưởng bộ phận tuyển trạch",
+      "alt": "Trưởng tuyển trạch",
+      "fontPx": 20,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.005208333333333333,
+        "y": 0.47962962962962963,
+        "w": 0.19166666666666665,
+        "h": 0.04629629629629628
+      }
+    },
+    {
+      "id": "e4bf9990f5d4",
+      "box": {
+        "x": 0.2916666666666667,
+        "y": 0.49074074074074076,
+        "w": 0.2864583333333333,
+        "h": 0.030555555555555503
+      },
+      "text": "[VI] Transfer budget: €45.0M approved",
+      "fontPx": 26,
+      "group": "col-2",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.15,
+        "y": 0.4759259259259259,
+        "w": 0.428125,
+        "h": 0.060185185185185175
+      }
+    },
+    {
+      "id": "b1219e79b0fc",
+      "box": {
+        "x": 0.053125,
+        "y": 0.5925925925925926,
+        "w": 0.11302083333333332,
+        "h": 0.024074074074074137
+      },
+      "text": "Đội ngũ y tế",
+      "fontPx": 20,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.0010416666666666667,
+        "y": 0.5814814814814815,
+        "w": 0.22552083333333334,
+        "h": 0.04629629629629628
+      }
+    },
+    {
+      "id": "896a4996bb42",
+      "box": {
+        "x": 0.29322916666666665,
+        "y": 0.5925925925925926,
+        "w": 0.31770833333333337,
+        "h": 0.030555555555555558
+      },
+      "text": "[VI] Injury update - two players unavailable",
+      "fontPx": 26,
+      "group": "col-2",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.16614583333333333,
+        "y": 0.5777777777777777,
+        "w": 0.615625,
+        "h": 0.06018518518518523
+      }
+    },
+    {
+      "id": "8b671b8ed9e8",
+      "box": {
+        "x": 0.052083333333333336,
+        "y": 0.6944444444444444,
+        "w": 0.12968749999999998,
+        "h": 0.030555555555555558
+      },
+      "text": "Học viện trẻ",
+      "alt": "HV trẻ",
+      "fontPx": 20,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0,
+        "y": 0.6796296296296296,
+        "w": 0.25885416666666666,
+        "h": 0.06018518518518523
+      }
+    },
+    {
+      "id": "1ece5e5072fb",
+      "box": {
+        "x": 0.29270833333333335,
+        "y": 0.6944444444444444,
+        "w": 0.31875,
+        "h": 0.030555555555555558
+      },
+      "text": "[VI] New prospects arrived at the academy",
+      "fontPx": 26,
+      "group": "col-2",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0.18229166666666666,
+        "y": 0.6796296296296296,
+        "w": 0.5979166666666667,
+        "h": 0.06018518518518523
+      }
+    }
+  ]
+}

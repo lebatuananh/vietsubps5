@@ -1,0 +1,49 @@
+=== push my synthetic screens into the app's filesDir (debug run-as)
+=== step 5 [inbox]: backdrop rv-a-inbox, engine replay --send --translator fake --hold-ms 9000
+  screenshot 3b-05-inbox-backdrop-only.png
+  screenshot 3b-05-inbox-overlay.png
+  screenshot 3b-05-inbox-after-engine-closed-3.5s.png
+[replay] rv-a-inbox.png: 19 item · gói 10 · bộ item đổi 2 lần · chưa dịch 1
+[replay] translator=fake · gọi backend: 1 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 1 → D:\Project\vietsubps5\project-docs\261114-fc26-vietsub-overlay\playtest\epic1-phase3\reviewer\replay-inbox
+exit=0
+=== step 5 [email]: backdrop rv-b-email, engine replay --send --translator fake --hold-ms 9000
+  screenshot 3b-05-email-backdrop-only.png
+  screenshot 3b-05-email-overlay.png
+  screenshot 3b-05-email-after-engine-closed-3.5s.png
+[replay] rv-b-email.png: 6 item · gói 10 · bộ item đổi 2 lần · chưa dịch 0
+[replay] translator=fake · gọi backend: 1 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 0 → D:\Project\vietsubps5\project-docs\261114-fc26-vietsub-overlay\playtest\epic1-phase3\reviewer\replay-email
+exit=0
+=== step 7: pattern --send over a black backdrop
+  screenshot 3b-07-pattern.png
+=== step 8: remote-only flows (engine connected via pattern 70 s)
+  screenshot 3b-08a-overlay-on-over-backdrop.png
+--- user opens VietSub from the launcher while the overlay is on
+  key KEYCODE_HOME
+  3b-08b-opened-app: FOCUS='Bật lại lớp phủ' [710,269][985,365] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Đã tắt lớp phủ ¦ Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại. ¦ OK để bật lại. ¦ Bật lại lớp phủ ¦ Về màn hình chính
+  screenshot 3b-08b-opened-app.png
+--- presses BACK (wants to go back to the game) without pressing OK
+  key KEYCODE_BACK
+  screenshot 3b-08c-after-back-is-overlay-still-off.png
+--- opens app again, OK on default focus, then OK again (double press)
+  3b-08d-reopened: FOCUS=NONE | 
+  key KEYCODE_DPAD_CENTER
+  3b-08e-after-ok1: FOCUS=NONE | 
+  screenshot 3b-08e-after-ok1.png
+  key KEYCODE_DPAD_CENTER
+  3b-08f-after-ok2: FOCUS=NONE | 
+  key KEYCODE_DPAD_CENTER
+  3b-08g-after-ok3: FOCUS=NONE | 
+--- focus not stolen: RIGHT to 'Ghép cặp lại', wait 4 s
+  key KEYCODE_DPAD_RIGHT
+  3b-08h-right: FOCUS=NONE | 
+  3b-08i-right-after-4s: FOCUS=NONE | 
+  screenshot 3b-08i-right-after-4s.png
+--- OK on 'Ghép cặp lại' ⇒ new code, engine rejected
+  key KEYCODE_DPAD_CENTER
+  3b-08j-after-repair: FOCUS=NONE | 
+  screenshot 3b-08j-after-repair.png
+  code changed: NO
+  hello with OLD code -> {"ok":true}
+[tv] đã kết nối 127.0.0.1:47830
+[tv] đã kết nối 127.0.0.1:47830
+  crash buffer lines: 0

@@ -1,0 +1,42 @@
+LABEL: reviewer-own SYNTHETIC screens (PIL/Arial) - NOT FC 26, NOT R-D. VIETSUB_HOME=D:\Temp\rv3a-home-QG3N ; ANTHROPIC_API_KEY='' ; proxy 127.0.0.1:9
+=== smoke 2: replay --translator fake
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[replay] rv-a-inbox.png: 19 item · gói 3 · bộ item đổi 2 lần · chưa dịch 1
+[run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+[replay] rv-b-email.png: 7 item · gói 3 · bộ item đổi 3 lần · chưa dịch 0
+[replay] translator=fake · gọi backend: 2 · HTTP thật: 0 · ký tự LLM hôm nay: 144/100000 · misses: 1 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/replay-fake
+exit=0
+=== smoke 3: replay --translator cache
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[replay] rv-a-inbox.png: 19 item · gói 2 · bộ item đổi 1 lần · chưa dịch 1
+[run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+[replay] rv-b-email.png: 7 item · gói 2 · bộ item đổi 2 lần · chưa dịch 0
+[replay] translator=cache · gọi backend: 0 · HTTP thật: 0 · ký tự LLM hôm nay: 144/100000 · misses: 1 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/replay-cache
+exit=0
+=== smoke 6: sequence A,A,B,B hold 10 s, translator cache, verbose
+[replay] 01-a.png: 19 item · gói 10 · bộ item đổi 1 lần · chưa dịch 1
+[replay] 02-a.png: 19 item · gói 11 · bộ item đổi 0 lần · chưa dịch 1
+[run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+[replay] 03-b.png: 7 item · gói 10 · bộ item đổi 2 lần · chưa dịch 0
+[replay] 04-b.png: 7 item · gói 10 · bộ item đổi 0 lần · chưa dịch 0
+[replay] translator=cache · gọi backend: 0 · HTTP thật: 0 · ký tự LLM hôm nay: 144/100000 · misses: 2 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/replay-seq
+exit=0
+  state lines (Động/Đứng yên) in verbose log: 2
+=== smoke 10: --translator claude with empty key
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[llm] cảnh báo: không có ANTHROPIC_API_KEY — chỉ dùng cache/glossary (không gọi LLM).
+[replay] rv-a-inbox.png: 19 item · gói 1 · bộ item đổi 1 lần · chưa dịch 1
+[run] chế độ trận: >50% ô đổi — im lặng, không OCR/dịch tới khi đứng yên ≥ 1,5 s
+[replay] rv-b-email.png: 0 item · gói 1 · bộ item đổi 1 lần · chưa dịch 1
+[replay] translator=claude · gọi backend: 0 · HTTP thật: 0 · ký tự LLM hôm nay: 144/100000 · misses: 2 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/replay-claude-nokey
+exit=0
+=== smoke 10b: warm without --yes (must not call)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[llm] cảnh báo: không có ANTHROPIC_API_KEY — chỉ dùng cache/glossary (không gọi LLM).
+[warm] 0 câu chưa có bản dịch, dự kiến gửi 0 ký tự (hôm nay đã dùng 144/100000). TỐN TIỀN nếu translator=claude.
+[warm] chưa chạy: thêm --yes để dịch và ghi cache.
+exit=1
+=== files written under VIETSUB_HOME
+/tmp/rv3a-home-QG3N/cache/fc26.json
+/tmp/rv3a-home-QG3N/usage/2026-11-18.json
+=== real %LOCALAPPDATA%\VietSub exists? no

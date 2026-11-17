@@ -1,0 +1,72 @@
+[
+  {
+    "image": "synth-dark.png",
+    "sourceKey": "Dark Screen Message",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-email.png",
+    "sourceKey": "Your contract offer has been accepted by the player.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-email.png",
+    "sourceKey": "Transfer fee: {N1} plus add-ons.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-email.png",
+    "sourceKey": "Kind regards, Director of Football",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "Transfer Committee",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "Contract offer for J. Smith",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "Scout report: new striker available",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "Transfer budget: {N1} approved",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "Injury update - two players unavailable",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "New prospects arrived at the academy",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-inbox-list.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  }
+]

@@ -1,0 +1,15 @@
+VietSub-261114-Reviewer review 3a (resume, delta only)
+
+Phase 3 started (User authorized coding without waiting for mockup approval on the TV). Read project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase3.md - the decision table at the top (Rev 1.1/1.2) is binding and overrides the body - plus reviews/261114-epic1-phase3-sa-review.md, reviews/261114-epic1-phase3-dev-feedback.md and reviews/261114-epic1-phase3-dev-report-3a.md.
+
+Review turn 3a = engine/ (steps 1-4) + the Giao thuc section of tv-overlay/README.md. Focus, in this order:
+1. Paid-call safety (B1, D10, N4, P3R2-D3): can any path call the LLM repeatedly for the same sourceKey across sessions, exceed the 100,000 source-chars/day cap, or log/write the API key? Read the code, and test with a fake HTTP handler where possible.
+2. Protocol exactness: is tv-overlay/README.md Giao thuc complete and consistent with the engine serializer (field names, #AARRGGBB, alt/room/display, no fontScale on the wire, hello/reply, limits) so turn 3b can build the TV side without guessing?
+3. Flicker/layout logic (N1, N3, P3R2-D2, N5, D7): grid signature, dynamic-background cells, match mode, row splitting, stable ids, color sampling - test with synthetic sequences.
+4. Data safety: atomic cache writes, reviewed entries never overwritten, VIETSUB_HOME honored everywhere (no writes to the real %LOCALAPPDATA%\VietSub from tests/smoke).
+Re-run smoke 1, 2, 3, 6, 10 yourself with your own temp VIETSUB_HOME and ANTHROPIC_API_KEY empty in the child process (prove 0 HTTP calls). Do not call the real API.
+
+Write reviews/261114-epic1-phase3-review-3a.md . FIRST line REVIEW-3A IN PROGRESS while working, exactly REVIEW-3A DONE when finished; verdict PASS or FAIL (n blocking) on line 3. Blocking = paid-call risk, data loss, protocol ambiguity that forces 3b to guess, crash in run loop, CLAUDE.md violation. Everything else non-blocking (NB).
+
+NOT YOURS: do not edit code (read-only review); no TV/PS5/LAN IP/adb/emulator; no windows you did not start; git read-only; never read or print API keys or PSN data.
+Open question: what would break first tonight on the real PS Remote Play window?

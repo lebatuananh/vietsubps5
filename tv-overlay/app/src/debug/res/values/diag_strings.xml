@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="diag_notif_channel">Màn kiểm tra (debug)</string>
+    <string name="diag_notif_title">VietSub — màn kiểm tra Phase 1 (debug)</string>
+    <string name="diag_title">VietSub PS5 — công cụ kiểm tra lớp phủ</string>
+    <string name="diag_subtitle">Bản kiểm tra Phase 1: chưa dịch gì. Dùng để thử vẽ lớp phủ lên hình PS5.</string>
+    <string name="diag_perm_overlay_yes">Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP</string>
+    <string name="diag_perm_overlay_no">Quyền hiển thị trên ứng dụng khác: CHƯA CẤP</string>
+    <string name="diag_battery_yes">Miễn tối ưu pin: ĐÃ MIỄN</string>
+    <string name="diag_battery_no">Miễn tối ưu pin: CHƯA MIỄN</string>
+    <string name="diag_overlay_running">Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)</string>
+    <string name="diag_overlay_stopped">Lớp phủ: ĐANG TẮT</string>
+    <string name="diag_metrics">Cửa sổ đo được: %1$d × %2$d px · mật độ %3$.2f (dpi %4$d) · Android %5$s (API %6$d)</string>
+    <string name="diag_btn_grant_overlay">Cấp quyền hiển thị trên ứng dụng khác</string>
+    <string name="diag_btn_battery">Bỏ tối ưu pin</string>
+    <string name="diag_btn_toggle_on">Bật lớp phủ</string>
+    <string name="diag_btn_toggle_off">Tắt lớp phủ</string>
+    <string name="diag_need_overlay">Chưa có quyền hiển thị trên ứng dụng khác — bấm nút cấp quyền trước.</string>
+    <string name="diag_hint_overlay_list">Màn cấp quyền trên TV hiện danh sách chung: dùng phím lên/xuống tìm dòng “VietSub — lớp phủ kiểm tra” rồi bật.</string>
+    <string name="diag_fallback_overlay">Quyền hiển thị trên ứng dụng khác vẫn CHƯA cấp. Trong danh sách, tìm dòng “VietSub — lớp phủ kiểm tra” và bật; nếu TV không có màn này, chạy lệnh (trên máy tính, do bạn chạy):\nadb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow</string>
+    <string name="diag_fallback_battery">Miễn tối ưu pin vẫn CHƯA được (TV này không có màn thật). Chạy lệnh (trên máy tính, do bạn chạy):\nadb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv</string>
+    <string name="diag_overlay_footer">VietSub — lớp phủ kiểm tra — tắt trong app</string>
+    <string name="diag_overlay_size">Kích thước View: %1$d × %2$d px</string>
+    <string name="diag_overlay_sample">HỘP THƯ · CHUYỂN NHƯỢNG — Bản hợp đồng mới đã được gửi tới Ban lãnh đạo. ẾỖẶỮỴ ếỗặữỵ</string>
+</resources>

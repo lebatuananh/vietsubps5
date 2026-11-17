@@ -1,0 +1,22 @@
+﻿listening 47821
+HELLO: {"hello":{"v":1,"token":"ACDEFHJM"}}
+REPLY token-reject
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok
+ERR: Exception calling "ReadLine" with "0" argument(s): "Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok
+ERR: Exception calling "ReadLine" with "0" argument(s): "Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok
+ERR: Exception calling "ReadLine" with "0" argument(s): "Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok
+ERR: Exception calling "ReadLine" with "0" argument(s): "Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok
+ERR: Exception calling "ReadLine" with "0" argument(s): "Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."
+HELLO: {"hello":{"v":1,"token":"ACDEFHJK"}}
+REPLY ok

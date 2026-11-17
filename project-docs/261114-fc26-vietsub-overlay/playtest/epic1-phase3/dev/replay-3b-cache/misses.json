@@ -1,0 +1,17 @@
+[
+  {
+    "image": "synth-email.png",
+    "sourceKey": "Your contract offer has been accepted by the player.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-email.png",
+    "sourceKey": "Transfer fee: {N1} plus add-ons.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "synth-email.png",
+    "sourceKey": "Kind regards, Director of Football",
+    "reason": "no-translator (chỉ cache/glossary)"
+  }
+]

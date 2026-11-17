@@ -7,29 +7,34 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ServiceInfo
-import android.graphics.Paint
 import android.graphics.PixelFormat
 import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
+import android.os.SystemClock
 import android.provider.Settings
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import androidx.core.app.ServiceCompat
 
 /**
- * Service foreground giữ cửa sổ overlay. Thứ tự: thêm cửa sổ overlay TRƯỚC, rồi mới startForeground.
- * START_NOT_STICKY; tự tắt sau [DEFAULT_AUTO_OFF_MS] (bản debug có thể rút ngắn qua extra auto_off_ms).
+ * Service foreground (specialUse) của bản sản phẩm: giữ server TCP 47820 + cửa sổ overlay.
+ * Thứ tự an toàn: thêm cửa sổ overlay TRƯỚC, rồi startForeground (discovery D7). Bỏ tự tắt 30 phút của APK kiểm tra:
+ * lớp phủ rỗng khi lõi không gửi (ttl). `START_NOT_STICKY`.
  */
 class OverlayService : Service() {
+    private val main = Handler(Looper.getMainLooper())
+    private val model = OverlayModel { Log.w(TAG, it) }
     private var view: OverlayView? = null
-    private val handler = Handler(Looper.getMainLooper())
-    private val autoOff = Runnable {
-        Log.i(TAG, "tự tắt sau hạn — gỡ cửa sổ + dừng service")
-        shutdown()
-    }
+    private var server: OverlayServer? = null
 
     override fun onBind(intent: Intent?): IBinder? = null
+
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent?.action == ACTION_STOP) {
@@ -45,20 +50,39 @@ class OverlayService : Service() {
             shutdown()
             return START_NOT_STICKY
         }
-        running = true
-        val autoOffMs = if (BuildConfig.DEBUG) {
-            intent?.getLongExtra(EXTRA_AUTO_OFF_MS, DEFAULT_AUTO_OFF_MS) ?: DEFAULT_AUTO_OFF_MS
-        } else {
-            DEFAULT_AUTO_OFF_MS
-        }
-        handler.removeCallbacks(autoOff)
-        handler.postDelayed(autoOff, autoOffMs)
-        Log.i(TAG, "overlay bật; tự tắt sau $autoOffMs ms")
-        if (BuildConfig.DEBUG) logGlyphCoverage()
+        startServer()
+        AppState.running = true
+        applyOverlayEnabled()
         return START_NOT_STICKY
     }
 
-    /** N1: addView có thể ném BadTokenException/SecurityException (quyền bị thu hồi giữa canDrawOverlays và addView) ⇒ false, không crash. */
+    private fun startServer() {
+        if (server != null) return
+        val s = OverlayServer(Protocol.PORT, { PairingStore.code(this) }, object : OverlayServer.Listener {
+            override fun onFrame(frame: OverlayFrame) {
+                main.post {
+                    model.applyFrame(frame, SystemClock.uptimeMillis())
+                    view?.onModelChanged()
+                }
+            }
+
+            override fun onConnectionChanged(connected: Boolean) {
+                AppState.connected = connected
+                if (connected) { AppState.everConnected = true; AppState.codeChanged = false; Log.i(TAG, "engine đã kết nối") }
+                else { AppState.lastLossAt = SystemClock.uptimeMillis(); Log.i(TAG, "engine ngắt kết nối") }
+            }
+        }, { Log.i(TAG, it) })
+        try {
+            s.start()
+            server = s
+            AppState.serverError = null
+            Log.i(TAG, "server nghe cổng ${Protocol.PORT}")
+        } catch (e: Exception) {
+            AppState.serverError = e.message ?: e.javaClass.simpleName
+            Log.e(TAG, "không mở được cổng ${Protocol.PORT}: $e")
+        }
+    }
+
     private fun addOverlay(): Boolean {
         val wm = getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val lp = WindowManager.LayoutParams(
@@ -70,55 +94,74 @@ class OverlayService : Service() {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS or
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
             PixelFormat.TRANSLUCENT,
-        ).apply {
-            layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
-        }
-        val v = OverlayView(this)
+        ).apply { layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES }
+        val v = OverlayView(this, model)
         return try {
             wm.addView(v, lp)
             view = v
             true
         } catch (e: WindowManager.BadTokenException) {
-            Log.e(TAG, "addView BadTokenException: $e")
-            false
+            Log.e(TAG, "addView BadTokenException: $e"); false
         } catch (e: SecurityException) {
-            Log.e(TAG, "addView SecurityException: $e")
-            false
+            Log.e(TAG, "addView SecurityException: $e"); false
         }
+    }
+
+    private fun applyOverlayEnabled() {
+        view?.visibility = if (AppState.overlayOn && !AppState.appInForeground) View.VISIBLE else View.GONE
+        view?.onModelChanged()
+    }
+
+    /** Bật/tắt vẽ lớp phủ (server vẫn nhận gói). Gọi trên luồng chính. */
+    fun setOverlayEnabled(on: Boolean) {
+        AppState.overlayOn = on
+        applyOverlayEnabled()
+    }
+
+    /** App ra/vào tiền cảnh: ẩn lớp phủ khi MainActivity đang hiện (NB7). Gọi trên luồng chính. */
+    fun setAppForeground(fg: Boolean) {
+        AppState.appInForeground = fg
+        applyOverlayEnabled()
+    }
+
+    /** "Ghép cặp lại"/"Tạo mã mới": SINH mã mới MỘT lần ở đây, ngắt kết nối hiện tại (engine cũ bị từ chối ở lần hello sau). */
+    fun repair() {
+        PairingStore.regenerate(this)
+        AppState.codeChanged = true
+        AppState.everConnected = false
+        AppState.connected = false
+        server?.disconnectCurrent()
     }
 
     private fun removeOverlay() {
         view?.let {
             val wm = getSystemService(Context.WINDOW_SERVICE) as WindowManager
-            try {
-                wm.removeView(it)
-            } catch (e: IllegalArgumentException) {
-                Log.w(TAG, "removeView: $e")
-            }
+            try { wm.removeView(it) } catch (e: IllegalArgumentException) { Log.w(TAG, "removeView: $e") }
         }
         view = null
     }
 
     private fun shutdown() {
-        handler.removeCallbacks(autoOff)
+        server?.stop(); server = null
         removeOverlay()
-        running = false
+        AppState.running = false
+        AppState.connected = false
         stopForeground(STOP_FOREGROUND_REMOVE)
         stopSelf()
     }
 
     override fun onDestroy() {
-        handler.removeCallbacks(autoOff)
+        server?.stop(); server = null
         removeOverlay()
-        running = false
+        AppState.running = false
+        AppState.connected = false
+        if (instance === this) instance = null
         super.onDestroy()
     }
 
     private fun buildNotification(): Notification {
         val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        nm.createNotificationChannel(
-            NotificationChannel(CHANNEL_ID, getString(R.string.notif_channel), NotificationManager.IMPORTANCE_MIN),
-        )
+        nm.createNotificationChannel(NotificationChannel(CHANNEL_ID, getString(R.string.notif_channel), NotificationManager.IMPORTANCE_MIN))
         return Notification.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_stat)
             .setContentTitle(getString(R.string.notif_title))
@@ -126,37 +169,14 @@ class OverlayService : Service() {
             .build()
     }
 
-    /** Chỉ bản debug (1.2 #8): Paint.hasGlyph cho dải U+1EA0–U+1EF9 + chuỗi mẫu; kèm ký tự đối chứng ngoài font. */
-    private fun logGlyphCoverage() {
-        val paint = Paint().apply { typeface = resources.getFont(R.font.be_vietnam_pro_regular) }
-        val missing = ArrayList<String>()
-        var ok = 0
-        for (cp in 0x1EA0..0x1EF9) {
-            val s = String(Character.toChars(cp))
-            if (paint.hasGlyph(s)) ok++ else missing.add("U+%04X".format(cp))
-        }
-        Log.i(GLYPH_TAG, "range U+1EA0-U+1EF9: total=${0x1EF9 - 0x1EA0 + 1} ok=$ok missing=${missing.size} $missing")
-        val sampleMissing = getString(R.string.overlay_sample).codePoints().distinct().toArray()
-            .filter { !Character.isWhitespace(it) }
-            .map { String(Character.toChars(it)) }
-            .filter { !paint.hasGlyph(it) }
-        Log.i(GLYPH_TAG, "sample string missing glyphs: $sampleMissing")
-        // Đối chứng: ký tự chắc chắn KHÔNG có trong Be Vietnam Pro. true ⇒ hasGlyph bị fallback hệ thống làm nhiễu.
-        val control = listOf("日", "한").associateWith { paint.hasGlyph(it) }
-        Log.i(GLYPH_TAG, "control (CJK, expect false): $control")
-    }
-
     companion object {
         const val TAG = "VietSubOverlay"
-        const val GLYPH_TAG = "VietSubGlyph"
         const val ACTION_STOP = "vn.vietsub.ps5.tv.STOP"
-        const val EXTRA_AUTO_OFF_MS = "auto_off_ms"
-        const val DEFAULT_AUTO_OFF_MS = 30L * 60 * 1000
         private const val CHANNEL_ID = "overlay"
         private const val NOTIF_ID = 1
 
-        /** Trạng thái trong tiến trình: tiến trình bị giết ⇒ false (đúng thực tế vì cửa sổ cũng mất). */
-        @Volatile
-        var running = false
+        @Volatile var instance: OverlayService? = null
+
+        val running: Boolean get() = AppState.running
     }
 }

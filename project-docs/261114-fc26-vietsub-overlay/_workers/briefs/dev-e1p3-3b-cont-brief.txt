@@ -1,0 +1,3 @@
+VietSub-261114-Dev turn 3b - CONTINUE (resume)
+
+Your previous run was cut off by a usage limit (report still DEV-3B IN PROGRESS; files AutoFit/OverlayModel/OverlayServer/PairingCode/Protocol + tests and src/debug exist). Continue the SAME 3b brief from where you stopped - do not redo finished work. First check what builds and which tests pass, then finish: MainActivity product screens, OverlayService/OverlayView integration, INTERNET permission, BackdropActivity, end-to-end smoke on emulator-5556, report, then kill your emulator. Finish with DEV-3B DONE on line 1.

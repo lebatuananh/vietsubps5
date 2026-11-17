@@ -31,5 +31,6 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.16.0")        // ServiceCompat.startForeground (minSdk 29 < API 34)
     implementation("androidx.window:window:1.4.0")          // WindowMetricsCalculator (WindowMetrics chỉ từ API 30)
+    implementation("com.google.code.gson:gson:2.11.0")      // parse JSON dòng của giao thức (cây JSON, không reflection)
     testImplementation("junit:junit:4.13.2")
 }

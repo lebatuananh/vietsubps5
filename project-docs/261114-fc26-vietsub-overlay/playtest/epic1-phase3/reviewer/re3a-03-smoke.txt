@@ -1,0 +1,15 @@
+[replay] rv-a-inbox.png: 19 item · gói 5 · bộ item đổi 2 lần · chưa dịch 1
+[replay] rv-b-email.png: 6 item · gói 6 · bộ item đổi 3 lần · chưa dịch 0
+[replay] translator=fake · gọi backend: 2 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 1 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/reviewer/re3a-replay-fake
+files in VIETSUB_HOME:
+  /tmp/rv-re3a-vg4b/cache/fc26.json: {
+  "entries": []
+}
+rv-a-inbox 19 items; dup ids: {} ; merged email: False
+rv-b-email 6 items; dup ids: {} ; merged email: False
+'Cập nhật hợp đồng' 3
+'Kính gửi ông,' 3
+'Đề nghị hợp đồng của ông đã được chấp nhận.' 4
+'[VI] Transfer Budget: €45.OM' 3
+'[VI] The striker wants a bigger role next season.' 3
+'Trân trọng,' 3

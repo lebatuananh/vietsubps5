@@ -1,0 +1,65 @@
+﻿VIETSUB_HOME=D:\Temp\vs3a-s45-002128 (temp)
+listener PID=14472 (own process, 127.0.0.1:47821)
+=== pair with WRONG code
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (1): Mã ghép cặp không hợp lệ: cần 8 ký tự thuộc ACDEFHJKMNPRTUVWXY3479 (dạng XXXX-XXXX).
+exit=1
+=== pair with INVALID code (alphabet)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[engine] LỖI (1): Mã ghép cặp không hợp lệ: cần 8 ký tự thuộc ACDEFHJKMNPRTUVWXY3479 (dạng XXXX-XXXX).
+exit=1
+=== pair with RIGHT code (lowercase + dash)
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[pair] đã ghi D:\Temp\vs3a-s45-002128\engine.local.json (host=127.0.0.1 port=47821; mã không in ra).
+[pair] OK — TV chấp nhận mã.
+exit=0
+=== engine.local.json (token masked)
+{
+  "tv": {
+    "host": "127.0.0.1",
+    "port": 47821,
+    "token": "<masked>"
+  },
+  "display": {
+    "coverMode": "auto",
+    "minFontPx": 24,
+    "holdMs": 0,
+    "fontScale": 0.78
+  },
+  "tuning": {
+    "cellDiffThreshold": 6,
+    "stableMs": 250,
+    "frameIntervalMs": 250,
+    "heartbeatMs": 1000,
+    "ttlMs": 3000,
+    "backgroundCellMs": 3000,
+    "matchModeCellRatio": 0.5,
+    "matchModeWindowMs": 3000,
+    "matchModeCalmMs": 1500,
+    "splitGapFactor": 1.2,
+    "mergeLeftTolerance": 0.006,
+    "mergeHeightTolerance": 0.2,
+    "mergeGapFactor": 0.9,
+    "groupHeightTolerance": 0.3,
+    "rowCenterTolerance": 0.005,
+    "rowLabelGapMax": 0.08,
+    "sampleRimPx": 3,
+    "coverUniformThreshold": 18,
+    "roomMaxFactor": 2,
+    "batchMax": 40,
+    "backoffMs": 30000,
+    "maxAttempts": 2,
+    "dailyCapChars": 100000
+  }
+}
+=== replay --send (fake translator), hold 3000
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[tv] đã kết nối 127.0.0.1:47821
+[replay] synth-inbox-list.png: 15 item · gói 4 · bộ item đổi 2 lần · chưa dịch 4
+[replay] translator=fake · gọi backend: 1 · HTTP thật: 0 · ký tự LLM hôm nay: 185/100000 · misses: 4 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/replay-send
+exit=0
+=== pattern --send --seconds 2
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[tv] đã kết nối 127.0.0.1:47821
+exit=0
+listener PID=14472 stopped: True

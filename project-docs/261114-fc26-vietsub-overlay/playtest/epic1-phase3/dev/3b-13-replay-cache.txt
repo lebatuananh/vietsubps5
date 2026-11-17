@@ -1,0 +1,7 @@
+﻿VIETSUB_HOME=D:\Temp\vs3b-020705 translator=cache image=synth-email.png
+am: Starting: Intent { cmp=vn.vietsub.ps5.tv/.BackdropActivity (has extras) }
+replay exit=
+[engine] DPI PerMonitorV2: set=True hiá»‡u lá»±c=True
+[tv] Ä‘Ã£ káº¿t ná»‘i 127.0.0.1:47820
+[replay] synth-email.png: 3 item Â· gÃ³i 9 Â· bá»™ item Ä‘á»•i 1 láº§n Â· chÆ°a dá»‹ch 3
+[replay] translator=cache Â· gá»i backend: 0 Â· HTTP tháº­t: 0 Â· kÃ½ tá»± LLM hÃ´m nay: 185/100000 Â· misses: 3 â†’ project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/replay-3b-cache

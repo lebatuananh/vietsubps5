@@ -1,0 +1,4 @@
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[tv] đã kết nối 127.0.0.1:47820
+[replay] synth-email.png: 3 item · gói 9 · bộ item đổi 1 lần · chưa dịch 3
+[replay] translator=cache · gọi backend: 0 · HTTP thật: 0 · ký tự LLM hôm nay: 185/100000 · misses: 3 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/replay-3b-cache

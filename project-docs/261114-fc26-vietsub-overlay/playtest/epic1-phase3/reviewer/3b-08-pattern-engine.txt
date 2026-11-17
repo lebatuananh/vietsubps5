@@ -1,0 +1,3 @@
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[tv] đã kết nối 127.0.0.1:47830
+[tv] đã kết nối 127.0.0.1:47830

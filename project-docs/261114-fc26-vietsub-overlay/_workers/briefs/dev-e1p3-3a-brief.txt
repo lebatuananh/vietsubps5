@@ -1,0 +1,27 @@
+VietSub-261114-Dev Phase 3 turn 3a (resume, delta only)
+
+Phase 1 is closed on the code side (Reviewer PASS after fix 2b); Phase 2 produced mockups. The User authorized coding Phase 3 now (verbatim: "Cứ tiếp tục code hết đi nhé tôi uỷ quyền cho bạn nhé"). The User wants to see Vietnamese on the real TV as soon as possible, so this turn merges the doc-feedback turn and the code turn:
+
+SA gate result: Rev 1.1 applied all SA findings (B1 no repeated paid calls across sessions, B2 protocol fixed, N1-N12). The decision table at the top of the doc is the most important part - read it twice.
+
+STEP 0 (feedback, max 15 minutes): read project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase3.md (BINDING; its section "Quyet dinh sau SA gate", if present, overrides the body) and reviews/261114-epic1-phase3-sa-review.md. Write reviews/261114-epic1-phase3-dev-feedback.md: anything that forces you to guess. If something is a real blocker (you cannot build it as written), write it, set the report first line to DEV-3A BLOCKED and stop. Otherwise continue straight to code and resolve small gaps yourself, listing each choice under "Lech so voi doc" in the report.
+
+CODE turn 3a = Phase doc Ke hoach steps 1-4 (engine/ only) + the Giao thuc section of tv-overlay/README.md written FIRST (turn 3b builds the TV side against it - make it exact: hello, reply, OverlayFrame, OverlayItem incl. group, alt, fontPx, display, limits).
+* TDD Stub -> Red -> Green for the pure logic listed under Ke hoach (normalize + slot masking, cache key, slot validator, glossary file test, daily cap, frame signature + Moving/Stable state machine, layout grouping, color sampling, frame/hello serialization). Save red output in the report.
+* Reuse existing capture/geometry/OCR code; do not rewrite it. Fix NB8, NB9 and frame-pool recreation on resize for `run` (capture keeps its exit 6).
+* LLM: official NuGet package Anthropic (check license in .nuspec, record in README; copyleft => stop). C# usage reference: D:\Temp\claude\d9d3e1a64600903d\e9665b82-ba7d-4af5-805e-bccc099e6d39\scratchpad\skill-ref\claude-api\csharp\claude-api\README.md and tool-use.md (read them; let the compiler correct type names; no reflection probes). Model claude-sonnet-5-5. NEVER call the real API in this turn: run every smoke with ANTHROPIC_API_KEY set to empty in the process and prove 0 HTTP calls. Unit-test ClaudeTranslator request building and response parsing with a fake HTTP handler or by testing the pure mapping code.
+* Seed data: engine/data/fc26/glossary.json and seed-cache.json - write ~80-150 common FC Career Mode / Inbox UI labels and short sentences in natural Vietnamese football terms (status machine). Quality matters: the User reads these on TV.
+* Smoke (Blackbox steps 1, 2, 3, 6, 10 and the engine side of 4-5 against a tiny local TCP listener you start yourself, e.g. a test or a PowerShell TcpListener on 127.0.0.1) with synthetic images: playtest/epic1-phase1/dev/synthetic/ and the mockup background images if you can export them. No emulator in this turn.
+* Update engine/README.md (commands, exit codes, files under %LOCALAPPDATA%\VietSub, license table). Do NOT edit CLAUDE.md, automation/README.md, Phase docs.
+* Network allowed only for NuGet restore.
+
+Report: reviews/261114-epic1-phase3-dev-report-3a.md . FIRST line exactly DEV-3A IN PROGRESS while working (write it early), exactly DEV-3A DONE when finished. Content: files built, tests before/after, red then green, smoke per step with evidence under playtest/epic1-phase3/dev/, "Chua chung minh duoc", "Lech so voi doc", git status --short at the end.
+
+NOT YOURS - do not touch:
+* Real TV, PS5, any LAN IP, adb connect, emulators: never in this turn.
+* PS Remote Play or any window you did not start.
+* Git: only status, diff, log, show, rev-parse, ls-files, check-ignore. Never add, commit, checkout, stash, reset, clean.
+* Existing docs (except your feedback, report, playtest/epic1-phase3/dev/ and the two module READMEs), workflow/, CLAUDE.md.
+* Credentials: never read, print or look for ANTHROPIC_API_KEY values, PSN data, or files under %LOCALAPPDATA%\VietSub of the real user beyond what your own smoke creates (Rev 1.1 N11: all data paths come from VIETSUB_HOME; your smoke and tests MUST set it to a temp dir).
+
+Open question: what will look worst on the real TV with this engine output, and what would you change first?

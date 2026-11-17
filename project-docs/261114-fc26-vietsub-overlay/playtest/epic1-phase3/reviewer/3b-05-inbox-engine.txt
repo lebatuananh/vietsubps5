@@ -1,0 +1,5 @@
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[tv] đã kết nối 127.0.0.1:47830
+[replay] rv-a-inbox.png: 19 item · gói 10 · bộ item đổi 2 lần · chưa dịch 1
+[replay] translator=fake · gọi backend: 1 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 1 → D:\Project\vietsubps5\project-docs\261114-fc26-vietsub-overlay\playtest\epic1-phase3\reviewer\replay-inbox
+exit=0

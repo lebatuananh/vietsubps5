@@ -1,0 +1,250 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:processDebugNavigationResources
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:generateDebugRFile
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:mergeDebugResources
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :app:processDebugResources
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+> Task :app:testDebugUnitTest FAILED
+
+AutoFitTest > row_without_alt_shrinks_the_whole_group_until_gaps_ok FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:107
+
+AutoFitTest > same_group_gets_same_size_equal_to_the_minimum FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:79
+
+AutoFitTest > short_label_keeps_requested_size_one_line_inside_box FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:26
+
+AutoFitTest > paragraph_wraps_within_box_and_respects_maxLines FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:50
+
+AutoFitTest > paragraph_that_cannot_fit_is_truncated_with_ellipsis_only_on_last_line FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:59
+
+AutoFitTest > different_groups_are_independent FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:87
+
+AutoFitTest > label_shrinks_until_it_fits_the_box_width FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:35
+
+AutoFitTest > alt_is_not_used_when_there_is_enough_gap FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:122
+
+AutoFitTest > never_goes_below_min_size_and_label_is_never_ellipsized_or_wrapped FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:42
+
+AutoFitTest > row_label_lacking_gap_uses_alt_only_for_that_label FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:100
+
+AutoFitTest > align_center_and_end_position_text_inside_box FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:134
+
+AutoFitTest > wraps_and_expands_only_inside_room FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:69
+
+AutoFitTest > fontPx_and_min_scale_with_plane_height FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:127
+
+CoverRegionTest > never_outside_plane FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:172
+
+CoverRegionTest > min_margin_is_6_of_1080_of_plane_height FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:154
+
+CoverRegionTest > card_is_fully_opaque FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:179
+
+CoverRegionTest > union_of_box_and_text_plus_margin FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:148
+
+CoverRegionTest > never_outside_room FAILED
+    kotlin.NotImplementedError at AutoFitTest.kt:166
+
+OverlayModelTest > same_id_same_content_is_not_redrawn_or_refaded FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:29
+
+OverlayModelTest > new_frame_after_expiry_shows_again FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:91
+
+OverlayModelTest > empty_frame_without_hold_fades_out_immediately FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:59
+
+OverlayModelTest > same_id_changed_content_updates_without_fade FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:38
+
+OverlayModelTest > missing_display_reuses_last_known_hold FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:67
+
+OverlayModelTest > ttl_expiry_clears_the_layer FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:83
+
+OverlayModelTest > empty_frame_with_hold_keeps_old_layer_then_fades_out_80ms FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:48
+
+OverlayModelTest > single_item_disappearing_fades_out_while_others_stay FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:75
+
+OverlayModelTest > nextEvent_and_animating_flags FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:100
+
+OverlayModelTest > new_item_fades_in_over_120ms FAILED
+    kotlin.NotImplementedError at OverlayModelTest.kt:20
+
+OverlayServerTest > new_valid_connection_replaces_the_old_one FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > invalid_new_connection_does_not_replace_the_old_one FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > wrong_token_is_rejected_and_closed FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > frame_with_other_version_is_dropped_without_closing FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > disconnectCurrent_closes_active_connection_and_reports_false FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > line_over_256KB_closes_the_connection_and_server_keeps_accepting FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > stale_seq_is_ignored_but_connection_stays FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > client_close_reports_disconnected FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > other_version_is_rejected_with_reason_version FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > first_line_not_hello_closes_without_reply FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+OverlayServerTest > valid_hello_gets_ok_then_frames_are_delivered FAILED
+    kotlin.NotImplementedError at OverlayServerTest.kt:27
+    kotlin.NotImplementedError at OverlayServerTest.kt:30
+
+PairingCodeTest > normalize_uppercases_and_strips_dash_and_spaces FAILED
+    kotlin.NotImplementedError at PairingCodeTest.kt:37
+
+PairingCodeTest > generate_is_not_constant_and_uses_the_whole_alphabet FAILED
+    kotlin.NotImplementedError at PairingCodeTest.kt:29
+
+PairingCodeTest > format_groups_four_dash_four FAILED
+    kotlin.NotImplementedError at PairingCodeTest.kt:34
+
+PairingCodeTest > matches_ignores_case_and_dash FAILED
+    kotlin.NotImplementedError at PairingCodeTest.kt:42
+
+PairingCodeTest > isValid FAILED
+    kotlin.NotImplementedError at PairingCodeTest.kt:48
+
+PairingCodeTest > generate_gives_eight_chars_from_alphabet FAILED
+    kotlin.NotImplementedError at PairingCodeTest.kt:19
+
+ProtocolTest > frame_missing_required_fields_is_dropped FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:80
+
+ProtocolTest > hello_check_rejects_wrong_token_and_version FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:46
+
+ProtocolTest > hello_parsed_and_wire_format FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:33
+
+ProtocolTest > lineReader_rejects_endless_line_without_newline FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:133
+
+ProtocolTest > parseColor_accepts_AARRGGBB_any_case FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:20
+
+ProtocolTest > frame_with_other_version_is_dropped FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:77
+
+ProtocolTest > frame_unknown_fields_are_ignored FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:86
+
+ProtocolTest > frame_empty_items_means_clear FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:75
+
+ProtocolTest > frame_limits_violations_are_dropped FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:89
+
+ProtocolTest > hello_check_token_case_and_dash_insensitive FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:41
+
+ProtocolTest > replies_exact_wire_format FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:51
+
+ProtocolTest > lineReader_unterminated_tail_is_eof_null FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:137
+
+ProtocolTest > lineReader_accepts_exactly_max_and_rejects_longer FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:126
+
+ProtocolTest > parseColor_rejects_bad_formats FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:25
+
+ProtocolTest > lineReader_reads_lines_and_eof FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:121
+
+ProtocolTest > seq_stale_and_duplicate_dropped_same_session FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:102
+
+ProtocolTest > frame_optional_fields_absent_or_null FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:71
+
+ProtocolTest > seq_new_session_resets_counter FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:111
+
+ProtocolTest > frame_parsed_with_all_fields FAILED
+    kotlin.NotImplementedError at ProtocolTest.kt:57
+
+71 tests completed, 64 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///D:/Project/vietsubps5/tv-overlay/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+
+BUILD FAILED in 30s
+26 actionable tasks: 15 executed, 11 up-to-date

@@ -48,3 +48,12 @@
 **Hệ quả nếu quên**: …
 **Cách sống chung**: …
 -->
+
+## Sau Phase 3 đợt 261114 (2026-11-18)
+
+5. **Tự ẩn lớp phủ theo nguồn TV** (X5-1, `UsageStatsManager`) — chưa làm; hiện dựa vào `ttlMs` + lõi ngừng gửi. Đổi nguồn TV sang app khác khi lõi còn chạy ⇒ chữ vẫn đè ≤ ttl.
+6. **Tách tiêu đề khỏi cột khi cao lệch > 30%** (review 3a NB9 phần còn lại) — chờ số đo F1/F2 thật.
+7. **Vòng `run` bắt mọi ngoại lệ / tạo lại frame pool khi đổi cỡ** — chỉ kiểm bằng đọc mã (máy dev ở phiên Disconnected không phát khung WGC). Kiểm ở buổi chạy thật đầu.
+8. **APK release chưa ký** — buổi đầu cài bản debug. Chia sẻ cho anh em cần keystore riêng (không commit) + quyết định ký.
+9. **Nhãn dài ở cột hẹp làm cả cột co tới 0,85 × `minFontPx`** — xem độ đọc được từ sofa; chỉnh `minFontPx`/`fontScale` hoặc thêm `short_vi` vào glossary.
+10. **Bộ dịch mẫu** (`engine/data/fc26/glossary.json` 129 mục, `seed-cache.json` 67 câu) là bản nháp `machine` — End User/User duyệt (`engine cache-export`).

@@ -1,0 +1,38 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Engine -> D:\Project\vietsubps5\engine\src\Engine\bin\Debug\net10.0-windows10.0.22621.0\Engine.dll
+  Engine.Tests -> D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll
+Test run for D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.35]     Engine.Tests.Fix3b_MaxLinesTests.ItemsInFrame_CarryTheSameMaxLines [FAIL]
+  Failed Engine.Tests.Fix3b_MaxLinesTests.ItemsInFrame_CarryTheSameMaxLines [112 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 1
+Actual:   3
+  Stack Trace:
+     at Engine.Tests.Fix3b_MaxLinesTests.ItemsInFrame_CarryTheSameMaxLines() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3bTests.cs:line 45
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.35]     Engine.Tests.Fix3b_MaxLinesTests.SingleLineLabels_GetMaxLines1 [FAIL]
+  Failed Engine.Tests.Fix3b_MaxLinesTests.SingleLineLabels_GetMaxLines1 [7 ms]
+  Error Message:
+   Assert.All() Failure: 3 out of 3 items in the collection did not pass.
+[0]: Item:  LayoutBlock { Text = Board, BoxPx = Box { X = 100, Y = 396, W = 90, H = 28 }, Box01 = Box { X = 0,052083333333333336, Y = 0,36666666666666664, W = 0,04687499999999999, H = 0,025925925925925963 }, LineCount = 1, LineHeightPx = 28, Group = solo-1, FontPx = 28, MaxLines = 3 }
+     Error: Assert.Equal() Failure: Values differ
+            Expected: 1
+            Actual:   3
+[1]: Item:  LayoutBlock { Text = Cap nhat muc tieu mua giai, BoxPx = Box { X = 600, Y = 396, W = 380, H = 28 }, Box01 = Box { X = 0,3125, Y = 0,36666666666666664, W = 0,19791666666666663, H = 0,025925925925925963 }, LineCount = 1, LineHeightPx = 28, Group = solo-2, FontPx = 28, MaxLines = 3 }
+     Error: Assert.Equal() Failure: Values differ
+            Expected: 1
+            Actual:   3
+[2]: Item:  LayoutBlock { Text = Today, BoxPx = Box { X = 1500, Y = 396, W = 90, H = 28 }, Box01 = Box { X = 0,78125, Y = 0,36666666666666664, W = 0,046875, H = 0,025925925925925963 }, LineCount = 1, LineHeightPx = 28, Group = solo-3, FontPx = 28, MaxLines = 3 }
+     Error: Assert.Equal() Failure: Values differ
+            Expected: 1
+            Actual:   3
+  Stack Trace:
+     at Engine.Tests.Fix3b_MaxLinesTests.SingleLineLabels_GetMaxLines1() in D:\Project\vietsubps5\engine\tests\Engine.Tests\Fix3bTests.cs:line 20
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     2, Passed:   184, Skipped:     0, Total:   186, Duration: 1 s - Engine.Tests.dll (net10.0)

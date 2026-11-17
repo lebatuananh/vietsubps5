@@ -1,0 +1,29 @@
+﻿
+pattern exit=
+=== v=2 hello
+  reply: {"ok":false,"reason":"version"}
+=== wrong token hello
+  reply: {"ok":false,"reason":"token"}
+=== garbage first line
+  reply: 
+=== valid hello then 300 KB line
+  reply: {"ok":true}
+  reply: after-big: EOF (closed by TV)
+=== valid hello still accepted afterwards (server alive)
+  reply: {"ok":true}
+=== crash buffer lines: 0
+logcat: 11-18 02:09:08.266  3585  3585 I VietSubOverlay: server nghe cổng 47820
+logcat: 11-18 02:09:17.961  3585  3648 I VietSubOverlay: engine đã kết nối
+logcat: 11-18 02:09:27.851  3585  3648 I VietSubOverlay: engine ngắt kết nối
+logcat: 11-18 02:09:36.199  3585  3697 I VietSubOverlay: engine đã kết nối
+logcat: 11-18 02:09:46.074  3585  3697 I VietSubOverlay: engine ngắt kết nối
+logcat: 11-18 02:10:19.789  3585  3745 I VietSubOverlay: engine đã kết nối
+logcat: 11-18 02:10:27.129  3585  3745 I VietSubOverlay: engine ngắt kết nối
+logcat: 11-18 02:10:27.210  3585  3765 I VietSubOverlay: [server] từ chối hello: version
+logcat: 11-18 02:10:27.238  3585  3766 I VietSubOverlay: [server] từ chối hello: token
+logcat: 11-18 02:10:27.255  3585  3768 I VietSubOverlay: engine đã kết nối
+logcat: 11-18 02:10:27.270  3585  3768 I VietSubOverlay: [server] đóng kết nối: dòng dài hơn 262144 byte
+logcat: 11-18 02:10:27.270  3585  3768 I VietSubOverlay: engine ngắt kết nối
+logcat: 11-18 02:10:27.282  3585  3769 I VietSubOverlay: engine đã kết nối
+logcat: 11-18 02:10:27.285  3585  3769 I VietSubOverlay: engine ngắt kết nối
+service alive: 1

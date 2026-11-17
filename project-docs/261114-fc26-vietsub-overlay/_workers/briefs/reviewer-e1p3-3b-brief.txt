@@ -1,0 +1,14 @@
+VietSub-261114-Reviewer review 3b (resume, delta only)
+
+Turn 3b = tv-overlay/ (Phase doc steps 5-6): read reviews/261114-epic1-phase3-dev-report-3b.md and the decision table of 261114-epic1-phase3.md (Rev 1.3 now includes your 3a findings: B4 says TV auto-fit starts at max(fontPx, minFontPx); B1 says id unique per frame - Dev is fixing those IN PARALLEL in a fix round touching engine/ and AutoFit, so judge 3b against Rev 1.2 and just note whether B1/B4 handling is pending).
+
+Focus, in order:
+1. Protocol conformance + robustness of OverlayServer (README Giao thuc): token/v/seq/line-size, one active connection, ttl, holdMs, malformed input, thread safety with the UI thread, socket left open/leaked, FGS lifecycle when the app goes to background or the TV switches to HDMI.
+2. Rendering quality: C1 (no original pixel peeking out - check screenshots and the cover math), card fully opaque, room respected, same group same size, alt only for labels lacking the gap, Be Vietnam Pro used, no flicker on unchanged ids.
+3. Product screens per D13 and the mockup mockups/261114-mockup-tv-app.html with the remote only (input keyevent): focus visible and not stolen, opening the app turns the overlay off, re-pair invalidates old code, collapsed installer help. Debug-only items (diag, BackdropActivity) absent from release (build assembleRelease and check the merged manifest).
+4. LAN security: listens only on LAN, no data beyond what the protocol needs, no logging of the pairing code at INFO in release.
+Re-run Blackbox steps 4, 5, 7, 8, 9 yourself on YOUR emulator vietsub_rv (emulator-5558) with the engine (temp VIETSUB_HOME, empty ANTHROPIC_API_KEY, translator fake/cache). Kill your emulator at the end.
+
+Write reviews/261114-epic1-phase3-review-3b.md . FIRST line REVIEW-3B IN PROGRESS, exactly REVIEW-3B DONE when finished; verdict PASS or FAIL (n blocking) on line 3. Blocking = crash/leak in server, protocol mismatch, C1 visibly violated, remote-only dead end, CLAUDE.md violation.
+NOT YOURS: code edits (read-only), emulator-5556 (Dev), real TV/PS5/LAN IPs, other windows, git writes, credentials.
+Open question: what will a person with only the Sony remote get stuck on tonight?

@@ -1,0 +1,4 @@
+VietSub-261114-Reviewer RE-REVIEW fix 3a (resume, delta only)
+
+Dev fixed your 3a findings: reviews/261114-epic1-phase3-dev-report-fix3a.md (Leader decisions = row "Sau review 3a - Rev 1.3" in the Phase doc table). Re-check B1-B4 with your own harness cases (A, B, J, K, the duplicate-label case) and spot-check NB2-NB8 and the C1 sliver fix (boxPadPx). Engine tests: 183. Same rules: temp VIETSUB_HOME, empty ANTHROPIC_API_KEY, no real API, read-only code.
+Append section "Re-review fix 3a" to reviews/261114-epic1-phase3-review-3a.md; set line 1 to REVIEW-RE3A IN PROGRESS while working and exactly REVIEW-RE3A DONE when finished; line 3 = new verdict. Be concise.

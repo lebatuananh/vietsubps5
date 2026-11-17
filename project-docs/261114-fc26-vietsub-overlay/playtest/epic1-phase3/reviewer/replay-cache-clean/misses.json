@@ -1,0 +1,42 @@
+[
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "Head Scout",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "Club Secretary",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "{N1}",
+    "reason": "not-eligible (chữ hoa ngắn/ ≤ 4 ký tự — chỉ glossary/cache)"
+  },
+  {
+    "image": "rv-a-inbox.png",
+    "sourceKey": "Press X to open",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "Your contract offer has been",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "accepted.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "Transfer Budget: {N1}.OM",
+    "reason": "no-translator (chỉ cache/glossary)"
+  },
+  {
+    "image": "rv-b-email.png",
+    "sourceKey": "The striker wants a bigger role next season.",
+    "reason": "no-translator (chỉ cache/glossary)"
+  }
+]

@@ -1,0 +1,43 @@
+﻿VIETSUB_HOME=D:\Temp\vsfix3a-tv-022730 (temp); ANTHROPIC_API_KEY empty; HTTPS_PROXY dead
+install: Performing Streamed Install
+install: Success
+waiting screen code=XPUK-7FVR focused=[Hướng dẫn cho người cài ▸]
+pair-wrong: [engine] DPI PerMonitorV2: set=True hiệu lực=True
+pair-wrong: [pair] đã ghi D:\Temp\vsfix3a-tv-022730\engine.local.json (host=127.0.0.1 port=47820; mã không in ra).
+pair-wrong: [engine] LỖI (3): TV từ chối: token — sai mã ghép cặp.
+exit=3
+pair-right: [engine] DPI PerMonitorV2: set=True hiệu lực=True
+pair-right: [pair] đã ghi D:\Temp\vsfix3a-tv-022730\engine.local.json (host=127.0.0.1 port=47820; mã không in ra).
+pair-right: [pair] OK — TV chấp nhận mã.
+exit=0
+replay fake-inbox exit=
+  [engine] DPI PerMonitorV2: set=True hiá»‡u lá»±c=True
+  [tv] Ä‘Ã£ káº¿t ná»‘i 127.0.0.1:47820
+  [replay] synth-inbox-list.png: 15 item Â· gÃ³i 10 Â· bá»™ item Ä‘á»•i 2 láº§n Â· chÆ°a dá»‹ch 4
+  [replay] translator=fake Â· gá»i backend: 1 Â· HTTP tháº­t: 0 Â· kÃ½ tá»± LLM hÃ´m nay: 0/100000 Â· misses: 4 â†’ project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/fix3a/replay-tv-fake-inbox
+replay cache-rvinbox exit=
+  [engine] DPI PerMonitorV2: set=True hiá»‡u lá»±c=True
+  [tv] Ä‘Ã£ káº¿t ná»‘i 127.0.0.1:47820
+  [replay] rv-a-inbox.png: 16 item Â· gÃ³i 9 Â· bá»™ item Ä‘á»•i 1 láº§n Â· chÆ°a dá»‹ch 4
+  [replay] translator=cache Â· gá»i backend: 0 Â· HTTP tháº­t: 0 Â· kÃ½ tá»± LLM hÃ´m nay: 0/100000 Â· misses: 4 â†’ project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/fix3a/replay-tv-cache-rvinbox
+pattern exit=
+OFF screen focused=[Bật lại lớp phủ] text-has-'Da tat'=True
+after OK: focused=[Hướng dẫn cho người cài ▸]
+connected: focused=[Tắt lớp phủ] has-Da-ket-noi=True
+after RIGHT +3s: focused=[Ghép cặp lại]
+after Ghep-cap-lai: new code=UD4R-NTW7 (old XPUK-7FVR) changed=True
+old-code hello reply: {"ok":false,"reason":"token"}
+hostile v=2:
+  {"ok":false,"reason":"version"}
+hostile wrong token:
+  {"ok":false,"reason":"token"}
+hostile garbage:
+  
+hostile 300KB:
+  {"ok":true}
+  after-big: EOF (closed by TV)
+still alive:
+  {"ok":true}
+crash buffer lines: 0
+service alive: 0
+RECHECK (script var clash \/\ broke the last two checks): crash buffer lines=0 ; service alive=1

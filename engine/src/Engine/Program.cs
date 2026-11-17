@@ -10,7 +10,13 @@ public static class Program
           capture   --window-title <chuỗi con> | --hwnd <số|0xHEX>  --out <thư mục>  [--frames N=1] [--interval-ms 500] [--timeout-ms 5000] [--no-crop true  (chẩn đoán: giữ cả thanh tiêu đề)]
           ocr       --input <thư mục PNG> --out <thư mục>  [--scale 1|2]
           ocr-score --ocr <thư mục *.ocr.json> --golden <thư mục *.golden.json>
-        Mã thoát: 0 ok · 1 tham số/ dữ liệu · 2 cửa sổ không tìm thấy/ mơ hồ · 3 cửa sổ thu nhỏ · 4 không có khung (timeout) · 5 thiếu OCR en-US · 6 lỗi hệ thống/ interop
+          pair      --tv <ip> --code <mã XXXX-XXXX> [--port 47820]
+          pattern   [--send true] [--seconds 60]
+          replay    --input <dir PNG> [--translator claude|cache|fake] [--send true] [--hold-ms 4000] [--out <dir>] [--verbose true]
+          run       [--window-title "PS Remote Play"] [--hwnd H] [--translator claude|cache|fake] [--no-send true] [--verbose true] [--max-seconds N]
+          warm      --input <dir PNG> [--translator claude|fake] [--yes true]
+          cache-export --out <file.tsv>
+        Mã thoát: 0 ok · 1 tham số/ dữ liệu · 2 cửa sổ không tìm thấy/ mơ hồ · 3 cửa sổ thu nhỏ · 4 không có khung (timeout) · 5 thiếu OCR en-US · 6 lỗi hệ thống/ interop · 1 cũng cho chưa ghép cặp
         """;
 
     public static async Task<int> Main(string[] args)
@@ -38,6 +44,12 @@ public static class Program
                 "capture" => await Commands.CaptureAsync(a, dpiOk),
                 "ocr" => await Commands.OcrAsync(a),
                 "ocr-score" => await Commands.OcrScoreAsync(a),
+                "pair" => await Commands3.PairAsync(a),
+                "pattern" => await Commands3.PatternAsync(a),
+                "replay" => await Commands3.ReplayAsync(a),
+                "run" => await Commands3.RunAsync(a),
+                "warm" => await Commands3.WarmAsync(a),
+                "cache-export" => await Commands3.CacheExportAsync(a),
                 _ => throw new ArgumentException($"Lệnh lạ '{args[0]}'.\n{Usage}"),
             };
         }

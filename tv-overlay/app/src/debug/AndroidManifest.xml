@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- CHỈ BẢN DEBUG: màn nền (D15) + màn kiểm tra Phase 1 (extra ez diag=true). Bản release không có các lớp này. -->
+    <application>
+        <activity
+            android:name=".BackdropActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" />
+        <activity
+            android:name=".DiagActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar" />
+        <service
+            android:name=".DiagOverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Màn kiểm tra lớp phủ (debug)" />
+        </service>
+    </application>
+</manifest>

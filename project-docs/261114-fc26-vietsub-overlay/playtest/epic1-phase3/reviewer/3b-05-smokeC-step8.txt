@@ -1,0 +1,32 @@
+=== clean start (force-stop clears the backdrop stack; pairing code persists in prefs)
+  3b-08k-connected: FOCUS='Tắt lớp phủ' [710,265][977,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghép cặp lại ¦ Mẹo: đang chơi mà muốn tắt chữ: Home → mở VietSub (mở app là tắt lớp phủ).
+  screenshot 3b-08k-connected.png
+--- HOME: overlay should be drawn over the launcher
+  key KEYCODE_HOME
+  screenshot 3b-08l-home-overlay-on.png
+--- open VietSub from launcher while overlay on ⇒ OFF screen
+  3b-08m-opened: FOCUS='Bật lại lớp phủ' [710,269][985,365] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Đã tắt lớp phủ ¦ Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại. ¦ OK để bật lại. ¦ Bật lại lớp phủ ¦ Về màn hình chính
+  screenshot 3b-08m-opened.png
+--- OK, OK, OK (default focus each time; double-press behaviour)
+  key KEYCODE_DPAD_CENTER
+  3b-08n-ok1: FOCUS='Tắt lớp phủ' [710,265][977,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghép cặp lại ¦ Mẹo: đang chơi mà muốn tắt chữ: Home → mở VietSub (mở app là tắt lớp phủ).
+  key KEYCODE_DPAD_CENTER
+  3b-08o-ok2: FOCUS='Bật lại lớp phủ' [710,269][985,365] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Đã tắt lớp phủ ¦ Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại. ¦ OK để bật lại. ¦ Bật lại lớp phủ ¦ Về màn hình chính
+  key KEYCODE_DPAD_CENTER
+  3b-08p-ok3: FOCUS='Tắt lớp phủ' [710,265][977,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghép cặp lại ¦ Mẹo: đang chơi mà muốn tắt chữ: Home → mở VietSub (mở app là tắt lớp phủ).
+--- go to CONNECTED if needed, RIGHT to 'Ghép cặp lại', wait 4 s (ticker must not steal focus)
+  key KEYCODE_DPAD_RIGHT
+  3b-08q-right: FOCUS='Ghép cặp lại' [986,265][1259,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghép cặp lại ¦ Mẹo: đang chơi mà muốn tắt chữ: Home → mở VietSub (mở app là tắt lớp phủ).
+  3b-08r-right-after-4s: FOCUS='Ghép cặp lại' [986,265][1259,361] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ ● Đã kết nối ¦ Mở Hộp thư trong Career Mode để thấy chữ Việt. ¦ Lớp phủ: đang bật ¦ Tắt lớp phủ ¦ Ghép cặp lại ¦ Mẹo: đang chơi mà muốn tắt chữ: Home → mở VietSub (mở app là tắt lớp phủ).
+  screenshot 3b-08r-right-after-4s.png
+--- OK on 'Ghép cặp lại'
+  key KEYCODE_DPAD_CENTER
+  3b-08s-after-repair: FOCUS='Hướng dẫn cho người cài ▸' [710,506][1101,606] | VietSub ¦ Dịch FC 26 sang tiếng Việt, ngay trên TV. ¦ Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại. ¦ Ghép với máy tính ¦ Trên máy tính, mở VietSub Engine và nhập mã: ¦ 7F9W-HRT7 ¦ Địa chỉ TV: 10.0.2.16:47820 ¦ Mã chỉ dùng trong mạng nhà. Ghép một lần, lần sau tự nhận. ¦ Hướng dẫn cho người cài ▸ ¦ Tạo mã mới
+  screenshot 3b-08s-after-repair.png
+  code changed: YES
+  hello with OLD code -> {"ok":false,"reason":"token"}
+  engine [tv] log tail:
+[tv] đã kết nối 127.0.0.1:47830
+[tv] TV từ chối: token — dừng kết nối (kiểm mã ghép cặp: engine pair).
+--- BACK at OFF screen leaves the overlay off? (reopen → OFF → BACK → screenshot launcher)
+  crash buffer lines: 0

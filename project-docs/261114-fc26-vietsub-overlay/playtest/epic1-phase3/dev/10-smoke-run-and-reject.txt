@@ -1,0 +1,16 @@
+﻿VIETSUB_HOME=D:\Temp\vs3a-run-002207 (temp)
+listener PID=15752, ffplay PID=18820 (both mine)
+=== pair with valid-but-WRONG code ACDEFHJM
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[pair] đã ghi D:\Temp\vs3a-run-002207\engine.local.json (host=127.0.0.1 port=47821; mã không in ra).
+[engine] LỖI (3): TV từ chối: token — sai mã ghép cặp.
+exit=3
+=== pair with right code
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[pair] đã ghi D:\Temp\vs3a-run-002207\engine.local.json (host=127.0.0.1 port=47821; mã không in ra).
+[pair] OK — TV chấp nhận mã.
+exit=0
+=== run --window-title VietSubTest --translator fake --max-seconds 16 (resize at ~7 s)
+resized own ffplay window to 1100x700 at ~7s
+run exit=
+ffplay stopped: True; listener stopped: True

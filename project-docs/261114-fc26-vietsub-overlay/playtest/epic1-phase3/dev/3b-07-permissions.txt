@@ -1,0 +1,8 @@
+﻿package: vn.vietsub.ps5.tv
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_SPECIAL_USE'
+permission: vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

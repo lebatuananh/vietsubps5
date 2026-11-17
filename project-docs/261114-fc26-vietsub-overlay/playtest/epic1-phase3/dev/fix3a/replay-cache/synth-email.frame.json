@@ -1,0 +1,90 @@
+{
+  "v": 1,
+  "sessionId": "493c74b20b3542f78b8b9a6db06c1353",
+  "seq": 4,
+  "ttlMs": 3000,
+  "display": {
+    "minFontPx": 24,
+    "holdMs": 0
+  },
+  "items": [
+    {
+      "id": "5e880fcb44a4",
+      "box": {
+        "x": 0.041666666666666664,
+        "y": 0.04351851851851852,
+        "w": 0.21302083333333335,
+        "h": 0.053703703703703705
+      },
+      "text": "Cập nhật hợp đồng",
+      "fontPx": 52,
+      "group": "solo-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0,
+        "y": 0.017592592592592594,
+        "w": 0.42552083333333335,
+        "h": 0.10555555555555556
+      }
+    },
+    {
+      "id": "30fffa77dec9",
+      "box": {
+        "x": 0.0625,
+        "y": 0.22870370370370371,
+        "w": 0.1375,
+        "h": 0.03981481481481483
+      },
+      "text": "Kính gửi ông,",
+      "fontPx": 37,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0,
+        "y": 0.2101851851851852,
+        "w": 0.275,
+        "h": 0.07685185185185184
+      }
+    },
+    {
+      "id": "d13b51879fc3",
+      "box": {
+        "x": 0.0625,
+        "y": 0.45092592592592595,
+        "w": 0.48750000000000004,
+        "h": 0.0398148148148148
+      },
+      "text": "Vui lòng hoàn tất đăng ký trước hạn chót.",
+      "fontPx": 37,
+      "group": "col-1",
+      "maxLines": 3,
+      "align": "start",
+      "bold": false,
+      "textColor": "#FFFFFFFF",
+      "cover": {
+        "mode": "solid",
+        "color": "#FF141F2C"
+      },
+      "room": {
+        "x": 0,
+        "y": 0.4324074074074074,
+        "w": 0.975,
+        "h": 0.0768518518518519
+      }
+    }
+  ]
+}

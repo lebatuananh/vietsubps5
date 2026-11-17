@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">VietSub — lớp phủ kiểm tra</string>
-    <string name="title">VietSub PS5 — công cụ kiểm tra lớp phủ</string>
-    <string name="subtitle">Bản kiểm tra Phase 1: chưa dịch gì. Dùng để thử vẽ lớp phủ lên hình PS5.</string>
-    <string name="perm_overlay_yes">Quyền hiển thị trên ứng dụng khác: ĐÃ CẤP</string>
-    <string name="perm_overlay_no">Quyền hiển thị trên ứng dụng khác: CHƯA CẤP</string>
-    <string name="battery_yes">Miễn tối ưu pin: ĐÃ MIỄN</string>
-    <string name="battery_no">Miễn tối ưu pin: CHƯA MIỄN</string>
-    <string name="overlay_running">Lớp phủ: ĐANG BẬT (tự tắt sau 30 phút)</string>
-    <string name="overlay_stopped">Lớp phủ: ĐANG TẮT</string>
-    <string name="metrics">Cửa sổ đo được: %1$d × %2$d px · mật độ %3$.2f (dpi %4$d) · Android %5$s (API %6$d)</string>
-    <string name="btn_grant_overlay">Cấp quyền hiển thị trên ứng dụng khác</string>
-    <string name="btn_battery">Bỏ tối ưu pin</string>
-    <string name="btn_toggle_on">Bật lớp phủ</string>
-    <string name="btn_toggle_off">Tắt lớp phủ</string>
-    <string name="need_overlay">Chưa có quyền hiển thị trên ứng dụng khác — bấm nút cấp quyền trước.</string>
-    <string name="hint_overlay_list">Màn cấp quyền trên TV hiện danh sách chung: dùng phím lên/xuống tìm dòng “VietSub — lớp phủ kiểm tra” rồi bật.</string>
-    <string name="fallback_overlay">Quyền hiển thị trên ứng dụng khác vẫn CHƯA cấp. Trong danh sách, tìm dòng “VietSub — lớp phủ kiểm tra” và bật; nếu TV không có màn này, chạy lệnh (trên máy tính, do bạn chạy):\nadb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow</string>
-    <string name="fallback_battery">Miễn tối ưu pin vẫn CHƯA được (TV này không có màn thật). Chạy lệnh (trên máy tính, do bạn chạy):\nadb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv</string>
-    <string name="notif_channel">Lớp phủ kiểm tra</string>
-    <string name="notif_title">VietSub — lớp phủ kiểm tra đang chạy</string>
-    <string name="overlay_footer">VietSub — lớp phủ kiểm tra — tắt trong app</string>
-    <string name="overlay_size">Kích thước View: %1$d × %2$d px</string>
-    <string name="overlay_sample">HỘP THƯ · CHUYỂN NHƯỢNG — Bản hợp đồng mới đã được gửi tới Ban lãnh đạo. ẾỖẶỮỴ ếỗặữỵ</string>
+    <string name="app_name">VietSub</string>
+    <string name="notif_channel">Lớp phủ VietSub</string>
+    <string name="notif_title">VietSub đang chạy</string>
+
+    <string name="brand_lead">Dịch FC 26 sang tiếng Việt, ngay trên TV.</string>
+    <string name="brand_hint">Điều khiển bằng remote: ↑↓ chọn · OK bấm · ← quay lại.</string>
+
+    <!-- Cần cấp quyền -->
+    <string name="perm_title">Chuẩn bị (một lần)</string>
+    <string name="perm_sub">Để chữ tiếng Việt nằm trên hình PS5.</string>
+    <string name="step1_title">Hiển thị trên ứng dụng khác</string>
+    <string name="step1_desc">Trong danh sách của TV, kéo xuống tìm dòng VietSub rồi bấm OK để bật.</string>
+    <string name="step2_title">Không tối ưu pin</string>
+    <string name="step2_desc">Để TV không tắt VietSub khi chuyển sang PS5. Khuyên bật, không bắt buộc.</string>
+    <string name="chip_on">ĐÃ BẬT</string>
+    <string name="chip_off">CHƯA BẬT</string>
+    <string name="chip_off_advice">CHƯA BẬT · khuyên</string>
+    <string name="btn_open_settings">Mở cài đặt</string>
+    <string name="btn_try_settings">Thử mở cài đặt</string>
+    <string name="hint_overlay_list">Màn cấp quyền của TV là danh sách chung: dùng phím ↑↓ tìm dòng VietSub rồi bấm OK để bật. Xong bấm Quay lại.</string>
+    <string name="fallback_overlay">Quyền hiển thị trên ứng dụng khác vẫn CHƯA cấp. Trong danh sách, tìm dòng VietSub và bật; không thấy dòng đó ⇒ cần máy tính một lần (xem “Hướng dẫn cho người cài” ở màn sau).</string>
+    <string name="fallback_battery">TV này không có màn thật để bỏ tối ưu pin (bấm chỉ chớp rồi quay lại). Cần máy tính một lần, hoặc bỏ qua — VietSub vẫn chạy nhưng TV có thể tắt nó.</string>
+
+    <!-- Chờ máy tính -->
+    <string name="wait_title">Ghép với máy tính</string>
+    <string name="wait_step">Trên máy tính, mở VietSub Engine và nhập mã:</string>
+    <string name="wait_addr">Địa chỉ TV: %1$s</string>
+    <string name="wait_noip">TV chưa kết nối mạng. Vào Cài đặt → Mạng và Internet, chọn Wi-Fi nhà, rồi quay lại đây.</string>
+    <string name="wait_foot">Mã chỉ dùng trong mạng nhà. Ghép một lần, lần sau tự nhận.</string>
+    <string name="wait_server_error">Không mở được cổng %1$s (%2$s). Mở lại app VietSub.</string>
+    <string name="installer_toggle_closed">Hướng dẫn cho người cài ▸</string>
+    <string name="installer_toggle_open">Hướng dẫn cho người cài ▾</string>
+    <string name="installer_body">Cần máy tính một lần, chỉ khi TV không cho làm bằng remote. Máy tính đã bật gỡ lỗi qua mạng với TV, chạy từng lệnh:\n1 · Hiển thị trên ứng dụng khác:\nadb shell appops set vn.vietsub.ps5.tv SYSTEM_ALERT_WINDOW allow\n2 · Không tối ưu pin:\nadb shell dumpsys deviceidle whitelist +vn.vietsub.ps5.tv</string>
+    <string name="wait_code_changed">Mã đã đổi — trên máy tính chạy lại engine pair với mã mới.</string>
+    <string name="btn_new_code">Tạo mã mới</string>
+
+    <!-- Đã kết nối -->
+    <string name="conn_title">● Đã kết nối</string>
+    <string name="conn_sub">Mở Hộp thư trong Career Mode để thấy chữ Việt.</string>
+    <string name="conn_overlay_on">Lớp phủ: đang bật</string>
+    <string name="conn_tip">Mẹo: đang chơi mà muốn tắt chữ: Home → mở VietSub (mở app là tắt lớp phủ).</string>
+    <string name="btn_overlay_off">Tắt lớp phủ</string>
+    <string name="btn_repair">Ghép cặp lại</string>
+
+    <!-- Mất kết nối -->
+    <string name="lost_title">Máy tính không còn gửi chữ</string>
+    <string name="lost_sub">Lớp chữ trên TV đã tự xoá. Game vẫn chơi bình thường. Đang chờ máy tính, tự thử lại.</string>
+    <string name="lost_check">· Máy tính còn bật, không ngủ?\n· VietSub Engine còn mở?\n· PS Remote Play còn kết nối với PS5?</string>
+
+    <!-- Đã tắt lớp phủ -->
+    <string name="off_title">Đã tắt lớp phủ</string>
+    <string name="off_sub">Chữ tiếng Việt sẽ không hiện cho tới khi bạn bật lại.</string>
+    <string name="off_ok">OK để bật lại.</string>
+    <string name="btn_overlay_on">Bật lại lớp phủ</string>
+    <string name="btn_home">Về màn hình chính</string>
 </resources>

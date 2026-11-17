@@ -1,0 +1,37 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Engine -> D:\Project\vietsubps5\engine\src\Engine\bin\Debug\net10.0-windows10.0.22621.0\Engine.dll
+  Engine.Tests -> D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll
+Test run for D:\Project\vietsubps5\engine\tests\Engine.Tests\bin\Debug\net10.0-windows10.0.22621.0\Engine.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.44]     Engine.Tests.ConfigTests.Load_MissingFile_GivesDefaults [FAIL]
+  Failed Engine.Tests.ConfigTests.Load_MissingFile_GivesDefaults [9 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 0,78000000000000003
+Actual:   1
+  Stack Trace:
+     at Engine.Tests.ConfigTests.Load_MissingFile_GivesDefaults() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 99
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.45]     Engine.Tests.ClaudeBackendTests.TransientTransportError_IsTransient_Others_AreDropped [FAIL]
+  Failed Engine.Tests.ClaudeBackendTests.TransientTransportError_IsTransient_Others_AreDropped [3 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: Dropped
+Actual:   Fatal
+  Stack Trace:
+     at Engine.Tests.ClaudeBackendTests.TransientTransportError_IsTransient_Others_AreDropped() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ClaudeTvTests.cs:line 124
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:00.50]     Engine.Tests.ConfigTests.SaveThenLoad_RoundTrips_AndPartialFileKeepsDefaults [FAIL]
+  Failed Engine.Tests.ConfigTests.SaveThenLoad_RoundTrips_AndPartialFileKeepsDefaults [70 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 0,78000000000000003
+Actual:   1
+  Stack Trace:
+     at Engine.Tests.ConfigTests.SaveThenLoad_RoundTrips_AndPartialFileKeepsDefaults() in D:\Project\vietsubps5\engine\tests\Engine.Tests\ProtocolConfigTests.cs:line 119
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     3, Passed:   180, Skipped:     0, Total:   183, Duration: 1 s - Engine.Tests.dll (net10.0)

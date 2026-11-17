@@ -1,0 +1,23 @@
+=== debug merged manifest: intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml
+android:name="vn.vietsub.ps5.tv.BackdropActivity"
+android:name="vn.vietsub.ps5.tv.DiagActivity"
+android:name="vn.vietsub.ps5.tv.DiagOverlayService"
+android:name="vn.vietsub.ps5.tv.MainActivity"
+android:name="vn.vietsub.ps5.tv.OverlayService"
+=== release merged manifest: intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml
+android:name="vn.vietsub.ps5.tv.MainActivity"
+android:name="vn.vietsub.ps5.tv.OverlayService"
+=== release apk outputs/apk/release/app-release-unsigned.apk
+"vn.vietsub.ps5.tv.MainActivity"
+"vn.vietsub.ps5.tv.OverlayService"
+dex strings Diag/Backdrop in release apk:
+(none above = absent)
+  public static final boolean DEBUG = false;
+package: vn.vietsub.ps5.tv
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_SPECIAL_USE'
+permission: vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='vn.vietsub.ps5.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

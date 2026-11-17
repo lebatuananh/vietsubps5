@@ -1,0 +1,14 @@
+﻿VIETSUB_HOME=D:\Temp\vsfix3a-s6-022558
+[engine] DPI PerMonitorV2: set=True hiệu lực=True
+[run] t=250 Đứng yên → OCR (ô bẩn 0, nền động 0)
+[run] t=250 9 item, chưa dịch 10
+[run] t=1000 15 item, chưa dịch 4
+[replay] 01-a.png: 15 item · gói 11 · bộ item đổi 2 lần · chưa dịch 4
+[replay] 02-a.png: 15 item · gói 10 · bộ item đổi 0 lần · chưa dịch 4
+[run] t=20500 Động (32 ô đổi)
+[run] t=20750 Đứng yên → OCR (ô bẩn 32, nền động 0)
+[run] t=20750 3 item, chưa dịch 3
+[run] t=21000 6 item, chưa dịch 0
+[replay] 03-b.png: 6 item · gói 12 · bộ item đổi 3 lần · chưa dịch 0
+[replay] 04-b.png: 6 item · gói 10 · bộ item đổi 0 lần · chưa dịch 0
+[replay] translator=fake · gọi backend: 2 · HTTP thật: 0 · ký tự LLM hôm nay: 0/100000 · misses: 8 → project-docs/261114-fc26-vietsub-overlay/playtest/epic1-phase3/dev/fix3a/replay-seq
