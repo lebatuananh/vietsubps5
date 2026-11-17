@@ -1,0 +1,7 @@
+title: VietSub — Mockup app TV (Phase 2) · ready
+Đếm phím — tắt lớp phủ nhanh (đường 3) · VietSub ghim vị trí 10. Đang chơi trên nguồn HDMI PS5, lớp chữ đang bật
+1. Home → TV · Màn hình chính (mô phỏng) · focus: Dành cho bạn
+2. ArrowDown → TV · Màn hình chính (mô phỏng) · focus: Gợi ý
+3. ArrowDown → TV · Màn hình chính (mô phỏng) · focus: VietSub
+4. Enter → App · Mở app khi lớp phủ đang bật = đã tắt · focus: Về màn hình chính
+Số phím: 4

@@ -1,0 +1,15 @@
+title: VietSub — Mockup app TV (Phase 2) · ready
+Đi luồng cài đặt chỉ bằng phím · VietSub ghim vị trí 10. Mở app lần đầu (chưa có quyền nào)
+1. Enter → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Ảnh
+2. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Chromecast built-in
+3. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Đồng hồ
+4. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Lịch
+5. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Máy nghe nhạc
+6. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Trình quản lý tệp
+7. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: Trợ lý
+8. ArrowDown → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: VietSub
+9. Enter → Cài đặt TV · Hiển thị trên ứng dụng khác (mô phỏng) · focus: VietSub
+10. Backspace → App · Lần đầu — cấp quyền · focus: Mở lại cài đặt
+11. ArrowDown → App · Lần đầu — cấp quyền · focus: Thử mở cài đặt
+12. Enter → App · Lần đầu — cấp quyền · focus: Thử mở cài đặt
+Số phím: 12

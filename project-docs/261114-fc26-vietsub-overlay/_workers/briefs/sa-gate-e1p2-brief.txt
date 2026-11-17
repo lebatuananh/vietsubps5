@@ -1,0 +1,15 @@
+VietSub-261114-SA SA gate Epic 1 Phase 2 (resume, delta only)
+
+Since your Phase 1 gate: Phase 1 code (engine/ + tv-overlay diagnostic APK) is done and Reviewer PASS; the on-device steps wait for the User at home. Leader wrote Phase 2 EARLY (mockup phase) because it only depends on the real F2 images, swapped in before User review. Read:
+* project-docs/261114-fc26-vietsub-overlay/261114-epic1-phase2.md (doc under review)
+* project-docs/present/backlog-and-techdebt.md item 3 (remote-only UX problems the TV app mockup must solve)
+* reviews/261114-epic1-phase1-review-2b.md (Re-review fix 2b, NB-R2 and the remote-only classification)
+* your discovery sections 3.8, 5, R2.7
+
+Gate per handbook section 5, six criteria, with criterion 6 (experience) weighted most: this is a design phase. Also judge: (1) is writing Phase 2 before Phase 1 closes acceptable here; (2) Leader's proposal for quick-off (overlay only visible while the core sends + Home tile to open the app) - better options?; (3) are the mockup states complete and not over-built; (4) is the ffmpeg/placeholder approach safe w.r.t. EA copyright (no web images).
+
+BLOCKER only if (verbatim): (1) causes repeated paid calls or wrong money grants; (2) loss or wrong deletion of data; (3) spec missing to the point that Dev has to guess. Plus any violation of the hard constraints in CLAUDE.md. Everything else is a NOTE.
+
+Write project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase2-sa-review.md (handbook format). FIRST line SA-GATE-P2 IN PROGRESS while working, exactly SA-GATE-P2 DONE when finished; verdict on line 3.
+
+Open question: what will the User most likely reject when he sees this mockup on his TV, and what did the Leader not ask?

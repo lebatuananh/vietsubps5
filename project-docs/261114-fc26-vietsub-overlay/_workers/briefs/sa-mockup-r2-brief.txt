@@ -1,0 +1,9 @@
+VietSub-261114-SA mockup round 2 (resume, delta only)
+
+Leader critique round 1: project-docs/261114-fc26-vietsub-overlay/reviews/261114-epic1-phase2-leader-critique.md . Fix exactly C1 (cover area = union of original-text bbox and Vietnamese bbox plus margin, no original pixel may peek out, in every state of the 3 inbox screens), C2 (minimum gap rule for horizontal labels: short form first, then shrink the whole tab group), C3 (collapse the installer adb lines into one hidden block opened by a button, >= 20 px when open). Add C1 and C2 to the decisions panel as Phase 3 constraints (not User choices).
+
+Rebuild the two mockup files the same way as before, re-shoot the affected screenshots with prefix r2- in playtest/epic1-phase2/sa/, and append a section Vong 2 to reviews/261114-epic1-phase2-mockup-report.md . Set the FIRST line of the report to MOCKUP R2 IN PROGRESS while working, exactly MOCKUP R2 DONE when finished.
+
+Same limits as before (write only mockups/, playtest/epic1-phase2/sa/, your report; temp files outside repo; no code/doc edits; git read-only).
+
+Open question: did fixing C1 make any screen look worse (e.g. a card now too big on the email header image)?
